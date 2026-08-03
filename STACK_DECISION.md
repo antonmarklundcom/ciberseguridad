@@ -63,9 +63,11 @@ None exist yet. Adopting it now means paying the operational tail — dependency
 patching, build fragility, a deploy pipeline, a hosting slot — to gain
 developer ergonomics on a site that is fifteen static documents.
 
-There is also a portfolio argument: there is one Node.js slot and
-`viaje.com.py` has a much stronger claim on it. See
-`planning/_shared/PORTFOLIO_STACK_ALLOCATION.md`.
+The scarce resource is not the hosting — a Node slot costs a few dollars. It is
+the operational tail: a database to back up, dependencies to patch, an admin
+login to secure, a deploy pipeline that can break at 11pm, and a build that
+fails six months later because a transitive dependency dropped a Node version.
+Static HTML plus PHP has almost no tail. It sits there and works.
 
 Revisit when the triggers in `FUTURE_NODE_FEATURES.md` fire. The migration path
 is clean and is designed for in §5.

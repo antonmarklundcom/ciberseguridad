@@ -4,7 +4,7 @@ The complete specification for the form and its handler. This is the only
 server-side code in Phase 1–3, and on a security consultancy's own website it
 is the only attack surface — it gets built carefully and reviewed twice.
 
-Protocol details for the CRM call: `planning/_shared/VENDERCRM_INTEGRATION.md`.
+Protocol details for the CRM call: `docs/VENDERCRM_INTEGRATION.md`.
 
 ---
 

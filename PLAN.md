@@ -133,7 +133,7 @@ leak.
 ### "Contact form to VenderCRM later"
 
 **Do it from day one, not later.** The integration is a few hours of work
-against a spec that already exists (`planning/_shared/VENDERCRM_INTEGRATION.md`).
+against a spec that already exists (`docs/VENDERCRM_INTEGRATION.md`).
 Retrofitting means a period where leads live only in an inbox, which is where
 leads go to die, and it means the attribution cookie was not being set during
 exactly the period you most need to learn which channel works.
@@ -276,7 +276,7 @@ with voseo, `es-PY`. Full architecture in `SEO_ARCHITECTURE.md`.
 Not later — from launch. One PHP handler: validate, honeypot, write locally,
 push to VenderCRM with an idempotency key, notify by email, redirect to a
 thank-you page. Never block the visitor on the CRM. Spec in `PHP_FORM_SPEC.md`,
-protocol in `planning/_shared/VENDERCRM_INTEGRATION.md`.
+protocol in `docs/VENDERCRM_INTEGRATION.md`.
 
 ## 4. Positioning
 

@@ -4,7 +4,7 @@ Ordered, self-contained work queue for an implementation model (Sonnet 5 /
 Codex). Each task names its inputs, its output, and its acceptance criteria.
 Execute in order; tasks within a block are independent unless stated.
 
-**Before starting anything, read:** `planning/_shared/CONVENTIONS.md`,
+**Before starting anything, read:** `docs/CONVENTIONS.md`,
 `PLAN.md`, `STACK_DECISION.md`.
 
 **Standing rules for every task in this file:**
@@ -98,7 +98,7 @@ zero console errors.
 *Depends on Block A. This is the only server-side code — review it twice.*
 
 ### B1. VenderCRM client
-**Input:** `planning/_shared/VENDERCRM_INTEGRATION.md`
+**Input:** `docs/VENDERCRM_INTEGRATION.md`
 **Output:** `src/vendercrm.php`
 - `push_lead(array $payload): array` returning status and body.
 - Key from the environment. 10s timeout. Peer and host verification on —

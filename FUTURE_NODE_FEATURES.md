@@ -4,7 +4,6 @@ What would justify moving beyond static HTML + PHP, what would not, and the
 specific conditions that should trigger the decision.
 
 Current decision and its reasoning: `STACK_DECISION.md`.
-Portfolio context: `planning/_shared/PORTFOLIO_STACK_ALLOCATION.md`.
 
 ---
 

@@ -171,7 +171,7 @@ or a validation rejection never loses a lead. A weekly manual check
 reconciles the CSV against the CRM; anything present locally and absent in the
 CRM is replayed with its original idempotency key.
 
-Protocol details: `planning/_shared/VENDERCRM_INTEGRATION.md`.
+Protocol details: `docs/VENDERCRM_INTEGRATION.md`.
 Field-level spec: `PHP_FORM_SPEC.md`.
 
 ## 7. Measurement

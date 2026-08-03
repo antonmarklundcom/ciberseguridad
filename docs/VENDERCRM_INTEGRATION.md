@@ -1,8 +1,8 @@
-# VenderCRM integration — shared spec
+# VenderCRM integration
 
-Every property in this set sends its leads to VenderCRM. The integration is
-identical across them; only the `fields` payload and the `source` string
-differ. Project docs reference this file rather than restating it.
+Every lead this site captures goes to VenderCRM. This file holds the protocol;
+`PHP_FORM_SPEC.md` holds the form and handler that use it, and `LEAD_FUNNEL.md`
+holds what happens to the lead afterwards.
 
 ---
 
@@ -99,18 +99,20 @@ cannot redirect leads into another pipeline.
    cookie and never overwrites it. Read that cookie server-side and map it into
    the payload. Without it every lead looks like direct traffic.
 
-## Per-project `source` and `fields`
+## `source` and `fields` for this site
 
 `source` is set explicitly rather than relying on the default, so campaign and
 page origin survive into reporting.
 
-| Project | `source` pattern | Key `fields` |
-|---|---|---|
-| ciberseguridad | `cyber:{page-slug}` | `servicio`, `empleados`, `rubro`, `disparador`, `urgencia`, `autoeval_score` |
-| viaje | `viaje:{page-slug}` | `destino`, `fecha_salida`, `pasajeros`, `presupuesto_pp`, `tipo_viaje` |
-| visas | `visas:{destino}` | `destino`, `tipo_visa`, `urgencia`, `intentos_previos`, `score`, `banda` |
-| criptomonedas | `cripto:{page-slug}` | `interes`, `nivel`, `motivo` |
-| prestamo | `prestamo:{page-slug}` | `monto`, `plazo`, `ingreso_banda`, `empleo`, `ciudad`, `urgencia`, `score`, `banda` |
+- **Pattern:** `cyber:{page-slug}` — e.g.
+  `cyber:servicios/cuestionarios-de-proveedores`, `cyber:recursos/autoevaluacion`.
+- **WhatsApp conversations created by hand** use `cyber:whatsapp-manual`. See
+  `LEAD_FUNNEL.md` §3 — without that rule the pipeline is blind to the
+  highest-intent channel.
+
+`fields` carries, on every submission: `empresa`, `empleados`, `rubro`,
+`disparador`, `form_type`. Assessment submissions add `score`, `banda`, and the
+seven `dominio_*` values. Exact payload in `PHP_FORM_SPEC.md` §5.
 
 `fields` values must be **enum strings, not free text**, wherever the form uses
 a select. Free text in `fields` cannot be filtered on in the CRM. Put free text
@@ -129,8 +131,8 @@ Trade-off to state to the user: the hosted form cannot be styled to match the
 site and does not pick up the `vc_attr` cookie from their domain. Fine for a
 demo; not fine for a property running paid traffic.
 
-None of the five properties here should need this — all four PHP properties
-have a server, and viaje has Node.
+This site does not need it — it has a PHP endpoint, and the styled inline form
+plus first-party attribution are both worth having.
 
 ## Verification before calling any integration done
 
@@ -161,15 +163,13 @@ Ordered by how often each is the actual cause:
 
 ## Local mirror
 
-Every property except `criptomonedas.com.py` also writes the lead to its own
-storage before calling the CRM:
-
-- PHP-only properties without MySQL: append a row to a git-ignored
-  `storage/leads.csv` **and** send a notification email.
-- Properties with MySQL: insert into the project's `leads` table, then push to
-  the CRM, then record `crm_contact_id` and `crm_pushed_at` on success.
+The handler writes the lead to local storage **before** calling the CRM: a row
+appended to a git-ignored `storage/leads.csv` under an exclusive `flock`, plus
+a notification email. On a successful push it records `crm_contact_id` and
+`crm_pushed_at` against the row.
 
 This is not redundancy for its own sake. It means a CRM outage, a rotated key,
-or a `422` never loses a lead, and it gives a replay path: a nightly job picks
-up rows where `crm_pushed_at IS NULL` and retries them with the original
-`idempotency_key`.
+or a `422` never loses a lead, and it gives a replay path: rows where
+`crm_pushed_at` is empty are retried with their original `idempotency_key`, so
+the replay cannot create duplicates. At this volume the reconciliation is a
+weekly manual check rather than a cron job — see `LEAD_FUNNEL.md` §6.
