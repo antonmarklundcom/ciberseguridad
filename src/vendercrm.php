@@ -158,7 +158,7 @@ function vendercrm_build_payload(array $clean, array $attr, string $idempotencyK
     // `fields` values are enum strings so they stay filterable in the CRM.
     // Free text belongs in `message`.
     $fields = ['form_type' => (string) $clean['form_type']];
-    foreach (['empresa', 'empleados', 'rubro', 'disparador'] as $k) {
+    foreach (['empresa', 'empleados', 'rubro', 'disparador', 'preferencia_de_contacto'] as $k) {
         if (!empty($clean[$k])) {
             $fields[$k] = (string) $clean[$k];
         }

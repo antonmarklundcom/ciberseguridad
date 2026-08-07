@@ -196,7 +196,7 @@ function form_client_ip(array $server): string
 function form_old_input(array $post): array
 {
     $out = [];
-    foreach (['nombre', 'telefono', 'email', 'empresa', 'empleados', 'rubro', 'disparador', 'mensaje'] as $k) {
+    foreach (['nombre', 'telefono', 'email', 'empresa', 'empleados', 'rubro', 'disparador', 'preferencia_de_contacto', 'mensaje'] as $k) {
         $v = $post[$k] ?? '';
         if (is_string($v)) {
             $out[$k] = mb_substr($v, 0, 2000);
@@ -260,7 +260,7 @@ function form_rate_ok(string $ip): bool
 
 const LEAD_COLUMNS = [
     'row_id', 'received_at', 'form_type', 'page', 'lead_band',
-    'nombre', 'telefono', 'email', 'empresa', 'empleados', 'rubro', 'disparador', 'mensaje',
+    'nombre', 'telefono', 'email', 'empresa', 'empleados', 'rubro', 'disparador', 'preferencia_de_contacto', 'mensaje',
     'score', 'banda', 'dominios',
     'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content',
     'gclid', 'fbclid', 'referrer',
@@ -296,6 +296,7 @@ function leads_append(array $clean, array $attr, string $band, string $key): str
         'empleados'       => (string) ($clean['empleados'] ?? ''),
         'rubro'           => (string) ($clean['rubro'] ?? ''),
         'disparador'      => (string) ($clean['disparador'] ?? ''),
+        'preferencia_de_contacto' => (string) ($clean['preferencia_de_contacto'] ?? ''),
         'mensaje'         => (string) ($clean['mensaje'] ?? ''),
         'score'           => isset($clean['score']) ? (string) $clean['score'] : '',
         'banda'           => (string) ($clean['banda'] ?? ''),
@@ -409,8 +410,9 @@ function form_notify(array $clean, string $band, array $attr, array $crm): void
         'incidente'    => 'Incidente',
         'cuestionario' => 'Cuestionario',
         'diagnostico'  => 'Diagnóstico',
+        'pentesting'   => 'Pentesting',
         'cumplimiento' => 'Cumplimiento',
-        'continuo'     => 'Continuo',
+        'capacitacion' => 'Capacitación',
         'otro'         => 'Otro',
     ];
 
@@ -435,6 +437,7 @@ function form_notify(array $clean, string $band, array $attr, array $crm): void
         'Empleados: ' . ($clean['empleados'] ?? ''),
         'Rubro: ' . ($clean['rubro'] ?? ''),
         'Qué lo trae: ' . ($clean['disparador'] ?? ''),
+        'Prefiere contacto por: ' . ($clean['preferencia_de_contacto'] ?? ''),
     ];
 
     if (($clean['mensaje'] ?? '') !== '') {

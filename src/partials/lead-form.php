@@ -62,9 +62,16 @@ $disparadorLabels = [
     'incidente'    => 'Tuvimos un incidente',
     'cuestionario' => 'Un cliente nos pidió un cuestionario de seguridad',
     'diagnostico'  => 'Queremos saber cómo estamos',
+    'pentesting'   => 'Queremos una prueba de penetración',
     'cumplimiento' => 'Tenemos una obligación que cumplir',
-    'continuo'     => 'Buscamos acompañamiento mensual',
+    'capacitacion' => 'Queremos capacitar al equipo',
     'otro'         => 'Otra cosa',
+];
+
+$preferenciaLabels = [
+    'whatsapp' => 'Prefiero WhatsApp',
+    'llamada'  => 'Prefiero que me llamen',
+    'email'    => 'Prefiero correo',
 ];
 ?>
 <form method="POST" action="/enviar" novalidate class="lead-form">
@@ -108,6 +115,20 @@ $disparadorLabels = [
            <?= isset($errors['telefono']) ? 'aria-invalid="true" aria-describedby="' . $err('telefono') . '"' : '' ?>>
 <?php if (isset($errors['telefono'])): ?>
     <p class="field-error" id="err-telefono"><?= $e($errors['telefono']) ?></p>
+<?php endif; ?>
+  </div>
+
+  <div class="field">
+    <label for="preferencia_de_contacto">¿Cómo preferís que te contactemos? <span aria-hidden="true">*</span></label>
+    <select id="preferencia_de_contacto" name="preferencia_de_contacto" required
+            <?= isset($errors['preferencia_de_contacto']) ? 'aria-invalid="true" aria-describedby="' . $err('preferencia_de_contacto') . '"' : '' ?>>
+      <option value="">Elegí una opción</option>
+<?php foreach ($preferenciaLabels as $val => $label): ?>
+      <option value="<?= $e($val) ?>"<?= $selected('preferencia_de_contacto', $val, $old) ?>><?= $e($label) ?></option>
+<?php endforeach; ?>
+    </select>
+<?php if (isset($errors['preferencia_de_contacto'])): ?>
+    <p class="field-error" id="err-preferencia_de_contacto"><?= $e($errors['preferencia_de_contacto']) ?></p>
 <?php endif; ?>
   </div>
 

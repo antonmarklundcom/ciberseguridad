@@ -1,0 +1,6 @@
+# PENDING — placeholder values, blocking on launch gate (BUILD-SPEC.md §14).
+# ⚠️ Contact and Expires must be verified/set before this file is real.
+Contact: mailto:contacto@ciberseguridad.com.py
+Expires: 2027-08-07T00:00:00.000Z
+Preferred-Languages: es
+Canonical: https://ciberseguridad.com.py/.well-known/security.txt

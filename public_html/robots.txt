@@ -1,0 +1,7 @@
+# Until launch every page also carries <meta name="robots" content="noindex,nofollow">.
+# This file stays permissive so it needs no edit at go-live — the per-page
+# meta tag is the actual gate (BUILD-SPEC.md §5.1).
+User-agent: *
+Disallow:
+
+Sitemap: https://ciberseguridad.com.py/sitemap.xml

@@ -1,0 +1,37 @@
+# ciberseguridad.com.py — public_html/.htaccess
+
+# ---- extensionless URLs ---------------------------------------------------
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# ---- deny dotfiles and anything that must never be served -----------------
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
+  # HSTS with preload — submit at hstspreload.org once the domain is live on HTTPS.
+  Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+  # CSP: no unsafe-inline, no third-party origins except the CRM (for vc-attribution.js).
+  # {VENDERCRM_ORIGIN} is a literal placeholder — replace with the real CRM origin
+  # before launch (BUILD-SPEC.md §11, rule 6). Left unresolved rather than guessed.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' {VENDERCRM_ORIGIN}; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' {VENDERCRM_ORIGIN}; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+</IfModule>
+
+# ---- disable directory listing / server signature --------------------------
+Options -Indexes
+ServerSignature Off
+
+# ---- PHP hardening (also set in php.ini on the host where possible) -------
+<IfModule mod_php.c>
+  php_flag display_errors off
+  php_flag expose_php off
+</IfModule>
+
+# ---- 404 --------------------------------------------------------------------
+ErrorDocument 404 /404

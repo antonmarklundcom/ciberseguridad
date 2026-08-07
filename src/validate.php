@@ -20,9 +20,18 @@ const V_RUBROS = [
     'comercio', 'servicios', 'educacion', 'ong', 'otro',
 ];
 
+/**
+ * Updated per BUILD-SPEC.md §10 amendment 2: matches the five published
+ * services. `continuo` is removed — no retainer service is published, and an
+ * enum value that maps to no page produces leads for something the site does
+ * not sell.
+ */
 const V_DISPARADORES = [
-    'incidente', 'cuestionario', 'diagnostico', 'cumplimiento', 'continuo', 'otro',
+    'incidente', 'cuestionario', 'diagnostico', 'pentesting', 'cumplimiento', 'capacitacion', 'otro',
 ];
+
+/** BUILD-SPEC.md §10 amendment 1. */
+const V_PREFERENCIA_CONTACTO = ['whatsapp', 'llamada', 'email'];
 
 const V_BANDAS = ['alta', 'media', 'solida'];
 
@@ -163,6 +172,14 @@ function validate_submission(array $post): array
         $errors['disparador'] = 'Contanos qué te trae por acá.';
     } else {
         $clean['disparador'] = $disparador;
+    }
+
+    // --- preferencia_de_contacto (BUILD-SPEC.md §10 amendment 1) -----------
+    $preferencia = v_line(v_post($post, 'preferencia_de_contacto')) ?? '';
+    if (!in_array($preferencia, V_PREFERENCIA_CONTACTO, true)) {
+        $errors['preferencia_de_contacto'] = 'Decinos cómo preferís que te contactemos.';
+    } else {
+        $clean['preferencia_de_contacto'] = $preferencia;
     }
 
     // --- form-specific -----------------------------------------------------

@@ -58,6 +58,7 @@ function post(array $over = []): array
         'empleados'  => '25-49',
         'rubro'      => 'comercio',
         'disparador' => 'cuestionario',
+        'preferencia_de_contacto' => 'whatsapp',
         'mensaje'    => 'Un cliente nos pidió completar un cuestionario.',
     ];
 }
@@ -267,7 +268,7 @@ ok('cuestionario → A', $band(['disparador' => 'cuestionario', 'empleados' => '
 ok('25-49 + diagnostico → B', $band(['disparador' => 'diagnostico', 'empleados' => '25-49']) === 'B');
 ok('10-24 + diagnostico → B', $band(['disparador' => 'diagnostico', 'empleados' => '10-24']) === 'B');
 ok('1-9 + diagnostico → C', $band(['disparador' => 'diagnostico', 'empleados' => '1-9']) === 'C');
-ok('1-9 + continuo → C', $band(['disparador' => 'continuo', 'empleados' => '1-9']) === 'C');
+ok('1-9 + otro → C', $band(['disparador' => 'otro', 'empleados' => '1-9']) === 'C');
 
 [$ac] = validate_submission($apost + ['empleados' => '100-249']);
 ok('large co. + low assessment score → A', lead_band($ac) === 'A');
