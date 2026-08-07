@@ -13,7 +13,7 @@ declare(strict_types=1);
  * article listing here the same day the article itself ships.
  */
 
-require_once dirname(__DIR__) . '/src/render.php';
+require_once dirname(__DIR__, 2) . '/src/render.php';
 
 layout_open([
     'title'       => 'Guías | Ciberseguridad para empresas en Paraguay',
