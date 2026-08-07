@@ -27,6 +27,32 @@ function tel_href(): string
 }
 
 /**
+ * <picture> markup for an image slot per BUILD-SPEC.md §9: AVIF + WebP at
+ * 640/1280/1920, explicit width/height against CLS, hero eager + high
+ * priority, everything else lazy.
+ *
+ * @param int[] $widths Native-resolution-capped widths this stem was
+ *                       actually rendered at (see the img pipeline's own
+ *                       report — 1024px source images only get 640/1280).
+ */
+function picture_tag(string $stem, string $alt, string $ratioW, string $ratioH, bool $eager = false, array $widths = [640, 1280, 1920], string $class = ''): string
+{
+    $e        = static fn (?string $v): string => htmlspecialchars((string) $v, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    $fallback = max($widths);
+    $avifSet  = implode(', ', array_map(static fn ($w) => "/assets/img/{$stem}-{$w}.avif {$w}w", $widths));
+    $webpSet  = implode(', ', array_map(static fn ($w) => "/assets/img/{$stem}-{$w}.webp {$w}w", $widths));
+
+    $imgAttrs = 'alt="' . $e($alt) . '" width="' . (int) $ratioW . '" height="' . (int) $ratioH . '" class="' . $e($class) . '"';
+    $imgAttrs .= $eager ? ' fetchpriority="high"' : ' loading="lazy"';
+
+    return '<picture>'
+        . '<source type="image/avif" srcset="' . $e($avifSet) . '">'
+        . '<source type="image/webp" srcset="' . $e($webpSet) . '">'
+        . '<img src="/assets/img/' . $e($stem) . '-' . $fallback . '.webp" ' . $imgAttrs . '>'
+        . '</picture>';
+}
+
+/**
  * @param array{
  *   title:string, description:string, path:string, mode:'a'|'b', wa_slug:string,
  *   og_image?:string, jsonld?:array<int,array<string,mixed>>, noindex?:bool
