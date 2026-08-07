@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  BUILD-SPEC-PAGES.md §16 specifies 16 URLs, including
+  /guias/responder-un-cuestionario-de-seguridad. That page is deliberately
+  not built yet (§14.2 — its prose is a separate content turn), so this
+  sitemap ships with 15 URLs. Add the 16th the same day that page ships.
+  /gracias and /404 are excluded per spec.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://ciberseguridad.com.py/</loc></url>
+  <url><loc>https://ciberseguridad.com.py/servicios/auditoria-de-seguridad</loc></url>
+  <url><loc>https://ciberseguridad.com.py/servicios/pentesting</loc></url>
+  <url><loc>https://ciberseguridad.com.py/servicios/respuesta-a-incidentes</loc></url>
+  <url><loc>https://ciberseguridad.com.py/servicios/cumplimiento</loc></url>
+  <url><loc>https://ciberseguridad.com.py/servicios/capacitacion</loc></url>
+  <url><loc>https://ciberseguridad.com.py/para/clinicas</loc></url>
+  <url><loc>https://ciberseguridad.com.py/para/contadores</loc></url>
+  <url><loc>https://ciberseguridad.com.py/para/ecommerce</loc></url>
+  <url><loc>https://ciberseguridad.com.py/para/pymes</loc></url>
+  <url><loc>https://ciberseguridad.com.py/precios</loc></url>
+  <url><loc>https://ciberseguridad.com.py/nosotros</loc></url>
+  <url><loc>https://ciberseguridad.com.py/contacto</loc></url>
+  <url><loc>https://ciberseguridad.com.py/preguntas-frecuentes</loc></url>
+  <url><loc>https://ciberseguridad.com.py/guias/</loc></url>
+</urlset>

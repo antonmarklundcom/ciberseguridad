@@ -158,6 +158,13 @@ function faq_section(array $faqs, string $eyebrow = 'PREGUNTAS FRECUENTES', stri
  */
 function layout_open(array $opts): void
 {
+    // Must run before any output: setcookie() silently no-ops once headers are
+    // sent, and this function's own first echo would send them. Every page
+    // using this layout includes the lead form somewhere, so the CSRF cookie
+    // needs to exist from the very first byte, not from wherever the form
+    // partial happens to be included.
+    csrf_token();
+
     $title       = $opts['title'];
     $description = $opts['description'];
     $path        = $opts['path'];
