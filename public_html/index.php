@@ -14,7 +14,6 @@ declare(strict_types=1);
  */
 
 require_once dirname(__DIR__) . '/src/render.php';
-require_once dirname(__DIR__) . '/src/form-handler.php'; // csrf_token()
 
 $faqs = [
     ['¿Trabajan solo en Asunción?', 'Trabajamos con empresas de todo el país. La mayor parte del trabajo es remoto; en Gran Asunción también vamos presencialmente cuando el trabajo lo requiere, y fuera del Gran Asunción lo coordinamos según el caso.'],

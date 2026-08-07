@@ -11,6 +11,7 @@ declare(strict_types=1);
  */
 
 require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/form-handler.php'; // csrf_token(), needed by every page that includes the lead form
 
 const WA_NUMBER = '595995628862';
 
@@ -50,6 +51,103 @@ function picture_tag(string $stem, string $alt, string $ratioW, string $ratioH, 
         . '<source type="image/webp" srcset="' . $e($webpSet) . '">'
         . '<img src="/assets/img/' . $e($stem) . '-' . $fallback . '.webp" ' . $imgAttrs . '>'
         . '</picture>';
+}
+
+/** @param array<int,array{0:string,1:string}> $faqs [question, answer] pairs */
+function faq_jsonld(array $faqs): array
+{
+    return [
+        '@context' => 'https://schema.org', '@type' => 'FAQPage',
+        'mainEntity' => array_map(static fn ($f) => [
+            '@type' => 'Question', 'name' => $f[0],
+            'acceptedAnswer' => ['@type' => 'Answer', 'text' => $f[1]],
+        ], $faqs),
+    ];
+}
+
+function service_jsonld(string $serviceType): array
+{
+    return [
+        '@context' => 'https://schema.org', '@type' => 'Service',
+        'serviceType' => $serviceType,
+        'provider' => ['@type' => 'ProfessionalService', 'name' => 'Ciberseguridad.com.py', 'url' => 'https://ciberseguridad.com.py'],
+        'areaServed' => ['@type' => 'Country', 'name' => 'Paraguay'],
+        'availableChannel' => ['@type' => 'ServiceChannel', 'serviceUrl' => 'https://ciberseguridad.com.py/contacto'],
+    ];
+}
+
+/** @param array<int,array{0:string,1:string}> $trail [label, path] pairs, path '' for the current (last) page */
+function breadcrumb_jsonld(array $trail): array
+{
+    $items = [];
+    foreach ($trail as $i => $t) {
+        $entry = ['@type' => 'ListItem', 'position' => $i + 1, 'name' => $t[0]];
+        if ($t[1] !== '') {
+            $entry['item'] = 'https://ciberseguridad.com.py' . $t[1];
+        }
+        $items[] = $entry;
+    }
+    return ['@context' => 'https://schema.org', '@type' => 'BreadcrumbList', 'itemListElement' => $items];
+}
+
+/**
+ * Standard closing section 08, verbatim on every service/vertical page
+ * (BUILD-SPEC-PAGES.md §0).
+ *
+ * @param string $waSlug   WhatsApp prefilled-text slug, e.g. 'auditoria'
+ * @param string $pageSlug Form `page` field, drives the CRM `source` —
+ *                          the full path slug, e.g. 'servicios/auditoria-de-seguridad'
+ */
+function service_closing_cta(string $waSlug, string $pageSlug): void
+{
+    ?>
+  <section id="contacto">
+    <div class="wrap p1 p1--mirrored">
+      <div>
+        <span class="eyebrow">SIGUIENTE PASO</span>
+        <h2>Media hora para saber si esto es lo que necesitás.</h2>
+        <p>Contanos la situación. Si no somos las personas indicadas, te lo decimos en la primera llamada y te orientamos hacia quien sí lo sea.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="/contacto#agendar" data-ev="schedule_click" data-ev-loc="servicios">Agendá una llamada</a>
+          <a class="btn btn--wa" href="<?= htmlspecialchars(wa_url($waSlug)) ?>" data-ev="whatsapp_click" data-ev-loc="servicios"><?= wa_glyph() ?> Escribinos por WhatsApp</a>
+        </div>
+      </div>
+      <div>
+        <p>Contanos brevemente y te respondemos en el día hábil.</p>
+        <?php
+        $form_type = 'contacto';
+        $page      = $pageSlug;
+        $errors    = [];
+        $old       = [];
+        require dirname(__DIR__) . '/src/partials/lead-form.php';
+        ?>
+      </div>
+    </div>
+  </section>
+    <?php
+}
+
+/** @param array<int,array{0:string,1:string}> $faqs */
+function faq_section(array $faqs, string $eyebrow = 'PREGUNTAS FRECUENTES', string $heading = 'Antes de escribirnos.'): void
+{
+    ?>
+  <section>
+    <div class="wrap p4">
+      <div class="p4-heading">
+        <span class="eyebrow"><?= htmlspecialchars($eyebrow) ?></span>
+        <h2><?= htmlspecialchars($heading) ?></h2>
+      </div>
+      <div class="faq-list p4-body">
+<?php foreach ($faqs as $f): ?>
+        <details>
+          <summary><?= htmlspecialchars($f[0]) ?></summary>
+          <p><?= htmlspecialchars($f[1]) ?></p>
+        </details>
+<?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+    <?php
 }
 
 /**
