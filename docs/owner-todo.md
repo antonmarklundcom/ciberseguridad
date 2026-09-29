@@ -52,12 +52,10 @@ hidden section on or unblocks launch. Nothing here should be invented.
 - [ ] Optional: self-host Space Grotesk / Inter (site currently uses the system font stack).
 - [ ] Re-run `php bin/build-sitemap.php` when pages are added.
 
-## Deploy por Git (hPanel → Avanzado → GIT) — este sitio es distinto
-El sitio se sirve desde `public_html/` del repo, **no** desde la raíz: `src/`, `storage/` y `.env` tienen que quedar fuera del docroot. Si el repo se instala directo en `public_html` de Hostinger, la raíz no tiene `index.php` y el sitio da 404.
-1. En GIT: repositorio `antonmarklundcom/ciberseguridad`, rama `main`, ruta de instalación **`ciberseguridad-repo`** (una carpeta fuera del docroot, p. ej. `/home/<usuario>/ciberseguridad-repo`).
-2. Por SSH (una sola vez): mover el `public_html` original y apuntar el docroot al repo:
-   `mv ~/domains/ciberseguridad.com.py/public_html ~/public_html.old && ln -s ~/ciberseguridad-repo/public_html ~/domains/ciberseguridad.com.py/public_html`
-   (ajustá la ruta al layout de tu cuenta; si Hostinger no sigue el symlink, pedile a soporte que cambie el document root a `ciberseguridad-repo/public_html`).
-3. Creá `ciberseguridad-repo/.env` (copia de `.env.example`) por el administrador de archivos; Git no lo pisa.
-4. Webhook de Hostinger → GitHub → Settings → Webhooks: cada merge redeploya solo.
-5. Verificá: `/`, `/contacto`, un POST a `/enviar` y que `/src/config.php`, `/storage/` y `/.env` den 403/404.
+## Deploy por Git (hPanel → Avanzado → GIT)
+El repo trae un `.htaccess` en la raíz que sirve `public_html/` en "/" y cierra `src/`, `storage/`, `tests/`, `docs/`, `bin/`, `.git` y `.env` (probado con Apache: `/`, `/contacto` y los assets dan 200; lo interno da 403). Por eso se instala directo, como los demás sitios.
+1. Repositorio `antonmarklundcom/ciberseguridad`, rama `main`, ruta de instalación vacía (= `public_html`, vacío en el primer deploy).
+2. Webhook de Hostinger → GitHub → Settings → Webhooks (push): cada merge redeploya solo.
+3. Creá `.env` (copia de `.env.example`) en la raíz de `public_html` por el administrador de archivos; Git no lo pisa. `storage/` se crea sola (o subí `storage/.gitkeep`).
+4. Verificá: `/`, `/contacto`, un POST a `/enviar`, y que `/src/config.php`, `/storage/`, `/.env` y `/.git/HEAD` den 403.
+Alternativa más estricta (opcional): apuntar el docroot a `public_html/` del repo por symlink o soporte de Hostinger; el `.htaccess` de la raíz queda inerte.
