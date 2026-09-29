@@ -1,0 +1,5 @@
+# Reportes de seguridad sobre este sitio: escribinos por el formulario de contacto.
+Contact: https://ciberseguridad.com.py/contacto
+Expires: 2027-03-29T00:00:00.000Z
+Preferred-Languages: es
+Canonical: https://ciberseguridad.com.py/.well-known/security.txt
