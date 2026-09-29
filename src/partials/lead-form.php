@@ -75,14 +75,15 @@ $disparadorLabels = [
 
 <?php if ($form_type === 'autoevaluacion'): ?>
   <!-- Populated by assets/js/autoevaluacion.js before submit. -->
-  <input type="hidden" name="score" value="">
-  <input type="hidden" name="banda" value="">
-  <input type="hidden" name="dominios" value="">
+  <input type="hidden" name="score" value="<?= $v('score') ?>">
+  <input type="hidden" name="banda" value="<?= $v('banda') ?>">
+  <input type="hidden" name="dominios" value="<?= $v('dominios') ?>">
 <?php endif; ?>
 
   <!-- honeypot: never remove, never make it look tempting to a human -->
-  <input name="website" tabindex="-1" autocomplete="off" aria-hidden="true"
-         style="position:absolute;left:-9999px">
+  <div class="hp" aria-hidden="true">
+    <input name="website" tabindex="-1" autocomplete="off">
+  </div>
 
 <?php if ($errors !== []): ?>
   <div class="form-errors" role="alert" tabindex="-1">
@@ -179,7 +180,7 @@ $disparadorLabels = [
     <textarea id="mensaje" name="mensaje" rows="4" maxlength="2000"
               <?= isset($errors['mensaje']) ? 'aria-invalid="true" aria-describedby="err-mensaje"' : 'aria-describedby="hint-mensaje"' ?>><?= $v('mensaje') ?></textarea>
     <p class="hint" id="hint-mensaje">No incluyas contraseñas ni detalles técnicos sensibles —
-       eso lo conversamos por un canal seguro.</p>
+       eso lo acordamos aparte, por otra vía.</p>
 <?php if (isset($errors['mensaje'])): ?>
     <p class="field-error" id="err-mensaje"><?= $e($errors['mensaje']) ?></p>
 <?php endif; ?>
@@ -189,8 +190,12 @@ $disparadorLabels = [
   <button type="submit">Enviar consulta</button>
 
   <p class="form-note">
-    <!-- TODO(content): replace with the real practitioner name (Phase 0). -->
-    Recibe tu consulta [Nombre real], directamente. Respondemos en el día hábil.
+<?php if (function_exists('cfg') && (string) cfg('practitioner') !== ''): ?>
+    Tu consulta la recibe <?= $e((string) cfg('practitioner')) ?>, directamente.
+<?php else: /* TODO(content): set PRACTITIONER_NAME in .env (Phase 0) to name who receives the form. */ ?>
+    Tu consulta llega directamente a quien te va a responder.
+<?php endif; ?>
+    Respondemos en el día hábil.
     Tus datos no se comparten con terceros.
     <a href="/politica-de-privacidad">Política de privacidad</a>.
   </p>

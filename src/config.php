@@ -34,6 +34,27 @@ function cfg_build(): array
         // STORAGE_DIR is overridable so the test suite never touches real leads.
         'storage_dir'    => cfg_env('STORAGE_DIR', $root . '/storage'),
 
+        // Business facts (Block A). Anything the owner has not supplied stays
+        // empty and the page degrades: the row / section is simply not shown.
+        // Never fill these with invented values.
+        'brand'          => 'Ciberseguridad.com.py',
+        'wa_number'      => preg_replace('/\D+/', '', cfg_env('WA_NUMBER', '595995628862')),
+        'phone_display'  => cfg_env('PHONE_DISPLAY', '+595 995 628862'),
+        'phone_e164'     => cfg_env('PHONE_E164', '+595995628862'),
+        'contact_email'  => cfg_env('CONTACT_EMAIL', ''),
+        'practitioner'   => cfg_env('PRACTITIONER_NAME', ''),
+        'hours'          => cfg_env('BUSINESS_HOURS', ''),
+        'ga4_id'         => cfg_env('GA4_ID', ''),
+        'incident_availability' => cfg_env(
+            'INCIDENT_AVAILABILITY',
+            'Respondemos llamadas en horario laboral. Fuera de horario, dejá un mensaje y devolvemos la llamada.'
+        ),
+        // Published starting bands, free text, e.g. "Gs. X para empresas de hasta N puestos".
+        'price_diagnostico'   => cfg_env('PRICE_DIAGNOSTICO', ''),
+        'price_cuestionarios' => cfg_env('PRICE_CUESTIONARIOS', ''),
+        'price_gestionada'    => cfg_env('PRICE_GESTIONADA', ''),
+        'price_incidentes'    => cfg_env('PRICE_INCIDENTES', ''),
+
         // Tunables. See PHP_FORM_SPEC.md §3–§4.
         'crm_timeout'    => 10,
         'rate_limit'     => 5,

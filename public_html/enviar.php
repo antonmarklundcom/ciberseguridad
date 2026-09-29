@@ -40,17 +40,16 @@ switch ($result['action']) {
         $errors    = $result['errors'] ?? [];
         $old       = $result['old'] ?? [];
 
-        // TODO(block-a): replace this bare shell with layout() from
-        // src/render.php once A5 lands. The form partial itself is final —
-        // only the surrounding chrome is a placeholder.
-        echo '<!doctype html><html lang="es-PY"><head><meta charset="utf-8">'
-           . '<meta name="viewport" content="width=device-width,initial-scale=1">'
-           . '<title>Revisá el formulario</title>'
-           . '<meta name="robots" content="noindex"></head><body><main>'
-           . '<h1>Revisá el formulario</h1>';
-
+        // Re-render inside the real site shell. The form partial is unchanged.
+        require_once dirname(__DIR__) . '/src/render.php';
+        $GLOBALS['__page'] = ['title' => 'Revisá el formulario | Ciberseguridad.com.py',
+            'desc' => 'Revisá los campos marcados y volvé a enviar tu consulta.',
+            'label' => 'Formulario', 'group' => 'hidden', 'index' => false, 'prio' => '0.0',
+            'wa' => 'Hola, quiero hacer una consulta sobre seguridad informática', 'slug' => 'contacto'];
+        ob_start();
+        echo '<section class="hero"><div class="wrap"><h1>Revisá el formulario</h1><div class="two-col"><div>';
         require dirname(__DIR__) . '/src/partials/lead-form.php';
-
-        echo '</main></body></html>';
+        echo '</div></div></div></section>';
+        echo layout($GLOBALS['__page'], (string) ob_get_clean(), ['service' => 'contacto']);
         exit;
 }

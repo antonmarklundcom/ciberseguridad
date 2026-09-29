@@ -202,6 +202,14 @@ function form_old_input(array $post): array
             $out[$k] = mb_substr($v, 0, 2000);
         }
     }
+    // Assessment result fields, so a failed re-render does not lose the score.
+    // Re-validated on the next submit; only ever echoed through e().
+    foreach (['score' => 3, 'banda' => 10, 'dominios' => 1000] as $k => $max) {
+        $v = $post[$k] ?? '';
+        if (is_string($v)) {
+            $out[$k] = mb_substr($v, 0, $max);
+        }
+    }
     return $out;
 }
 

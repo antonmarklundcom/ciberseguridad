@@ -7,24 +7,30 @@ Strategy and specs live in the root `*.md` files; start with `CLAUDE_TASKS.md`.
 
 | Block | State |
 |---|---|
-| A — foundation (scaffold, .htaccess, CSS, fonts, layout, JS) | **Not started**, except the minimal scaffold Block B needed |
+| A — foundation (`.htaccess`, CSS, JS, `render.php` layout, system fonts) | **Done** (fonts: system stack, no font files) |
 | B — validation, CRM client, form handler, form partial | **Done**, 97/97 tests passing |
-| C — pages | **Blocked on Phase 0 content** (see `IMPLEMENTATION_PHASES.md`) |
-| D — SEO metadata | Not started |
-| E — Phase 2 tools | Not started |
-| F — launch | Not started |
+| C — pages | **Built**; Phase 0 content shown only when supplied (see `docs/owner-todo.md`) |
+| D — SEO metadata, JSON-LD, sitemap, robots | **Done**; OG images wait on owner files; `php tests/seo-check.php` |
+| E — Phase 2 tools (`/recursos`, autoevaluación, checklist) | **Built** (E4 emails: owner, email provider) |
+| F — launch | Not started; owner gate, see `docs/owner-todo.md` |
 
 ## Layout
 
 ```
 public_html/     web root — this is what Hostinger serves
+  *.php          one file per page, using page_start()/page_end()
   enviar.php     the only server-side entry point
+  assets/        css/site.css, js/*.js (no inline script/style: strict CSP)
 src/             OUTSIDE the web root: all logic
   config.php     reads env; holds no secrets
   validate.php   B2
   vendercrm.php  B1
   form-handler.php  B3
   partials/lead-form.php  B4
+  render.php     layout(), meta(), jsonld(), breadcrumbs(), helpers
+  pages.php      page registry: titles, descriptions, nav, sitemap
+  assessment.php questions and weights for the self-assessment
+bin/build-sitemap.php   regenerates public_html/sitemap.xml
 storage/         OUTSIDE the web root, git-ignored: leads.csv, form.log, ratelimit/
 tests/run.php    zero-dependency test suite
 ```
@@ -39,7 +45,14 @@ repo ends up served, `storage/leads.csv` becomes a public file.
 # Tests — no dependencies, no database, no network.
 php tests/run.php
 
-# Local server. Note: .htaccess is NOT applied by the built-in server, so
+# SEO and content guard rails: titles, descriptions, H1, JSON-LD, CSP-inline,
+# fabrication words, tú-forms, links, sitemap parity.
+php tests/seo-check.php
+
+# Local server with extensionless URLs (router emulates .htaccess).
+php -S 127.0.0.1:8899 -t public_html tests/router.php
+
+# Plain local server. Note: .htaccess is NOT applied by the built-in server, so
 # extensionless URLs don't work locally — POST to /enviar.php, not /enviar.
 php -S 127.0.0.1:8899 -t public_html
 ```
@@ -68,10 +81,8 @@ else; the handler swallows CRM errors by design so the visitor is never blocked.
 - No tool or page ever contacts a host the visitor has not proven they own.
 - Mobile-first: verify at 390px before anything else.
 
-## Known TODOs left by Block B
+## Owner-supplied facts
 
-- `src/partials/lead-form.php` — `TODO(content)`: the practitioner's real name
-  in the form note (Phase 0).
-- `public_html/enviar.php` — `TODO(block-a)`: the 422 re-render uses a bare
-  HTML shell; swap in `layout()` from `src/render.php` once A5 lands. The form
-  partial itself is final.
+Business facts (phone, email, practitioner name, hours, prices, GA4 id) come from
+`.env` via `src/config.php`; empty means the section is hidden, never invented.
+Full list in `docs/owner-todo.md`. Grep `TODO(content)` / `TODO(legal)` for spots.

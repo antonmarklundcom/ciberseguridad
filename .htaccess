@@ -1,0 +1,7 @@
+# Safety net only. The domain's document root must be public_html/ (see
+# docs/owner-todo.md). If the whole repo is ever served, keep private paths shut.
+Options -Indexes
+RedirectMatch 403 ^/(src|storage|tests|docs|\.git)(/|$)
+<FilesMatch "(?i)(^\.env|\.md$|\.csv$|\.log$)">
+  Require all denied
+</FilesMatch>
