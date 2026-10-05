@@ -1,0 +1,4754 @@
+[
+  {
+    "path": "/",
+    "url": "https://ciberseguridad.com.py/",
+    "final_url": "https://ciberseguridad.com.py/",
+    "status": 200,
+    "title": "Ciberseguridad para empresas en Paraguay | ciberseguridad.com.py",
+    "description": "Entendé qué servicio de ciberseguridad necesita tu empresa, compará alcances y pedí un primer contacto seguro con especialistas en Paraguay. Sin jerga, sin exponer datos sensibles.",
+    "h1": [
+      "Entender antes de contratar."
+    ],
+    "canonical": "https://ciberseguridad.com.py/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/#webpage",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "Ciberseguridad para empresas en Paraguay",
+            "description": "Entendé qué servicio de ciberseguridad necesita tu empresa, compará alcances y pedí un primer contacto seguro con especialistas en Paraguay. Sin jerga, sin exponer datos sensibles.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://www.bacn.gov.py/leyes-paraguayas/12924/ley-n-75932025-de-proteccion-de-datos-personales-en-la-republica-del-paraguay",
+      "https://www.cert.gov.py/contacto/",
+      "https://mitic.gov.py/eoj0cad9uplo/2025/05/ENC-Paraguay-2025-2028-Mayo-20251558.pdf",
+      "https://www.bcp.gov.py/documents/d/institucional/reglamento-de-definicion-de-roles-registro-y-transparencia-informativa-para-psp-pdf",
+      "/recursos/preguntas-antes-contratar-pentest/",
+      "/recursos/checklist-pruebas-recuperacion-backup/",
+      "/recursos/practicas-minimas-ciberseguridad-pymes-paraguay/",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/servicios/",
+    "url": "https://ciberseguridad.com.py/servicios/",
+    "final_url": "https://ciberseguridad.com.py/servicios/",
+    "status": 200,
+    "title": "Servicios de ciberseguridad para empresas | ciberseguridad.com.py",
+    "description": "Los 17 servicios de ciberseguridad que contratan las empresas en Paraguay, explicados sin jerga: evaluación, pentesting, respuesta a incidentes, ISO 27001, protección de datos y más.",
+    "h1": [
+      "Servicios de ciberseguridad"
+    ],
+    "canonical": "https://ciberseguridad.com.py/servicios/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "CollectionPage",
+            "@id": "https://ciberseguridad.com.py/servicios/#webpage",
+            "url": "https://ciberseguridad.com.py/servicios/",
+            "name": "Servicios de ciberseguridad para empresas",
+            "description": "Los 17 servicios de ciberseguridad que contratan las empresas en Paraguay, explicados sin jerga: evaluación, pentesting, respuesta a incidentes, ISO 27001, protección de datos y más.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios de ciberseguridad para empresas",
+                "item": "https://ciberseguridad.com.py/servicios/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "#que-te-pasa",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/proveedores/",
+    "url": "https://ciberseguridad.com.py/proveedores/",
+    "final_url": "https://ciberseguridad.com.py/proveedores/",
+    "status": 200,
+    "title": "Proveedores de ciberseguridad en Paraguay | ciberseguridad.com.py",
+    "description": "Cómo elegir un proveedor de ciberseguridad en Paraguay: qué comparar, qué pedir por escrito y cómo iniciar un contacto sin compartir información sensible.",
+    "h1": [
+      "Proveedores de ciberseguridad en Paraguay"
+    ],
+    "canonical": "https://ciberseguridad.com.py/proveedores/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "CollectionPage",
+            "@id": "https://ciberseguridad.com.py/proveedores/#webpage",
+            "url": "https://ciberseguridad.com.py/proveedores/",
+            "name": "Proveedores de ciberseguridad en Paraguay",
+            "description": "Cómo elegir un proveedor de ciberseguridad en Paraguay: qué comparar, qué pedir por escrito y cómo iniciar un contacto sin compartir información sensible.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Proveedores de ciberseguridad en Paraguay",
+                "item": "https://ciberseguridad.com.py/proveedores/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "/registro-proveedor/",
+      "/nosotros/",
+      "/correcciones/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/encontra-un-proveedor/",
+    "url": "https://ciberseguridad.com.py/encontra-un-proveedor/",
+    "final_url": "https://ciberseguridad.com.py/encontra-un-proveedor/",
+    "status": 200,
+    "title": "Pedí orientación para contratar ciberseguridad | ciberseguridad.com.py",
+    "description": "Contanos en dos minutos qué necesita tu empresa y te ayudamos a definir el alcance y el tipo de especialista. Sin costo, sin compromiso y sin datos técnicos sensibles.",
+    "h1": [
+      "Pedí orientación"
+    ],
+    "canonical": "https://ciberseguridad.com.py/encontra-un-proveedor/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/encontra-un-proveedor/#webpage",
+            "url": "https://ciberseguridad.com.py/encontra-un-proveedor/",
+            "name": "Pedí orientación para contratar ciberseguridad",
+            "description": "Contanos en dos minutos qué necesita tu empresa y te ayudamos a definir el alcance y el tipo de especialista. Sin costo, sin compromiso y sin datos técnicos sensibles.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Pedí orientación para contratar ciberseguridad",
+                "item": "https://ciberseguridad.com.py/encontra-un-proveedor/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "#formulario",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Cache-Control": "no-store, no-cache, must-revalidate",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/incidente/",
+    "url": "https://ciberseguridad.com.py/incidente/",
+    "final_url": "https://ciberseguridad.com.py/incidente/",
+    "status": 200,
+    "title": "Incidente de seguridad en curso | ciberseguridad.com.py",
+    "description": "Si tu empresa tiene un incidente de seguridad ahora, pedí un primer contacto con datos mínimos. No pegues contraseñas, archivos ni evidencia. Canal oficial: CERT-PY.",
+    "h1": [
+      "Incidente en curso"
+    ],
+    "canonical": "https://ciberseguridad.com.py/incidente/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/incidente/#webpage",
+            "url": "https://ciberseguridad.com.py/incidente/",
+            "name": "Incidente de seguridad en curso",
+            "description": "Si tu empresa tiene un incidente de seguridad ahora, pedí un primer contacto con datos mínimos. No pegues contraseñas, archivos ni evidencia. Canal oficial: CERT-PY.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Incidente de seguridad en curso",
+                "item": "https://ciberseguridad.com.py/incidente/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "#formulario",
+      "https://www.cert.gov.py/contacto/",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Cache-Control": "no-store, no-cache, must-revalidate",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/registro-proveedor/",
+    "url": "https://ciberseguridad.com.py/registro-proveedor/",
+    "final_url": "https://ciberseguridad.com.py/registro-proveedor/",
+    "status": 200,
+    "title": "Registro para proveedores | ciberseguridad.com.py",
+    "description": "Solicitá una revisión editorial para publicar tu empresa de ciberseguridad. Enviar datos no crea un perfil verificado ni garantiza publicación.",
+    "h1": [
+      "Registro para proveedores"
+    ],
+    "canonical": "https://ciberseguridad.com.py/registro-proveedor/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/registro-proveedor/#webpage",
+            "url": "https://ciberseguridad.com.py/registro-proveedor/",
+            "name": "Registro para proveedores",
+            "description": "Solicitá una revisión editorial para publicar tu empresa de ciberseguridad. Enviar datos no crea un perfil verificado ni garantiza publicación.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Registro para proveedores",
+                "item": "https://ciberseguridad.com.py/registro-proveedor/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Cache-Control": "no-store, no-cache, must-revalidate",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/reclamar-perfil/",
+    "url": "https://ciberseguridad.com.py/reclamar-perfil/",
+    "final_url": "https://ciberseguridad.com.py/reclamar-perfil/",
+    "status": 200,
+    "title": "Reclamá o corregí un perfil | ciberseguridad.com.py",
+    "description": "Verificamos identidad y autoridad antes de modificar datos públicos de un proveedor.",
+    "h1": [
+      "Reclamá o corregí un perfil"
+    ],
+    "canonical": "https://ciberseguridad.com.py/reclamar-perfil/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/reclamar-perfil/#webpage",
+            "url": "https://ciberseguridad.com.py/reclamar-perfil/",
+            "name": "Reclamá o corregí un perfil",
+            "description": "Verificamos identidad y autoridad antes de modificar datos públicos de un proveedor.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Reclamá o corregí un perfil",
+                "item": "https://ciberseguridad.com.py/reclamar-perfil/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "/correcciones/",
+      "/nosotros/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Cache-Control": "no-store, no-cache, must-revalidate",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/recursos/",
+    "url": "https://ciberseguridad.com.py/recursos/",
+    "final_url": "https://ciberseguridad.com.py/recursos/",
+    "status": 200,
+    "title": "Guías de ciberseguridad para empresas | ciberseguridad.com.py",
+    "description": "Guías prácticas para prepararse, contratar mejor y responder con calma, con fuentes, fecha y alcance declarados.",
+    "h1": [
+      "Guías de ciberseguridad para empresas"
+    ],
+    "canonical": "https://ciberseguridad.com.py/recursos/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "CollectionPage",
+            "@id": "https://ciberseguridad.com.py/recursos/#webpage",
+            "url": "https://ciberseguridad.com.py/recursos/",
+            "name": "Guías de ciberseguridad para empresas",
+            "description": "Guías prácticas para prepararse, contratar mejor y responder con calma, con fuentes, fecha y alcance declarados.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Guías de ciberseguridad para empresas",
+                "item": "https://ciberseguridad.com.py/recursos/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "/recursos/preparar-hoja-contactos-incidentes/",
+      "/recursos/preguntas-antes-contratar-pentest/",
+      "/recursos/autorizacion-alcance-pruebas-seguridad/",
+      "/recursos/checklist-pruebas-recuperacion-backup/",
+      "/recursos/que-significa-certificacion-iso-27001/",
+      "/recursos/reportar-correo-sospechoso-seguro/",
+      "/recursos/practicas-minimas-ciberseguridad-pymes-paraguay/",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/nosotros/",
+    "url": "https://ciberseguridad.com.py/nosotros/",
+    "final_url": "https://ciberseguridad.com.py/nosotros/",
+    "status": 200,
+    "title": "Sobre la plataforma | ciberseguridad.com.py",
+    "description": "Qué hace ciberseguridad.com.py, qué no hace, cómo se financia y cómo mantiene independencia frente a autoridades y proveedores.",
+    "h1": [
+      "Sobre la plataforma"
+    ],
+    "canonical": "https://ciberseguridad.com.py/nosotros/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/nosotros/#webpage",
+            "url": "https://ciberseguridad.com.py/nosotros/",
+            "name": "Sobre la plataforma",
+            "description": "Qué hace ciberseguridad.com.py, qué no hace, cómo se financia y cómo mantiene independencia frente a autoridades y proveedores.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Sobre la plataforma",
+                "item": "https://ciberseguridad.com.py/nosotros/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "/divulgacion-responsable/",
+      "/correcciones/",
+      "/privacidad/",
+      "/nosotros/",
+      "/registro-proveedor/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/contacto/",
+    "url": "https://ciberseguridad.com.py/contacto/",
+    "final_url": "https://ciberseguridad.com.py/contacto/",
+    "status": 200,
+    "title": "Contacto con la plataforma | ciberseguridad.com.py",
+    "description": "Consultas comerciales, editoriales, correcciones y privacidad. Este canal no reemplaza el reporte oficial de incidentes a CERT-PY.",
+    "h1": [
+      "Contacto con la plataforma"
+    ],
+    "canonical": "https://ciberseguridad.com.py/contacto/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/contacto/#webpage",
+            "url": "https://ciberseguridad.com.py/contacto/",
+            "name": "Contacto con la plataforma",
+            "description": "Consultas comerciales, editoriales, correcciones y privacidad. Este canal no reemplaza el reporte oficial de incidentes a CERT-PY.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Contacto con la plataforma",
+                "item": "https://ciberseguridad.com.py/contacto/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "#formulario",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Cache-Control": "no-store, no-cache, must-revalidate",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/privacidad/",
+    "url": "https://ciberseguridad.com.py/privacidad/",
+    "final_url": "https://ciberseguridad.com.py/privacidad/",
+    "status": 200,
+    "title": "Privacidad | ciberseguridad.com.py",
+    "description": "Cómo ciberseguridad.com.py trata los datos enviados mediante formularios de contacto y solicitud.",
+    "h1": [
+      "Privacidad"
+    ],
+    "canonical": "https://ciberseguridad.com.py/privacidad/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/privacidad/#webpage",
+            "url": "https://ciberseguridad.com.py/privacidad/",
+            "name": "Privacidad",
+            "description": "Cómo ciberseguridad.com.py trata los datos enviados mediante formularios de contacto y solicitud.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Privacidad",
+                "item": "https://ciberseguridad.com.py/privacidad/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/terminos/",
+    "url": "https://ciberseguridad.com.py/terminos/",
+    "final_url": "https://ciberseguridad.com.py/terminos/",
+    "status": 200,
+    "title": "Términos de uso | ciberseguridad.com.py",
+    "description": "Condiciones preliminares para usar el directorio, las guías y los canales de contacto.",
+    "h1": [
+      "Términos de uso"
+    ],
+    "canonical": "https://ciberseguridad.com.py/terminos/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/terminos/#webpage",
+            "url": "https://ciberseguridad.com.py/terminos/",
+            "name": "Términos de uso",
+            "description": "Condiciones preliminares para usar el directorio, las guías y los canales de contacto.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Términos de uso",
+                "item": "https://ciberseguridad.com.py/terminos/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/correcciones/",
+    "url": "https://ciberseguridad.com.py/correcciones/",
+    "final_url": "https://ciberseguridad.com.py/correcciones/",
+    "status": 200,
+    "title": "Correcciones y reportes | ciberseguridad.com.py",
+    "description": "Reportá un dato incorrecto, vencido o disputado sin compartir información confidencial.",
+    "h1": [
+      "Correcciones y reportes"
+    ],
+    "canonical": "https://ciberseguridad.com.py/correcciones/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/correcciones/#webpage",
+            "url": "https://ciberseguridad.com.py/correcciones/",
+            "name": "Correcciones y reportes",
+            "description": "Reportá un dato incorrecto, vencido o disputado sin compartir información confidencial.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Correcciones y reportes",
+                "item": "https://ciberseguridad.com.py/correcciones/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/divulgacion-responsable/",
+    "url": "https://ciberseguridad.com.py/divulgacion-responsable/",
+    "final_url": "https://ciberseguridad.com.py/divulgacion-responsable/",
+    "status": 200,
+    "title": "Divulgación responsable | ciberseguridad.com.py",
+    "description": "Política para reportar vulnerabilidades del propio sitio dentro de un alcance limitado y de buena fe.",
+    "h1": [
+      "Divulgación responsable"
+    ],
+    "canonical": "https://ciberseguridad.com.py/divulgacion-responsable/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/divulgacion-responsable/#webpage",
+            "url": "https://ciberseguridad.com.py/divulgacion-responsable/",
+            "name": "Divulgación responsable",
+            "description": "Política para reportar vulnerabilidades del propio sitio dentro de un alcance limitado y de buena fe.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Divulgación responsable",
+                "item": "https://ciberseguridad.com.py/divulgacion-responsable/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/metodologia-verificacion/",
+    "url": "https://ciberseguridad.com.py/metodologia-verificacion/",
+    "final_url": "https://ciberseguridad.com.py/metodologia-verificacion/",
+    "status": 200,
+    "title": "Cómo verificamos a los proveedores | ciberseguridad.com.py",
+    "description": "Cómo se valida cada dato, certificación y relación de servicio antes de publicarlo, y por qué todavía no mostramos perfiles.",
+    "h1": [
+      "Cómo verificamos a los proveedores"
+    ],
+    "canonical": "https://ciberseguridad.com.py/metodologia-verificacion/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/metodologia-verificacion/#webpage",
+            "url": "https://ciberseguridad.com.py/metodologia-verificacion/",
+            "name": "Cómo verificamos a los proveedores",
+            "description": "Cómo se valida cada dato, certificación y relación de servicio antes de publicarlo, y por qué todavía no mostramos perfiles.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Cómo verificamos a los proveedores",
+                "item": "https://ciberseguridad.com.py/metodologia-verificacion/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "/registro-proveedor/",
+      "/nosotros/",
+      "/correcciones/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/servicios/evaluacion-ciberseguridad/",
+    "url": "https://ciberseguridad.com.py/servicios/evaluacion-ciberseguridad/",
+    "final_url": "https://ciberseguridad.com.py/servicios/evaluacion-ciberseguridad/",
+    "status": 200,
+    "title": "Evaluación de ciberseguridad | ciberseguridad.com.py",
+    "description": "Evaluación o auditoría de seguridad informática para empresas en Paraguay: qué incluye, qué no, entregables, precio orientativo y preguntas para el proveedor.",
+    "h1": [
+      "Evaluación de ciberseguridad"
+    ],
+    "canonical": "https://ciberseguridad.com.py/servicios/evaluacion-ciberseguridad/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/servicios/evaluacion-ciberseguridad/#webpage",
+            "url": "https://ciberseguridad.com.py/servicios/evaluacion-ciberseguridad/",
+            "name": "Evaluación de ciberseguridad",
+            "description": "Evaluación o auditoría de seguridad informática para empresas en Paraguay: qué incluye, qué no, entregables, precio orientativo y preguntas para el proveedor.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://ciberseguridad.com.py/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Evaluación de ciberseguridad",
+                "item": "https://ciberseguridad.com.py/servicios/evaluacion-ciberseguridad/"
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "Evaluación de ciberseguridad",
+            "description": "Una revisión de riesgos, controles y prioridades para saber qué corregir primero y cuánto esfuerzo pide.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            },
+            "mainEntityOfPage": "https://ciberseguridad.com.py/servicios/evaluacion-ciberseguridad/#webpage"
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/servicios/",
+      "/encontra-un-proveedor/?servicio=evaluacion-ciberseguridad",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/servicios/evaluacion-vulnerabilidades/",
+    "url": "https://ciberseguridad.com.py/servicios/evaluacion-vulnerabilidades/",
+    "final_url": "https://ciberseguridad.com.py/servicios/evaluacion-vulnerabilidades/",
+    "status": 200,
+    "title": "Evaluación de vulnerabilidades | ciberseguridad.com.py",
+    "description": "Evaluación de vulnerabilidades para empresas en Paraguay: alcance, autorización, validación de resultados, entregables y qué influye en el precio.",
+    "h1": [
+      "Evaluación de vulnerabilidades"
+    ],
+    "canonical": "https://ciberseguridad.com.py/servicios/evaluacion-vulnerabilidades/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/servicios/evaluacion-vulnerabilidades/#webpage",
+            "url": "https://ciberseguridad.com.py/servicios/evaluacion-vulnerabilidades/",
+            "name": "Evaluación de vulnerabilidades",
+            "description": "Evaluación de vulnerabilidades para empresas en Paraguay: alcance, autorización, validación de resultados, entregables y qué influye en el precio.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://ciberseguridad.com.py/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Evaluación de vulnerabilidades",
+                "item": "https://ciberseguridad.com.py/servicios/evaluacion-vulnerabilidades/"
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "Evaluación de vulnerabilidades",
+            "description": "Identificación autorizada y priorización de fallas técnicas en sistemas, dentro de un alcance acordado.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            },
+            "mainEntityOfPage": "https://ciberseguridad.com.py/servicios/evaluacion-vulnerabilidades/#webpage"
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/servicios/",
+      "/encontra-un-proveedor/?servicio=evaluacion-vulnerabilidades",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/servicios/pentesting-autorizado/",
+    "url": "https://ciberseguridad.com.py/servicios/pentesting-autorizado/",
+    "final_url": "https://ciberseguridad.com.py/servicios/pentesting-autorizado/",
+    "status": 200,
+    "title": "Pentesting autorizado | ciberseguridad.com.py",
+    "description": "Pentesting autorizado en Paraguay: qué pedir antes de contratar, autorización, reglas de trabajo, evidencia, límites, reporte y precio orientativo.",
+    "h1": [
+      "Pentesting autorizado"
+    ],
+    "canonical": "https://ciberseguridad.com.py/servicios/pentesting-autorizado/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/servicios/pentesting-autorizado/#webpage",
+            "url": "https://ciberseguridad.com.py/servicios/pentesting-autorizado/",
+            "name": "Pentesting autorizado",
+            "description": "Pentesting autorizado en Paraguay: qué pedir antes de contratar, autorización, reglas de trabajo, evidencia, límites, reporte y precio orientativo.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://ciberseguridad.com.py/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Pentesting autorizado",
+                "item": "https://ciberseguridad.com.py/servicios/pentesting-autorizado/"
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "Pentesting autorizado",
+            "description": "Prueba controlada y con permiso escrito para comprobar si ciertas fallas producen impacto real, sin ampliar el alcance.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            },
+            "mainEntityOfPage": "https://ciberseguridad.com.py/servicios/pentesting-autorizado/#webpage"
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/servicios/",
+      "/encontra-un-proveedor/?servicio=pentesting-autorizado",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/servicios/preparacion-respuesta-incidentes/",
+    "url": "https://ciberseguridad.com.py/servicios/preparacion-respuesta-incidentes/",
+    "final_url": "https://ciberseguridad.com.py/servicios/preparacion-respuesta-incidentes/",
+    "status": 200,
+    "title": "Preparación para respuesta a incidentes | ciberseguridad.com.py",
+    "description": "Plan de respuesta a incidentes para empresas en Paraguay: roles, contactos, comunicación, ejercicios de mesa y revisión periódica.",
+    "h1": [
+      "Preparación para respuesta a incidentes"
+    ],
+    "canonical": "https://ciberseguridad.com.py/servicios/preparacion-respuesta-incidentes/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/servicios/preparacion-respuesta-incidentes/#webpage",
+            "url": "https://ciberseguridad.com.py/servicios/preparacion-respuesta-incidentes/",
+            "name": "Preparación para respuesta a incidentes",
+            "description": "Plan de respuesta a incidentes para empresas en Paraguay: roles, contactos, comunicación, ejercicios de mesa y revisión periódica.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://ciberseguridad.com.py/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Preparación para respuesta a incidentes",
+                "item": "https://ciberseguridad.com.py/servicios/preparacion-respuesta-incidentes/"
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "Preparación para respuesta a incidentes",
+            "description": "Roles, contactos, decisiones y ejercicios para responder con menos improvisación cuando algo pasa.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            },
+            "mainEntityOfPage": "https://ciberseguridad.com.py/servicios/preparacion-respuesta-incidentes/#webpage"
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/servicios/",
+      "/encontra-un-proveedor/?servicio=preparacion-respuesta-incidentes",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/servicios/respuesta-incidentes/",
+    "url": "https://ciberseguridad.com.py/servicios/respuesta-incidentes/",
+    "final_url": "https://ciberseguridad.com.py/servicios/respuesta-incidentes/",
+    "status": 200,
+    "title": "Apoyo de respuesta a incidentes | ciberseguridad.com.py",
+    "description": "Apoyo de respuesta a incidentes en Paraguay: cómo pedir ayuda profesional sin exponer evidencia en un formulario público y qué esperar del proveedor.",
+    "h1": [
+      "Apoyo de respuesta a incidentes"
+    ],
+    "canonical": "https://ciberseguridad.com.py/servicios/respuesta-incidentes/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/servicios/respuesta-incidentes/#webpage",
+            "url": "https://ciberseguridad.com.py/servicios/respuesta-incidentes/",
+            "name": "Apoyo de respuesta a incidentes",
+            "description": "Apoyo de respuesta a incidentes en Paraguay: cómo pedir ayuda profesional sin exponer evidencia en un formulario público y qué esperar del proveedor.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://ciberseguridad.com.py/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Apoyo de respuesta a incidentes",
+                "item": "https://ciberseguridad.com.py/servicios/respuesta-incidentes/"
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "Apoyo de respuesta a incidentes",
+            "description": "Coordinación profesional para analizar, contener y recuperar dentro de un mandato claro.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            },
+            "mainEntityOfPage": "https://ciberseguridad.com.py/servicios/respuesta-incidentes/#webpage"
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/servicios/",
+      "/encontra-un-proveedor/?servicio=respuesta-incidentes",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/servicios/preparacion-recuperacion-ransomware/",
+    "url": "https://ciberseguridad.com.py/servicios/preparacion-recuperacion-ransomware/",
+    "final_url": "https://ciberseguridad.com.py/servicios/preparacion-recuperacion-ransomware/",
+    "status": 200,
+    "title": "Preparación y recuperación ante ransomware | ciberseguridad.com.py",
+    "description": "Preparación y recuperación ante ransomware para empresas en Paraguay: backups probados, prioridades, roles y límites. Sin prometer descifrado.",
+    "h1": [
+      "Preparación y recuperación ante ransomware"
+    ],
+    "canonical": "https://ciberseguridad.com.py/servicios/preparacion-recuperacion-ransomware/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/servicios/preparacion-recuperacion-ransomware/#webpage",
+            "url": "https://ciberseguridad.com.py/servicios/preparacion-recuperacion-ransomware/",
+            "name": "Preparación y recuperación ante ransomware",
+            "description": "Preparación y recuperación ante ransomware para empresas en Paraguay: backups probados, prioridades, roles y límites. Sin prometer descifrado.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://ciberseguridad.com.py/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Preparación y recuperación ante ransomware",
+                "item": "https://ciberseguridad.com.py/servicios/preparacion-recuperacion-ransomware/"
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "Preparación y recuperación ante ransomware",
+            "description": "Planificación defensiva para reducir impacto y comprobar que podés restaurar antes de que pase.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            },
+            "mainEntityOfPage": "https://ciberseguridad.com.py/servicios/preparacion-recuperacion-ransomware/#webpage"
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/servicios/",
+      "/encontra-un-proveedor/?servicio=preparacion-recuperacion-ransomware",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/servicios/seguridad-microsoft-365-google-workspace/",
+    "url": "https://ciberseguridad.com.py/servicios/seguridad-microsoft-365-google-workspace/",
+    "final_url": "https://ciberseguridad.com.py/servicios/seguridad-microsoft-365-google-workspace/",
+    "status": 200,
+    "title": "Seguridad de Microsoft 365 y Google Workspace | ciberseguridad.com.py",
+    "description": "Seguridad de Microsoft 365 y Google Workspace para empresas en Paraguay: MFA, cuentas privilegiadas, correo, registros y fraude por correo.",
+    "h1": [
+      "Seguridad de Microsoft 365 y Google Workspace"
+    ],
+    "canonical": "https://ciberseguridad.com.py/servicios/seguridad-microsoft-365-google-workspace/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/servicios/seguridad-microsoft-365-google-workspace/#webpage",
+            "url": "https://ciberseguridad.com.py/servicios/seguridad-microsoft-365-google-workspace/",
+            "name": "Seguridad de Microsoft 365 y Google Workspace",
+            "description": "Seguridad de Microsoft 365 y Google Workspace para empresas en Paraguay: MFA, cuentas privilegiadas, correo, registros y fraude por correo.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://ciberseguridad.com.py/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Seguridad de Microsoft 365 y Google Workspace",
+                "item": "https://ciberseguridad.com.py/servicios/seguridad-microsoft-365-google-workspace/"
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "Seguridad de Microsoft 365 y Google Workspace",
+            "description": "Revisión de identidades, permisos, correo y configuración en las plataformas donde vive el trabajo diario.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            },
+            "mainEntityOfPage": "https://ciberseguridad.com.py/servicios/seguridad-microsoft-365-google-workspace/#webpage"
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/servicios/",
+      "/encontra-un-proveedor/?servicio=seguridad-microsoft-365-google-workspace",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/servicios/revision-seguridad-nube/",
+    "url": "https://ciberseguridad.com.py/servicios/revision-seguridad-nube/",
+    "final_url": "https://ciberseguridad.com.py/servicios/revision-seguridad-nube/",
+    "status": 200,
+    "title": "Revisión de seguridad en la nube | ciberseguridad.com.py",
+    "description": "Revisión de seguridad cloud para empresas en Paraguay: identidades, exposición, configuración, registros y responsabilidad compartida con el proveedor.",
+    "h1": [
+      "Revisión de seguridad en la nube"
+    ],
+    "canonical": "https://ciberseguridad.com.py/servicios/revision-seguridad-nube/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/servicios/revision-seguridad-nube/#webpage",
+            "url": "https://ciberseguridad.com.py/servicios/revision-seguridad-nube/",
+            "name": "Revisión de seguridad en la nube",
+            "description": "Revisión de seguridad cloud para empresas en Paraguay: identidades, exposición, configuración, registros y responsabilidad compartida con el proveedor.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://ciberseguridad.com.py/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Revisión de seguridad en la nube",
+                "item": "https://ciberseguridad.com.py/servicios/revision-seguridad-nube/"
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "Revisión de seguridad en la nube",
+            "description": "Evaluación de identidades, exposición, registros y configuración en servicios de nube.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            },
+            "mainEntityOfPage": "https://ciberseguridad.com.py/servicios/revision-seguridad-nube/#webpage"
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/servicios/",
+      "/encontra-un-proveedor/?servicio=revision-seguridad-nube",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/servicios/backup-recuperacion/",
+    "url": "https://ciberseguridad.com.py/servicios/backup-recuperacion/",
+    "final_url": "https://ciberseguridad.com.py/servicios/backup-recuperacion/",
+    "status": 200,
+    "title": "Revisión de backup y recuperación | ciberseguridad.com.py",
+    "description": "Revisión de backup y recuperación para empresas en Paraguay: pruebas de restauración, prioridades, dependencias y evidencia de resultados.",
+    "h1": [
+      "Revisión de backup y recuperación"
+    ],
+    "canonical": "https://ciberseguridad.com.py/servicios/backup-recuperacion/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/servicios/backup-recuperacion/#webpage",
+            "url": "https://ciberseguridad.com.py/servicios/backup-recuperacion/",
+            "name": "Revisión de backup y recuperación",
+            "description": "Revisión de backup y recuperación para empresas en Paraguay: pruebas de restauración, prioridades, dependencias y evidencia de resultados.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://ciberseguridad.com.py/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Revisión de backup y recuperación",
+                "item": "https://ciberseguridad.com.py/servicios/backup-recuperacion/"
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "Revisión de backup y recuperación",
+            "description": "Comprobación de que las copias existen, se pueden restaurar y cubren lo que la empresa necesita para seguir operando.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            },
+            "mainEntityOfPage": "https://ciberseguridad.com.py/servicios/backup-recuperacion/#webpage"
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/servicios/",
+      "/encontra-un-proveedor/?servicio=backup-recuperacion",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/servicios/seguridad-red-endpoints/",
+    "url": "https://ciberseguridad.com.py/servicios/seguridad-red-endpoints/",
+    "final_url": "https://ciberseguridad.com.py/servicios/seguridad-red-endpoints/",
+    "status": 200,
+    "title": "Seguridad de red y endpoints | ciberseguridad.com.py",
+    "description": "Seguridad de red y endpoints para empresas en Paraguay: segmentación, accesos remotos, parches, antivirus gestionado y administración operativa.",
+    "h1": [
+      "Seguridad de red y endpoints"
+    ],
+    "canonical": "https://ciberseguridad.com.py/servicios/seguridad-red-endpoints/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/servicios/seguridad-red-endpoints/#webpage",
+            "url": "https://ciberseguridad.com.py/servicios/seguridad-red-endpoints/",
+            "name": "Seguridad de red y endpoints",
+            "description": "Seguridad de red y endpoints para empresas en Paraguay: segmentación, accesos remotos, parches, antivirus gestionado y administración operativa.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://ciberseguridad.com.py/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Seguridad de red y endpoints",
+                "item": "https://ciberseguridad.com.py/servicios/seguridad-red-endpoints/"
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "Seguridad de red y endpoints",
+            "description": "Revisión de segmentación, accesos, protección y administración de los equipos conectados.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            },
+            "mainEntityOfPage": "https://ciberseguridad.com.py/servicios/seguridad-red-endpoints/#webpage"
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/servicios/",
+      "/encontra-un-proveedor/?servicio=seguridad-red-endpoints",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/servicios/capacitacion-phishing/",
+    "url": "https://ciberseguridad.com.py/servicios/capacitacion-phishing/",
+    "final_url": "https://ciberseguridad.com.py/servicios/capacitacion-phishing/",
+    "status": 200,
+    "title": "Capacitación sobre phishing | ciberseguridad.com.py",
+    "description": "Capacitación sobre phishing para empresas en Paraguay: talleres, simulaciones autorizadas, canal de reporte y métricas responsables.",
+    "h1": [
+      "Capacitación sobre phishing"
+    ],
+    "canonical": "https://ciberseguridad.com.py/servicios/capacitacion-phishing/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/servicios/capacitacion-phishing/#webpage",
+            "url": "https://ciberseguridad.com.py/servicios/capacitacion-phishing/",
+            "name": "Capacitación sobre phishing",
+            "description": "Capacitación sobre phishing para empresas en Paraguay: talleres, simulaciones autorizadas, canal de reporte y métricas responsables.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://ciberseguridad.com.py/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Capacitación sobre phishing",
+                "item": "https://ciberseguridad.com.py/servicios/capacitacion-phishing/"
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "Capacitación sobre phishing",
+            "description": "Formación y ejercicios autorizados para que tu equipo reconozca engaños y sepa a quién avisar.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            },
+            "mainEntityOfPage": "https://ciberseguridad.com.py/servicios/capacitacion-phishing/#webpage"
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/servicios/",
+      "/encontra-un-proveedor/?servicio=capacitacion-phishing",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/servicios/iso-27001/",
+    "url": "https://ciberseguridad.com.py/servicios/iso-27001/",
+    "final_url": "https://ciberseguridad.com.py/servicios/iso-27001/",
+    "status": 200,
+    "title": "Preparación para ISO 27001 | ciberseguridad.com.py",
+    "description": "Consultoría y preparación para ISO/IEC 27001 en Paraguay: alcance, SGSI, riesgos, evidencias, plazos y límites frente a la certificación.",
+    "h1": [
+      "Preparación para ISO 27001"
+    ],
+    "canonical": "https://ciberseguridad.com.py/servicios/iso-27001/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/servicios/iso-27001/#webpage",
+            "url": "https://ciberseguridad.com.py/servicios/iso-27001/",
+            "name": "Preparación para ISO 27001",
+            "description": "Consultoría y preparación para ISO/IEC 27001 en Paraguay: alcance, SGSI, riesgos, evidencias, plazos y límites frente a la certificación.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://ciberseguridad.com.py/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Preparación para ISO 27001",
+                "item": "https://ciberseguridad.com.py/servicios/iso-27001/"
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "Preparación para ISO 27001",
+            "description": "Apoyo para establecer y mejorar un sistema de gestión de seguridad de la información con miras a certificar.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            },
+            "mainEntityOfPage": "https://ciberseguridad.com.py/servicios/iso-27001/#webpage"
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/servicios/",
+      "/encontra-un-proveedor/?servicio=iso-27001",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/servicios/asesoria-pci-dss/",
+    "url": "https://ciberseguridad.com.py/servicios/asesoria-pci-dss/",
+    "final_url": "https://ciberseguridad.com.py/servicios/asesoria-pci-dss/",
+    "status": 200,
+    "title": "Asesoría PCI DSS | ciberseguridad.com.py",
+    "description": "Asesoría PCI DSS en Paraguay: alcance, responsabilidades, reducción de entorno y preparación, sin prometer cumplimiento o validación automática.",
+    "h1": [
+      "Asesoría PCI DSS"
+    ],
+    "canonical": "https://ciberseguridad.com.py/servicios/asesoria-pci-dss/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/servicios/asesoria-pci-dss/#webpage",
+            "url": "https://ciberseguridad.com.py/servicios/asesoria-pci-dss/",
+            "name": "Asesoría PCI DSS",
+            "description": "Asesoría PCI DSS en Paraguay: alcance, responsabilidades, reducción de entorno y preparación, sin prometer cumplimiento o validación automática.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://ciberseguridad.com.py/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Asesoría PCI DSS",
+                "item": "https://ciberseguridad.com.py/servicios/asesoria-pci-dss/"
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "Asesoría PCI DSS",
+            "description": "Orientación sobre alcance y preparación para proteger datos de tarjetas según PCI DSS.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            },
+            "mainEntityOfPage": "https://ciberseguridad.com.py/servicios/asesoria-pci-dss/#webpage"
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/servicios/",
+      "/encontra-un-proveedor/?servicio=asesoria-pci-dss",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/servicios/politicas-gobernanza-seguridad/",
+    "url": "https://ciberseguridad.com.py/servicios/politicas-gobernanza-seguridad/",
+    "final_url": "https://ciberseguridad.com.py/servicios/politicas-gobernanza-seguridad/",
+    "status": 200,
+    "title": "Políticas y gobernanza de seguridad | ciberseguridad.com.py",
+    "description": "Políticas y gobernanza de seguridad para empresas en Paraguay: responsables, decisiones, riesgos, políticas aplicables y revisión continua.",
+    "h1": [
+      "Políticas y gobernanza de seguridad"
+    ],
+    "canonical": "https://ciberseguridad.com.py/servicios/politicas-gobernanza-seguridad/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/servicios/politicas-gobernanza-seguridad/#webpage",
+            "url": "https://ciberseguridad.com.py/servicios/politicas-gobernanza-seguridad/",
+            "name": "Políticas y gobernanza de seguridad",
+            "description": "Políticas y gobernanza de seguridad para empresas en Paraguay: responsables, decisiones, riesgos, políticas aplicables y revisión continua.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://ciberseguridad.com.py/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Políticas y gobernanza de seguridad",
+                "item": "https://ciberseguridad.com.py/servicios/politicas-gobernanza-seguridad/"
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "Políticas y gobernanza de seguridad",
+            "description": "Responsabilidades, decisiones y políticas conectadas con el riesgo y la operación real de la empresa.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            },
+            "mainEntityOfPage": "https://ciberseguridad.com.py/servicios/politicas-gobernanza-seguridad/#webpage"
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/servicios/",
+      "/encontra-un-proveedor/?servicio=politicas-gobernanza-seguridad",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/servicios/monitoreo-gestionado-soc/",
+    "url": "https://ciberseguridad.com.py/servicios/monitoreo-gestionado-soc/",
+    "final_url": "https://ciberseguridad.com.py/servicios/monitoreo-gestionado-soc/",
+    "status": 200,
+    "title": "Monitoreo gestionado y SOC | ciberseguridad.com.py",
+    "description": "Monitoreo gestionado y SOC para empresas en Paraguay: cobertura real, fuentes, horarios, escalamiento, retención de datos y precio mensual.",
+    "h1": [
+      "Monitoreo gestionado y SOC"
+    ],
+    "canonical": "https://ciberseguridad.com.py/servicios/monitoreo-gestionado-soc/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/servicios/monitoreo-gestionado-soc/#webpage",
+            "url": "https://ciberseguridad.com.py/servicios/monitoreo-gestionado-soc/",
+            "name": "Monitoreo gestionado y SOC",
+            "description": "Monitoreo gestionado y SOC para empresas en Paraguay: cobertura real, fuentes, horarios, escalamiento, retención de datos y precio mensual.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://ciberseguridad.com.py/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Monitoreo gestionado y SOC",
+                "item": "https://ciberseguridad.com.py/servicios/monitoreo-gestionado-soc/"
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "Monitoreo gestionado y SOC",
+            "description": "Supervisión acordada de señales de seguridad con responsabilidades, horarios y escalamiento definidos.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            },
+            "mainEntityOfPage": "https://ciberseguridad.com.py/servicios/monitoreo-gestionado-soc/#webpage"
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/servicios/",
+      "/encontra-un-proveedor/?servicio=monitoreo-gestionado-soc",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/servicios/proteccion-datos-personales/",
+    "url": "https://ciberseguridad.com.py/servicios/proteccion-datos-personales/",
+    "final_url": "https://ciberseguridad.com.py/servicios/proteccion-datos-personales/",
+    "status": 200,
+    "title": "Adecuación a la ley de protección de datos personales | ciberseguridad.com.py",
+    "description": "Adecuación a la Ley N.º 7593/2025 de protección de datos personales en Paraguay: inventario de datos, medidas de seguridad, incidentes y límites del servicio.",
+    "h1": [
+      "Adecuación a la ley de protección de datos personales"
+    ],
+    "canonical": "https://ciberseguridad.com.py/servicios/proteccion-datos-personales/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/servicios/proteccion-datos-personales/#webpage",
+            "url": "https://ciberseguridad.com.py/servicios/proteccion-datos-personales/",
+            "name": "Adecuación a la ley de protección de datos personales",
+            "description": "Adecuación a la Ley N.º 7593/2025 de protección de datos personales en Paraguay: inventario de datos, medidas de seguridad, incidentes y límites del servicio.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://ciberseguridad.com.py/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Adecuación a la ley de protección de datos personales",
+                "item": "https://ciberseguridad.com.py/servicios/proteccion-datos-personales/"
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "Adecuación a la ley de protección de datos personales",
+            "description": "Orientación para ordenar el tratamiento de datos personales según la Ley N.º 7593/2025 y sus medidas de seguridad.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            },
+            "mainEntityOfPage": "https://ciberseguridad.com.py/servicios/proteccion-datos-personales/#webpage"
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/servicios/",
+      "/encontra-un-proveedor/?servicio=proteccion-datos-personales",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/servicios/ciso-externo/",
+    "url": "https://ciberseguridad.com.py/servicios/ciso-externo/",
+    "final_url": "https://ciberseguridad.com.py/servicios/ciso-externo/",
+    "status": 200,
+    "title": "CISO externo o responsable de seguridad por horas | ciberseguridad.com.py",
+    "description": "CISO externo o responsable de seguridad por horas para empresas en Paraguay: qué hace, qué no, dedicación, entregables y precio mensual orientativo.",
+    "h1": [
+      "CISO externo o responsable de seguridad por horas"
+    ],
+    "canonical": "https://ciberseguridad.com.py/servicios/ciso-externo/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/servicios/ciso-externo/#webpage",
+            "url": "https://ciberseguridad.com.py/servicios/ciso-externo/",
+            "name": "CISO externo o responsable de seguridad por horas",
+            "description": "CISO externo o responsable de seguridad por horas para empresas en Paraguay: qué hace, qué no, dedicación, entregables y precio mensual orientativo.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Servicios",
+                "item": "https://ciberseguridad.com.py/servicios/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "CISO externo o responsable de seguridad por horas",
+                "item": "https://ciberseguridad.com.py/servicios/ciso-externo/"
+              }
+            ]
+          },
+          {
+            "@type": "Service",
+            "name": "CISO externo o responsable de seguridad por horas",
+            "description": "Una persona con experiencia lidera la seguridad de tu empresa de forma parcial, sin contratar un cargo a tiempo completo.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            },
+            "mainEntityOfPage": "https://ciberseguridad.com.py/servicios/ciso-externo/#webpage"
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/servicios/",
+      "/encontra-un-proveedor/?servicio=ciso-externo",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/recursos/preparar-hoja-contactos-incidentes/",
+    "url": "https://ciberseguridad.com.py/recursos/preparar-hoja-contactos-incidentes/",
+    "final_url": "https://ciberseguridad.com.py/recursos/preparar-hoja-contactos-incidentes/",
+    "status": 200,
+    "title": "Cómo preparar una hoja de contactos para incidentes | ciberseguridad.com.py",
+    "description": "Definí quién decide, a quién llamar y qué canales alternativos usar antes de una interrupción.",
+    "h1": [
+      "Cómo preparar una hoja de contactos para incidentes"
+    ],
+    "canonical": "https://ciberseguridad.com.py/recursos/preparar-hoja-contactos-incidentes/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/recursos/preparar-hoja-contactos-incidentes/#webpage",
+            "url": "https://ciberseguridad.com.py/recursos/preparar-hoja-contactos-incidentes/",
+            "name": "Cómo preparar una hoja de contactos para incidentes",
+            "description": "Definí quién decide, a quién llamar y qué canales alternativos usar antes de una interrupción.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Guías",
+                "item": "https://ciberseguridad.com.py/recursos/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Cómo preparar una hoja de contactos para incidentes",
+                "item": "https://ciberseguridad.com.py/recursos/preparar-hoja-contactos-incidentes/"
+              }
+            ]
+          },
+          {
+            "@type": "Article",
+            "headline": "Cómo preparar una hoja de contactos para incidentes",
+            "datePublished": "2026-08-28",
+            "dateModified": "2026-08-28",
+            "author": {
+              "@type": "Organization",
+              "name": "Equipo editorial de ciberseguridad.com.py"
+            },
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/recursos/",
+      "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+      "https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/recursos/preguntas-antes-contratar-pentest/",
+    "url": "https://ciberseguridad.com.py/recursos/preguntas-antes-contratar-pentest/",
+    "final_url": "https://ciberseguridad.com.py/recursos/preguntas-antes-contratar-pentest/",
+    "status": 200,
+    "title": "Preguntas antes de contratar un pentest | ciberseguridad.com.py",
+    "description": "Acordá autorización, objetivos, límites, evidencia y criterios de parada antes de probar sistemas.",
+    "h1": [
+      "Preguntas antes de contratar un pentest"
+    ],
+    "canonical": "https://ciberseguridad.com.py/recursos/preguntas-antes-contratar-pentest/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/recursos/preguntas-antes-contratar-pentest/#webpage",
+            "url": "https://ciberseguridad.com.py/recursos/preguntas-antes-contratar-pentest/",
+            "name": "Preguntas antes de contratar un pentest",
+            "description": "Acordá autorización, objetivos, límites, evidencia y criterios de parada antes de probar sistemas.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Guías",
+                "item": "https://ciberseguridad.com.py/recursos/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Preguntas antes de contratar un pentest",
+                "item": "https://ciberseguridad.com.py/recursos/preguntas-antes-contratar-pentest/"
+              }
+            ]
+          },
+          {
+            "@type": "Article",
+            "headline": "Preguntas antes de contratar un pentest",
+            "datePublished": "2026-08-28",
+            "dateModified": "2026-08-28",
+            "author": {
+              "@type": "Organization",
+              "name": "Equipo editorial de ciberseguridad.com.py"
+            },
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/recursos/",
+      "https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20",
+      "https://www.cert.gov.py/",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/recursos/autorizacion-alcance-pruebas-seguridad/",
+    "url": "https://ciberseguridad.com.py/recursos/autorizacion-alcance-pruebas-seguridad/",
+    "final_url": "https://ciberseguridad.com.py/recursos/autorizacion-alcance-pruebas-seguridad/",
+    "status": 200,
+    "title": "Por qué la autorización y el alcance importan | ciberseguridad.com.py",
+    "description": "La claridad sobre activos, acciones y límites protege a la organización y al equipo que realiza la prueba.",
+    "h1": [
+      "Por qué la autorización y el alcance importan"
+    ],
+    "canonical": "https://ciberseguridad.com.py/recursos/autorizacion-alcance-pruebas-seguridad/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/recursos/autorizacion-alcance-pruebas-seguridad/#webpage",
+            "url": "https://ciberseguridad.com.py/recursos/autorizacion-alcance-pruebas-seguridad/",
+            "name": "Por qué la autorización y el alcance importan",
+            "description": "La claridad sobre activos, acciones y límites protege a la organización y al equipo que realiza la prueba.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Guías",
+                "item": "https://ciberseguridad.com.py/recursos/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Por qué la autorización y el alcance importan",
+                "item": "https://ciberseguridad.com.py/recursos/autorizacion-alcance-pruebas-seguridad/"
+              }
+            ]
+          },
+          {
+            "@type": "Article",
+            "headline": "Por qué la autorización y el alcance importan",
+            "datePublished": "2026-08-28",
+            "dateModified": "2026-08-28",
+            "author": {
+              "@type": "Organization",
+              "name": "Equipo editorial de ciberseguridad.com.py"
+            },
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/recursos/",
+      "https://www.nist.gov/cyberframework",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/recursos/checklist-pruebas-recuperacion-backup/",
+    "url": "https://ciberseguridad.com.py/recursos/checklist-pruebas-recuperacion-backup/",
+    "final_url": "https://ciberseguridad.com.py/recursos/checklist-pruebas-recuperacion-backup/",
+    "status": 200,
+    "title": "Checklist para probar recuperación de backups | ciberseguridad.com.py",
+    "description": "Comprobá que podés restaurar datos y servicios, no solamente que la tarea de copia terminó.",
+    "h1": [
+      "Checklist para probar recuperación de backups"
+    ],
+    "canonical": "https://ciberseguridad.com.py/recursos/checklist-pruebas-recuperacion-backup/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/recursos/checklist-pruebas-recuperacion-backup/#webpage",
+            "url": "https://ciberseguridad.com.py/recursos/checklist-pruebas-recuperacion-backup/",
+            "name": "Checklist para probar recuperación de backups",
+            "description": "Comprobá que podés restaurar datos y servicios, no solamente que la tarea de copia terminó.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Guías",
+                "item": "https://ciberseguridad.com.py/recursos/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Checklist para probar recuperación de backups",
+                "item": "https://ciberseguridad.com.py/recursos/checklist-pruebas-recuperacion-backup/"
+              }
+            ]
+          },
+          {
+            "@type": "Article",
+            "headline": "Checklist para probar recuperación de backups",
+            "datePublished": "2026-08-28",
+            "dateModified": "2026-08-28",
+            "author": {
+              "@type": "Organization",
+              "name": "Equipo editorial de ciberseguridad.com.py"
+            },
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/recursos/",
+      "https://www.cisa.gov/stopransomware/ransomware-guide",
+      "https://www.cert.gov.py/siguen-los-casos-de-ransomware-mediante-la-explotacion-de-rdp/",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/recursos/que-significa-certificacion-iso-27001/",
+    "url": "https://ciberseguridad.com.py/recursos/que-significa-certificacion-iso-27001/",
+    "final_url": "https://ciberseguridad.com.py/recursos/que-significa-certificacion-iso-27001/",
+    "status": 200,
+    "title": "Qué significa —y qué no— una certificación ISO 27001 | ciberseguridad.com.py",
+    "description": "Entendé el alcance de un SGSI y por qué una certificación no equivale a seguridad absoluta.",
+    "h1": [
+      "Qué significa —y qué no— una certificación ISO 27001"
+    ],
+    "canonical": "https://ciberseguridad.com.py/recursos/que-significa-certificacion-iso-27001/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/recursos/que-significa-certificacion-iso-27001/#webpage",
+            "url": "https://ciberseguridad.com.py/recursos/que-significa-certificacion-iso-27001/",
+            "name": "Qué significa —y qué no— una certificación ISO 27001",
+            "description": "Entendé el alcance de un SGSI y por qué una certificación no equivale a seguridad absoluta.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Guías",
+                "item": "https://ciberseguridad.com.py/recursos/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Qué significa —y qué no— una certificación ISO 27001",
+                "item": "https://ciberseguridad.com.py/recursos/que-significa-certificacion-iso-27001/"
+              }
+            ]
+          },
+          {
+            "@type": "Article",
+            "headline": "Qué significa —y qué no— una certificación ISO 27001",
+            "datePublished": "2026-08-28",
+            "dateModified": "2026-08-28",
+            "author": {
+              "@type": "Organization",
+              "name": "Equipo editorial de ciberseguridad.com.py"
+            },
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/recursos/",
+      "https://www.iso.org/standard/27001",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/recursos/reportar-correo-sospechoso-seguro/",
+    "url": "https://ciberseguridad.com.py/recursos/reportar-correo-sospechoso-seguro/",
+    "final_url": "https://ciberseguridad.com.py/recursos/reportar-correo-sospechoso-seguro/",
+    "status": 200,
+    "title": "Cómo reportar un correo sospechoso de forma segura | ciberseguridad.com.py",
+    "description": "Usá el canal interno correcto y evitá reenviar contenido o secretos por vías no acordadas.",
+    "h1": [
+      "Cómo reportar un correo sospechoso de forma segura"
+    ],
+    "canonical": "https://ciberseguridad.com.py/recursos/reportar-correo-sospechoso-seguro/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/recursos/reportar-correo-sospechoso-seguro/#webpage",
+            "url": "https://ciberseguridad.com.py/recursos/reportar-correo-sospechoso-seguro/",
+            "name": "Cómo reportar un correo sospechoso de forma segura",
+            "description": "Usá el canal interno correcto y evitá reenviar contenido o secretos por vías no acordadas.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Guías",
+                "item": "https://ciberseguridad.com.py/recursos/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Cómo reportar un correo sospechoso de forma segura",
+                "item": "https://ciberseguridad.com.py/recursos/reportar-correo-sospechoso-seguro/"
+              }
+            ]
+          },
+          {
+            "@type": "Article",
+            "headline": "Cómo reportar un correo sospechoso de forma segura",
+            "datePublished": "2026-08-28",
+            "dateModified": "2026-08-28",
+            "author": {
+              "@type": "Organization",
+              "name": "Equipo editorial de ciberseguridad.com.py"
+            },
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/recursos/",
+      "https://sedeco.gov.py/webinar-sedeco-recomendaciones-para-prevenir-fraudes-y-riesgos-en-el-consumo/",
+      "https://www.cert.gov.py/contacto/",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  },
+  {
+    "path": "/recursos/practicas-minimas-ciberseguridad-pymes-paraguay/",
+    "url": "https://ciberseguridad.com.py/recursos/practicas-minimas-ciberseguridad-pymes-paraguay/",
+    "final_url": "https://ciberseguridad.com.py/recursos/practicas-minimas-ciberseguridad-pymes-paraguay/",
+    "status": 200,
+    "title": "Prácticas mínimas de ciberseguridad para pymes paraguayas | ciberseguridad.com.py",
+    "description": "Una base priorizada de gobierno, identidad, actualizaciones, backups y preparación para incidentes.",
+    "h1": [
+      "Prácticas mínimas de ciberseguridad para pymes paraguayas"
+    ],
+    "canonical": "https://ciberseguridad.com.py/recursos/practicas-minimas-ciberseguridad-pymes-paraguay/",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "schema": [
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://ciberseguridad.com.py/#organization",
+            "name": "ciberseguridad.com.py",
+            "url": "https://ciberseguridad.com.py/",
+            "description": "Plataforma independiente de orientación y descubrimiento de proveedores de ciberseguridad para empresas en Paraguay.",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Paraguay"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ciberseguridad.com.py/#website",
+            "url": "https://ciberseguridad.com.py/",
+            "name": "ciberseguridad.com.py",
+            "inLanguage": "es-PY",
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://ciberseguridad.com.py/recursos/practicas-minimas-ciberseguridad-pymes-paraguay/#webpage",
+            "url": "https://ciberseguridad.com.py/recursos/practicas-minimas-ciberseguridad-pymes-paraguay/",
+            "name": "Prácticas mínimas de ciberseguridad para pymes paraguayas",
+            "description": "Una base priorizada de gobierno, identidad, actualizaciones, backups y preparación para incidentes.",
+            "inLanguage": "es-PY",
+            "isPartOf": {
+              "@id": "https://ciberseguridad.com.py/#website"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ciberseguridad.com.py/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Guías",
+                "item": "https://ciberseguridad.com.py/recursos/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Prácticas mínimas de ciberseguridad para pymes paraguayas",
+                "item": "https://ciberseguridad.com.py/recursos/practicas-minimas-ciberseguridad-pymes-paraguay/"
+              }
+            ]
+          },
+          {
+            "@type": "Article",
+            "headline": "Prácticas mínimas de ciberseguridad para pymes paraguayas",
+            "datePublished": "2026-08-28",
+            "dateModified": "2026-08-28",
+            "author": {
+              "@type": "Organization",
+              "name": "Equipo editorial de ciberseguridad.com.py"
+            },
+            "publisher": {
+              "@id": "https://ciberseguridad.com.py/#organization"
+            }
+          }
+        ]
+      }
+    ],
+    "links": [
+      "#contenido",
+      "/",
+      "/incidente/",
+      "/servicios/",
+      "/servicios/evaluacion-ciberseguridad/",
+      "/servicios/evaluacion-vulnerabilidades/",
+      "/servicios/pentesting-autorizado/",
+      "/servicios/preparacion-respuesta-incidentes/",
+      "/servicios/respuesta-incidentes/",
+      "/servicios/preparacion-recuperacion-ransomware/",
+      "/servicios/seguridad-microsoft-365-google-workspace/",
+      "/servicios/revision-seguridad-nube/",
+      "/servicios/backup-recuperacion/",
+      "/servicios/seguridad-red-endpoints/",
+      "/servicios/capacitacion-phishing/",
+      "/servicios/iso-27001/",
+      "/servicios/asesoria-pci-dss/",
+      "/servicios/politicas-gobernanza-seguridad/",
+      "/servicios/monitoreo-gestionado-soc/",
+      "/servicios/proteccion-datos-personales/",
+      "/servicios/ciso-externo/",
+      "/proveedores/",
+      "/recursos/",
+      "/metodologia-verificacion/",
+      "/contacto/",
+      "/encontra-un-proveedor/",
+      "https://ciberseguridad.com.py/",
+      "https://ciberseguridad.com.py/recursos/",
+      "https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20",
+      "https://mitic.gov.py/eoj0cad9uplo/2025/05/ENC-Paraguay-2025-2028-Mayo-20251558.pdf",
+      "https://sedeco.gov.py/webinar-sedeco-recomendaciones-para-prevenir-fraudes-y-riesgos-en-el-consumo/",
+      "/nosotros/",
+      "/correcciones/",
+      "/registro-proveedor/",
+      "/divulgacion-responsable/",
+      "/privacidad/",
+      "/terminos/",
+      "https://www.cert.gov.py/contacto/"
+    ],
+    "headers": {
+      "X-Powered-By": "PHP/8.3.33",
+      "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://images.higgs.ai; media-src 'self' https://d8j0ntlcm91z4.cloudfront.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'self'; object-src 'none'",
+      "X-Content-Type-Options": "nosniff"
+    }
+  }
+]

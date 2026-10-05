@@ -1,7 +1,32 @@
-# Safety net only. The domain's document root must be public_html/ (see
-# docs/owner-todo.md). If the whole repo is ever served, keep private paths shut.
-Options -Indexes
-RedirectMatch 403 ^/(src|storage|tests|docs|\.git)(/|$)
-<FilesMatch "(?i)(^\.env|\.md$|\.csv$|\.log$)">
-  Require all denied
-</FilesMatch>
+# ciberseguridad.com.py — deploy por Git de Hostinger.
+#
+# Hostinger clona el repo en public_html, así que la raíz del repo ES el docroot.
+# El sitio real vive en public_html/ (dentro del repo): este archivo lo expone
+# en "/" y deja src/, storage/, tests/, docs/, bin/ y .env fuera del alcance de
+# cualquier URL. Si el docroot se apunta directo a public_html/ (symlink o
+# soporte de Hostinger), este archivo queda inerte y la config de public_html/
+# hace lo mismo.
+Options -Indexes -MultiViews
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# HTTPS y host canónico primero, con la URL original (antes del rewrite interno).
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^ https://ciberseguridad.com.py%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} ^www\.ciberseguridad\.com\.py$ [NC]
+RewriteRule ^ https://ciberseguridad.com.py%{REQUEST_URI} [L,R=301]
+
+# Todo lo interno da 403, sin importar cómo se lo pida.
+RewriteRule ^(src|storage|tests|docs|bin|tools|vendor)(/|$) - [F,L]
+RewriteCond %{REQUEST_URI} !/\.well-known/
+RewriteRule (^|/)\. - [F,L]
+RewriteCond %{THE_REQUEST} "\s/+public_html(?:[/\s?]|$)" [NC]
+RewriteRule ^ - [F,L]
+RewriteRule \.(md|env|log|csv|ini|sh|bak|sql|lock|dist|example)$ - [F,NC,L]
+
+# El resto se sirve desde public_html/ (su .htaccess hace el ruteo fino).
+RewriteCond %{REQUEST_URI} !^/public_html/
+RewriteRule ^(.*)$ public_html/$1 [L]
+</IfModule>

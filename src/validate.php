@@ -11,7 +11,7 @@ declare(strict_types=1);
  * controlled in full.
  */
 
-const V_FORM_TYPES = ['contacto', 'autoevaluacion'];
+const V_FORM_TYPES = ['contacto', 'autoevaluacion', 'orientacion'];
 
 const V_EMPLEADOS = ['1-9', '10-24', '25-49', '50-99', '100-249', '250+'];
 
@@ -22,6 +22,11 @@ const V_RUBROS = [
 
 const V_DISPARADORES = [
     'incidente', 'cuestionario', 'diagnostico', 'cumplimiento', 'continuo', 'otro',
+    'cuentas', 'backup', 'capacitacion', 'contacto',
+];
+const V_ORIENTATION_NEEDS = [
+    'diagnostico', 'cuentas', 'backup', 'capacitacion', 'cuestionario',
+    'cumplimiento', 'continuo', 'contacto',
 ];
 
 const V_BANDAS = ['alta', 'media', 'solida'];
@@ -87,6 +92,10 @@ function validate_submission(array $post): array
     // --- page slug (drives `source`; user controlled, so constrain hard) ----
     $page = v_line(v_post($post, 'page')) ?? '';
     $clean['page'] = preg_match('#^[a-z0-9\-/]{0,80}$#', $page) === 1 ? $page : '';
+    if ($formType === 'orientacion') {
+        require_once __DIR__ . '/pages.php';
+        $clean['page'] = isset(site_pages()[$page]) ? $page : 'encontra-un-proveedor';
+    }
 
     // --- nombre ------------------------------------------------------------
     $nombre = v_line(v_post($post, 'nombre'));
@@ -129,7 +138,7 @@ function validate_submission(array $post): array
     }
 
     // --- empresa (optional) ------------------------------------------------
-    $empresa = v_line(v_post($post, 'empresa'));
+    $empresa = $formType === 'orientacion' ? '' : v_line(v_post($post, 'empresa'));
     if ($empresa === null) {
         $errors['empresa'] = 'El nombre de la empresa contiene caracteres no permitidos.';
     } elseif ($empresa !== '') {
@@ -159,14 +168,23 @@ function validate_submission(array $post): array
     if ($formType === 'autoevaluacion' && $disparador === '') {
         $disparador = 'diagnostico';
     }
-    if (!in_array($disparador, V_DISPARADORES, true)) {
+    $allowedNeeds = $formType === 'orientacion' ? V_ORIENTATION_NEEDS : V_DISPARADORES;
+    if (!in_array($disparador, $allowedNeeds, true)) {
         $errors['disparador'] = 'Contanos qué te trae por acá.';
     } else {
         $clean['disparador'] = $disparador;
     }
 
     // --- form-specific -----------------------------------------------------
-    if ($formType === 'contacto') {
+    if ($formType === 'orientacion') {
+        if (v_post($post, 'consent') !== '1') {
+            $errors['consent'] = 'Aceptá el uso de estos datos para responder tu solicitud.';
+        } else {
+            $clean['consent'] = '1';
+        }
+        // Structured context only: never accept a technical narrative or files.
+        unset($clean['empresa']);
+    } elseif ($formType === 'contacto') {
         $mensaje = v_text(v_post($post, 'mensaje'));
         if ($mensaje === null) {
             $errors['mensaje'] = 'El mensaje contiene caracteres no permitidos.';

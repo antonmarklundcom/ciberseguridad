@@ -1,5 +1,7 @@
 # CLAUDE.md — ciberseguridad.com.py
 
+**October 2026 update:** start with `README.md`, `docs/DEPLOYMENT.md` and `docs/review/REPORT-SV.md`. The current product is independent orientation, with 39 preserved live URLs, not direct technical delivery. Forms are disabled by default until a real recipient and operating policy are verified. The block status and earlier spec references below are historical. Never restore unverified contact numbers, expertise, prices, staffing or public assessment tools from those earlier plans.
+
 Working notes for anyone (human or model) touching this repo.
 Strategy and specs live in the root `*.md` files; start with `CLAUDE_TASKS.md`.
 

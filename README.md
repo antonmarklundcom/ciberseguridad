@@ -1,67 +1,34 @@
-# ciberseguridad.com.py — planning repository
+# Ciberseguridad.com.py
 
-This repo holds the **planning and specification documents** for
-`ciberseguridad.com.py`, a cybersecurity services lead-generation site for the
-Paraguayan market. No application code has been written yet, by design: these
-documents exist so that an implementation model (Sonnet 5 / Codex) can build
-the site without re-deriving strategy.
+Independent Spanish-language guidance for businesses in Paraguay. This PHP site explains security services and helps visitors prepare a scoped conversation with a specialist. The platform does not perform technical security work or promise emergency response.
 
-## Layout
+The October 2026 implementation preserves the 39 published live URLs, 17 service pages and seven guides. The live site's original PHP source was not present in any inspected Git branch: reviewed public content was recovered and integrated into the existing PHP shell. See [the Swedish audit and delivery report](docs/review/REPORT-SV.md) for evidence and limitations.
 
+## Current implementation
+
+- `public_html/`: public PHP controllers, assets, sitemap, robots and Apache configuration.
+- `src/`: private rendering, page registry, reviewed HTML content, validation and delivery code.
+- `storage/`: private CSV, operational logs and rate-limit state; never ship existing data in a release.
+- `bin/purge-leads.php`: CLI-only 30-day local lead cleanup.
+- `tests/`: isolated validation/transport tests and local HTTP/Apache checks.
+- `docs/review/`: live inventory, test evidence, image cost log and before/after screenshots.
+
+No framework, database, production Node dependency or asset build step. PHP 8.3.33 and 8.5.11 were tested. PHP needs mbstring, curl and openssl for the configured delivery path. Apache/LiteSpeed must support the documented `.htaccess` directives.
+
+## Review locally
+
+```sh
+php -S 127.0.0.1:8899 -t public_html tests/router.php
+php tests/run.php
+php tests/orientation.php
+php tests/config-gate.php
+php tests/seo-check.php
 ```
-PLAN.md                      Strategy, critique of the brief, decisions taken
-STACK_DECISION.md            Static HTML + PHP, and why not Node or WordPress
-PRODUCT_SPEC.md              Site map, page specs, design system, copy rules
-SAFE_SECURITY_TOOL_IDEAS.md  What tooling can be built, what cannot, and the line
-SEO_ARCHITECTURE.md          Structure, targeting, schema, content plan
-SERVICE_PAGE_PLAN.md         Build sheet for the money pages
-LEAD_FUNNEL.md               How a stranger becomes a conversation
-PHP_FORM_SPEC.md             The form and its handler, in full
-FUTURE_NODE_FEATURES.md      What would justify Node, and the triggers
-IMPLEMENTATION_PHASES.md     What ships when, and the launch gates
-CLAUDE_TASKS.md              The ordered work queue for an implementer
 
-docs/CONVENTIONS.md          Language, anti-fabrication, technical baseline
-docs/VENDERCRM_INTEGRATION.md  Lead capture protocol and its six rules
-```
+The development server emulates page routing only. Apache checks verify rewrite rules, headers, forbidden paths and both supported document roots. Python HTTP checks require requests and BeautifulSoup and target localhost only.
 
-## Reading order for an implementer
+## Publish manually after review
 
-1. `docs/CONVENTIONS.md` — the rules that apply to everything
-2. `PLAN.md` — strategy and the decisions taken, especially §1
-3. `STACK_DECISION.md` — what to build it in and why
-4. `IMPLEMENTATION_PHASES.md` — what ships when
-5. `CLAUDE_TASKS.md` — the actual ordered work queue
+Follow [DEPLOYMENT.md](docs/DEPLOYMENT.md). `.env.example` ships with `LEAD_ENABLED=0`. Requests stay unavailable until the owner verifies the recipient identity, delivery configuration, legal/privacy text, retention and operational monitoring. Do not copy a test recipient into production. No production form submissions, merge or Hostinger deployment were performed.
 
-Everything else is reference material consumed by those tasks.
-
-## The four decisions worth knowing up front
-
-**Static HTML with one PHP endpoint.** No framework, no database, no build
-step. This is a brochure plus a form; it ships in a week and will still be the
-right architecture in two years. Attack surface is a first-order concern on
-this site specifically, and that argues against a dependency tree.
-
-**Money pages are organised by buying trigger, not service category.** Got hit,
-got asked, got scared, got audited. A prospect self-identifies in three
-seconds, and the pages can be written because you know who is reading.
-
-**The site's own security posture is the primary trust signal.** A+ on SSL
-Labs, A on securityheaders.com, HSTS preload, strict CSP, DNSSEC, DMARC at
-`p=reject`, and a published `security.txt` — then link the live third-party
-scans so a visitor can verify it in one click. It costs a day and no competitor
-in this market can copy it without doing the work. It is launch-blocking.
-
-**Tools operate on declared input only.** Nothing this site publishes ever
-touches a host the visitor has not proven they own. That rule excludes the
-obvious "free scan, enter any URL" lead magnet, which would be unauthorised
-access performed by your infrastructure under Ley 4439/2011. See
-`SAFE_SECURITY_TOOL_IDEAS.md` §1.
-
-## Honest expectation setting
-
-Read `PLAN.md` §1 before anything else. Search volume for commercial
-cybersecurity terms in Paraguay is thin, and most of it is students and job
-seekers. This site's primary job is closing referrals and outbound, not
-originating demand. That is why it is a one-week build rather than a six-week
-one — the time saved belongs in the channels that actually fill the funnel.
+Older strategy/specification documents and legacy helpers are historical context. They do not establish business capabilities, credentials, prices, staffing, contact numbers or current launch requirements. This README, deployment guide and October report supersede conflicting earlier assumptions.

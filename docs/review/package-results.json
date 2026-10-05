@@ -1,0 +1,16 @@
+{
+  "archive": "ciberseguridad-publicacion-2026-10-05.zip",
+  "archive_bytes": 286279,
+  "archive_sha256": "5fb323c108fb7e61785f893f21b1f5e8dc16301aa5444b3dccfc4186bcfb9b61",
+  "verified_files": 124,
+  "intake_default": "LEAD_ENABLED=0",
+  "excluded": [
+    ".env",
+    "test data",
+    "private lead CSV/logs",
+    "Git metadata",
+    "portable runtimes",
+    "audit captures",
+    "screenshots"
+  ]
+}

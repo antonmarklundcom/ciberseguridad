@@ -107,22 +107,13 @@ function organization_ld(): array
         '@id'      => site_url('/#organization'),
         'name'     => $n['name'],
         'url'      => site_url('/'),
-        'telephone' => $n['e164'],
         'areaServed' => ['@type' => 'Country', 'name' => 'Paraguay'],
-        'address'  => [
-            '@type' => 'PostalAddress',
-            'addressLocality' => $n['locality'],
-            'addressCountry'  => 'PY',
-        ],
-        'contactPoint' => [[
-            '@type' => 'ContactPoint',
-            'contactType' => 'customer service',
-            'telephone' => $n['e164'],
-            'availableLanguage' => 'es',
-        ] + ($n['email'] !== '' ? ['email' => $n['email']] : [])],
     ];
     if ($n['email'] !== '') {
         $org['email'] = $n['email'];
+    }
+    if ($n['e164'] !== '') {
+        $org['telephone'] = $n['e164'];
     }
     return $org;
 }
@@ -193,7 +184,7 @@ function crumbs_for(string $slug): array
     }
     $parts = explode('/', $slug);
     if (count($parts) === 2) {
-        $parent = ['servicios' => ['Servicios', '/#servicios'], 'para' => ['Para tu rubro', '/para/pymes'], 'recursos' => ['Recursos', '/recursos']][$parts[0]] ?? null;
+        $parent = ['servicios' => ['Servicios', '/servicios/'], 'para' => ['Para tu rubro', '/para/pymes'], 'recursos' => ['Guías', '/recursos/']][$parts[0]] ?? null;
         if ($parent !== null) {
             $trail[] = $parent;
         }
@@ -275,7 +266,7 @@ function og_image_for(string $slug): ?string
             return "/assets/img/og/$name.$ext";
         }
     }
-    return null;
+    return '/assets/img/og/default.jpg';
 }
 
 // ---------------------------------------------------------------------------
@@ -295,70 +286,18 @@ function nav_groups(): array
 
 function render_header(array $page, bool $minimal): string
 {
-    $brand = '<a class="brand" href="/" aria-label="' . e(cfg('brand')) . ' — inicio">Ciberseguridad<span>.com.py</span></a>';
-    if ($minimal) {
-        return '<header class="site-header site-header--min"><div class="wrap bar">' . $brand
-            . '<a class="btn-link" href="/">Ir al inicio</a></div></header>';
+    $h='<header class="site-header"><div class="shell bar"><a class="brand" href="/" aria-label="Ciberseguridad.com.py — inicio"><span class="brand-mark" aria-hidden="true">c.</span><span>ciberseguridad<span class="brand-domain">.com.py</span></span></a>';
+    if ($minimal) return $h . '</div></header>';
+    $h.='<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel">Menú <span aria-hidden="true">☰</span></button><div class="nav-panel" id="nav-panel"><nav aria-label="Principal"><ul class="nav">';
+    foreach (['servicios'=>'Servicios','recursos'=>'Guías','proveedores'=>'Proveedores','nosotros'=>'La plataforma','contacto'=>'Contacto'] as $slug=>$label) {
+        $h.='<li><a href="'.e(page_path($slug)).'"'.($page['slug']===$slug?' aria-current="page"':'').'>'.e($label).'</a></li>';
     }
-
-    $g = nav_groups();
-    $cur = $page['slug'];
-    $li = static function (string $slug, string $label) use ($cur): string {
-        $c = $slug === $cur ? ' aria-current="page"' : '';
-        return '<li><a href="' . e(page_path($slug)) . '"' . $c . '>' . e($label) . '</a></li>';
-    };
-
-    $h  = '<header class="site-header"><div class="wrap bar">' . $brand;
-    $h .= '<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel"><span class="nav-toggle__bars" aria-hidden="true"></span><span class="sr">Menú</span></button>';
-    $h .= '<div class="nav-panel" id="nav-panel"><nav aria-label="Principal"><ul class="nav">';
-    $h .= '<li class="has-sub"><button class="sub-toggle" type="button" aria-expanded="false">Servicios</button><ul class="sub">';
-    foreach ($g['servicios'] as $slug => $label) {
-        $h .= $li($slug, $label);
-    }
-    $h .= '</ul></li>';
-    $h .= '<li class="has-sub"><button class="sub-toggle" type="button" aria-expanded="false">Para tu rubro</button><ul class="sub">';
-    foreach ($g['para'] as $slug => $label) {
-        $h .= $li($slug, $label);
-    }
-    $h .= '</ul></li>';
-    $h .= $li('recursos', 'Recursos') . $li('nosotros', 'Nosotros') . $li('contacto', 'Contacto');
-    $h .= '</ul></nav>';
-    $h .= '<a class="btn btn--primary nav-cta" href="' . e(wa($page['wa'])) . '" data-track="whatsapp">Escribinos</a>';
-    $h .= '</div></div></header>';
-    return $h;
+    return $h.'</ul></nav><a class="button nav-cta" href="/encontra-un-proveedor/">Pedir orientación <span aria-hidden="true">↗</span></a></div></div></header>';
 }
 
 function render_footer(): string
 {
-    $g = nav_groups();
-    $h  = '<footer class="site-footer"><div class="wrap">';
-    $h .= '<div class="foot-grid">';
-    $h .= '<div>' . nap_html() . '</div>';
-    $h .= '<nav aria-label="Servicios"><h2 class="foot-h">Servicios</h2><ul>';
-    foreach ($g['servicios'] as $slug => $label) {
-        $h .= '<li><a href="' . e(page_path($slug)) . '">' . e($label) . '</a></li>';
-    }
-    $h .= '</ul></nav>';
-    $h .= '<nav aria-label="Para tu rubro"><h2 class="foot-h">Para tu rubro</h2><ul>';
-    foreach ($g['para'] as $slug => $label) {
-        $h .= '<li><a href="' . e(page_path($slug)) . '">' . e($label) . '</a></li>';
-    }
-    $h .= '</ul></nav>';
-    $h .= '<nav aria-label="Sitio"><h2 class="foot-h">Sitio</h2><ul>'
-        . '<li><a href="/recursos">Recursos</a></li>'
-        . '<li><a href="/nosotros">Nosotros</a></li>'
-        . '<li><a href="/contacto">Contacto</a></li>'
-        . '<li><a href="/politica-de-privacidad">Política de privacidad</a></li>'
-        . '<li><a href="/terminos">Términos de uso</a></li>'
-        . '<li><a href="/.well-known/security.txt">security.txt</a></li>'
-        . '</ul></nav>';
-    $h .= '</div>';
-    // Verify-our-security line (PRODUCT_SPEC.md §2). This only invites a scan
-    // of our own host; it makes no claim about the grade.
-    $h .= '<p class="foot-note">Este sitio publica su propia configuración de seguridad — '
-        . '<a href="https://securityheaders.com/?q=ciberseguridad.com.py" rel="noopener">verificala</a>.</p>';
-    $h .= '</div></footer>';
-    return $h;
+    return '<footer class="site-footer"><div class="shell"><div class="footer-grid"><div><a class="brand" href="/">ciberseguridad.com.py</a><p>Orientación independiente para empresas en Paraguay. Te ayudamos a entender y comparar servicios de seguridad.</p><p class="foot-note">No prestamos servicios técnicos de seguridad ni somos CERT-PY o MITIC.</p></div><nav aria-label="Plataforma"><h2>Explorá</h2><a href="/servicios/">Servicios</a><a href="/recursos/">Guías para empresas</a><a href="/proveedores/">Proveedores</a><a href="/encontra-un-proveedor/">Pedir orientación</a><a href="/incidente/">Incidente en curso</a></nav><nav aria-label="Confianza"><h2>La plataforma</h2><a href="/nosotros/">Sobre nosotros</a><a href="/metodologia-verificacion/">Cómo verificamos</a><a href="/registro-proveedor/">Soy proveedor</a><a href="/correcciones/">Correcciones</a><a href="/divulgacion-responsable/">Divulgación responsable</a></nav><nav aria-label="Contacto y privacidad"><h2>Contacto</h2><a href="/contacto/">Contacto general</a><a href="/privacidad/">Privacidad</a><a href="/terminos/">Términos</a><a href="https://www.cert.gov.py/contacto/" rel="noopener">Canal oficial CERT-PY ↗</a></nav></div><div class="footer-bottom"><span>Paraguay · Español</span><span>Datos mínimos. Alcance por escrito. Decisiones informadas.</span></div></div></footer>';
 }
 
 /**
@@ -380,7 +319,20 @@ function layout(array $page, string $body, array $opts = []): string
 
     // Structured data: page-specific documents plus breadcrumbs. Organization
     // is emitted on the home and contact pages only, others reference its @id.
-    $ld = '';
+    $ld = jsonld(['@type'=>'WebPage','name'=>$page['title'],'description'=>$page['desc'],'url'=>site_url(page_path($page['slug'])),'inLanguage'=>'es-PY']) . "\n";
+    if (isset($page['published_at'], $page['modified_at'])) {
+        preg_match('/<h1[^>]*>(.*?)<\/h1>/is', $body, $headline);
+        $ld .= jsonld([
+            '@type'=>'Article',
+            'headline'=>html_entity_decode(strip_tags($headline[1] ?? $page['label']), ENT_QUOTES | ENT_HTML5, 'UTF-8'),
+            'url'=>site_url(page_path($page['slug'])),
+            'datePublished'=>$page['published_at'],
+            'dateModified'=>$page['modified_at'],
+            'inLanguage'=>'es-PY',
+            'author'=>['@type'=>'Organization', 'name'=>cfg('brand')],
+            'publisher'=>['@id'=>site_url('/#organization')],
+        ]) . "\n";
+    }
     foreach ($schema as $doc) {
         $ld .= jsonld($doc) . "\n";
     }
@@ -402,9 +354,9 @@ function layout(array $page, string $body, array $opts = []): string
 
     $out  = "<!doctype html>\n<html lang=\"es-PY\">\n<head>\n<meta charset=\"utf-8\">\n";
     $out .= '<meta name="viewport" content="width=device-width,initial-scale=1">' . "\n";
-    $out .= '<meta name="theme-color" content="#0B2545">' . "\n";
+    $out .= '<meta name="theme-color" content="#163b3c">' . "\n";
     $out .= meta($page, $opts['og_image'] ?? og_image_for($page['slug']));
-    $out .= '<link rel="stylesheet" href="' . e(asset('/assets/css/site.css')) . '">' . "\n";
+    $out .= '<link rel="stylesheet" href="' . e(asset('/assets/css/orientation.css')) . '">' . "\n";
     $out .= '<link rel="icon" href="/favicon.svg" type="image/svg+xml">' . "\n";
     $out .= $ld;
     $out .= "</head>\n<body{$bodyAttrs}>\n";
@@ -413,14 +365,9 @@ function layout(array $page, string $body, array $opts = []): string
     $out .= '<main id="main" tabindex="-1">' . "\n" . $body . "\n</main>\n";
     $out .= render_footer() . "\n";
 
-    if ($sticky === 'tel') {
-        $out .= '<div class="sticky-cta sticky-cta--tel"><a class="btn btn--danger" href="' . e(tel_href())
-            . '" data-track="phone">Llamanos ahora</a></div>' . "\n";
-    } elseif ($sticky === 'wa') {
-        $out .= '<div class="sticky-cta"><a class="btn btn--primary" href="' . e(wa($page['wa']))
-            . '" data-track="whatsapp">Escribinos por WhatsApp</a></div>' . "\n";
+    if (!$minimal && !in_array($page['slug'], ['encontra-un-proveedor','contacto','incidente','gracias','404','privacidad','terminos'], true)) {
+        $out .= '<div class="sticky-cta"><a class="button" href="/encontra-un-proveedor/">Pedir orientación <span aria-hidden="true">↗</span></a></div>';
     }
-
     if (!$minimal) {
         $out .= '<script src="' . e(asset('/assets/js/site.js')) . '"></script>' . "\n";
     }

@@ -1,55 +1,39 @@
 <?php
 declare(strict_types=1);
-
-/**
- * POST /enviar — the only server-side entry point on the site.
- *
- * Thin front controller: it delegates to handle_submission() and turns the
- * result into a response. All logic lives in src/, outside the web root.
- */
-
 require_once dirname(__DIR__) . '/src/form-handler.php';
-
-$result = handle_submission($_POST, $_SERVER, $_COOKIE);
-
-switch ($result['action']) {
-    case 'redirect':
-        header('Location: ' . $result['to'], true, 302);
-        exit;
-
-    case 'deny':
-        $code = (int) ($result['code'] ?? 403);
-        http_response_code($code);
-        header('Content-Type: text/html; charset=UTF-8');
-        // Deliberately says nothing about why. A CSRF failure and a wrong
-        // method look identical from outside.
-        echo '<!doctype html><html lang="es-PY"><head><meta charset="utf-8">'
-           . '<title>No se pudo procesar</title><meta name="robots" content="noindex">'
-           . '</head><body><h1>No se pudo procesar el formulario</h1>'
-           . '<p>Volvé a la página e intentá de nuevo, o escribinos por WhatsApp.</p>'
-           . '<p><a href="/">Volver al inicio</a></p></body></html>';
-        exit;
-
-    case 'render':
-    default:
-        http_response_code(422);
-        header('Content-Type: text/html; charset=UTF-8');
-
-        $form_type = $result['form_type'] ?? 'contacto';
-        $page      = $result['page'] ?? '';
-        $errors    = $result['errors'] ?? [];
-        $old       = $result['old'] ?? [];
-
-        // Re-render inside the real site shell. The form partial is unchanged.
-        require_once dirname(__DIR__) . '/src/render.php';
-        $GLOBALS['__page'] = ['title' => 'Revisá el formulario | Ciberseguridad.com.py',
-            'desc' => 'Revisá los campos marcados y volvé a enviar tu consulta.',
-            'label' => 'Formulario', 'group' => 'hidden', 'index' => false, 'prio' => '0.0',
-            'wa' => 'Hola, quiero hacer una consulta sobre seguridad informática', 'slug' => 'contacto'];
-        ob_start();
-        echo '<section class="hero"><div class="wrap"><h1>Revisá el formulario</h1><div class="two-col"><div>';
-        require dirname(__DIR__) . '/src/partials/lead-form.php';
-        echo '</div></div></div></section>';
-        echo layout($GLOBALS['__page'], (string) ob_get_clean(), ['service' => 'contacto']);
-        exit;
+header('Cache-Control: no-store');
+header('X-Robots-Tag: noindex');
+if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && v_post($_POST, 'form_type') !== 'orientacion') {
+    $result = ['action'=>'deny', 'code'=>422];
+} else {
+    $result = handle_submission($_POST, $_SERVER, $_COOKIE);
 }
+if ($result['action'] === 'redirect') {
+    header('Location: /gracias/', true, 303);
+    exit;
+}
+require_once dirname(__DIR__) . '/src/render.php';
+if ($result['action'] === 'deny') {
+    $code=(int)($result['code'] ?? 403);
+    http_response_code($code);
+    if ($code===405) header('Allow: POST');
+    if ($code===429) header('Retry-After: 3600');
+    if ($code===503) header('Retry-After: 300');
+    $message=match($code) {
+        429=>'Hay demasiados intentos. Esperá antes de volver a enviar.',
+        503=>'El canal de solicitudes no está disponible. La solicitud no quedó confirmada. Intentá más tarde.',
+        default=>'No se pudo procesar el formulario. Volvé a abrir la solicitud y revisá los datos.'
+    };
+    $p=site_page('gracias'); $p['title']='No se pudo registrar la solicitud';
+    echo layout($p,'<section class="page-hero"><div class="shell narrow"><h1>No se pudo registrar la solicitud.</h1><p>'.e($message).'</p><a class="button" href="/encontra-un-proveedor/">Volver al formulario</a></div></section>',['minimal'=>true]);
+    exit;
+}
+http_response_code(422);
+csrf_token();
+$errors=$result['errors']??[]; $old=$result['old']??[]; $page='encontra-un-proveedor';
+$p=site_page($page); $p['title']='Revisá la solicitud'; $p['index']=false;
+ob_start();
+echo '<section class="page-hero"><div class="shell narrow"><h1>Revisá la solicitud.</h1><p>Corregí los campos marcados y volvé a enviar.</p></div></section><section class="section"><div class="shell narrow">';
+require dirname(__DIR__) . '/src/partials/orientation-form.php';
+echo '</div></section>';
+echo layout($p,(string)ob_get_clean());
