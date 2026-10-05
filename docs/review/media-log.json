@@ -1,0 +1,56 @@
+{
+  "review_date": "2026-10-05",
+  "budget_credits": 100,
+  "total_quoted_credits": 1,
+  "billing_note": "Each request received an exact pre-generation quote of 0.5 credits. Both completed; no retries, failed generations, video, project creation, purchases or subscriptions. Provider settlement/other concurrent account activity not independently audited.",
+  "generations": [
+    {
+      "index": 1,
+      "model": "gpt_image_2_5",
+      "variant": "sunburst",
+      "quality": "medium",
+      "resolution": "1k",
+      "aspect_ratio": "3:2",
+      "count": 1,
+      "prompt": "Premium editorial conceptual still life for independent cybersecurity guidance for Paraguayan small businesses. A sculptural architectural network of matte ivory rectangular blocks connected by precise warm rust-orange bridges on a muted deep petrol teal background, one orderly circular path communicating business continuity and clear next steps. Isometric three-quarter view, soft natural studio light, crisp but tactile materials, understated sophisticated B2B magazine art, ample empty petrol space at top. No people, no screens, no text, no padlocks, no shields, no logos, no glowing hacker effects. A conceptual illustration, never a real customer case.",
+      "quote_credits": 0.5,
+      "job_id": "e4ba8912-d876-460e-8bea-af6c7a0dddcf",
+      "status": "completed"
+    },
+    {
+      "index": 2,
+      "model": "gpt_image_2_5",
+      "variant": "sunburst",
+      "quality": "medium",
+      "resolution": "1k",
+      "aspect_ratio": "3:2",
+      "count": 1,
+      "prompt": "Premium editorial conceptual still life matching an independent cybersecurity business website. Three organized sets of cream paper folios in a shallow matte ivory tray, a single rust-orange linking ribbon, small petrol teal geometric blocks indicating separate copies and a route back to work. Abstract business backup continuity concept, not a technical diagram. Background warm off-white, precise sculptural composition, soft studio daylight, tactile paper and ceramic, restrained sophisticated B2B magazine art. No text, no people, no screens, no padlocks, no shields, no logos, no imaginary product interfaces.",
+      "quote_credits": 0.5,
+      "job_id": "f621179e-ff61-4492-a228-082fd4e82e15",
+      "status": "completed"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/img/continuity-1024.webp",
+      "bytes": 31958
+    },
+    {
+      "path": "assets/img/continuity-480.webp",
+      "bytes": 11756
+    },
+    {
+      "path": "assets/img/backup-768.webp",
+      "bytes": 28340
+    },
+    {
+      "path": "assets/img/backup-480.webp",
+      "bytes": 13176
+    },
+    {
+      "path": "assets/img/og/default.jpg",
+      "bytes": 63838
+    }
+  ]
+}

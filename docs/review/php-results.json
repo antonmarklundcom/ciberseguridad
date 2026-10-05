@@ -1,0 +1,84 @@
+[
+  {
+    "runtime": "PHP 8.3.33 (cli) (built: Jul 28 2026 18:10:26) (NTS Visual C++ 2019 x64)",
+    "test": "tests/config-gate.php",
+    "exit_code": 0,
+    "summary": [],
+    "checks": 8
+  },
+  {
+    "runtime": "PHP 8.3.33 (cli) (built: Jul 28 2026 18:10:26) (NTS Visual C++ 2019 x64)",
+    "test": "tests/seo-check.php",
+    "exit_code": 0,
+    "summary": [
+      "ok    41 registry entries checked for title/description",
+      "SEO check: all good"
+    ],
+    "checks": 0
+  },
+  {
+    "runtime": "PHP 8.3.33 (cli) (built: Jul 28 2026 18:10:26) (NTS Visual C++ 2019 x64)",
+    "test": "PHP syntax",
+    "files": 69,
+    "failures": []
+  },
+  {
+    "runtime": "PHP 8.5.11 (cli) (built: Sep 22 2026 13:51:38) (NTS Visual C++ 2022 x64)",
+    "test": "tests/config-gate.php",
+    "exit_code": 0,
+    "summary": [],
+    "checks": 8
+  },
+  {
+    "runtime": "PHP 8.5.11 (cli) (built: Sep 22 2026 13:51:38) (NTS Visual C++ 2022 x64)",
+    "test": "tests/seo-check.php",
+    "exit_code": 0,
+    "summary": [
+      "ok    41 registry entries checked for title/description",
+      "SEO check: all good"
+    ],
+    "checks": 0
+  },
+  {
+    "runtime": "PHP 8.5.11 (cli) (built: Sep 22 2026 13:51:38) (NTS Visual C++ 2022 x64)",
+    "test": "PHP syntax",
+    "files": 69,
+    "failures": []
+  },
+  {
+    "runtime": "PHP 8.3.33 (cli) (built: Jul 28 2026 18:10:26) (NTS Visual C++ 2019 x64)",
+    "test": "tests/run.php",
+    "exit_code": 0,
+    "summary": [
+      "97 passed, 0 failed"
+    ],
+    "checks": 97
+  },
+  {
+    "runtime": "PHP 8.3.33 (cli) (built: Jul 28 2026 18:10:26) (NTS Visual C++ 2019 x64)",
+    "test": "tests/orientation.php",
+    "exit_code": 0,
+    "summary": [
+      "25 passed, 0 failed"
+    ],
+    "checks": 25
+  },
+  {
+    "runtime": "PHP 8.5.11 (cli) (built: Sep 22 2026 13:51:38) (NTS Visual C++ 2022 x64)",
+    "test": "tests/run.php",
+    "exit_code": 0,
+    "summary": [
+      "97 passed, 0 failed"
+    ],
+    "checks": 97
+  },
+  {
+    "runtime": "PHP 8.5.11 (cli) (built: Sep 22 2026 13:51:38) (NTS Visual C++ 2022 x64)",
+    "test": "tests/orientation.php",
+    "exit_code": 0,
+    "summary": [
+      "25 passed, 0 failed"
+    ],
+    "checks": 25
+  }
+]

@@ -1,0 +1,55 @@
+<?php
+declare(strict_types=1);
+require dirname(__DIR__) . '/src/form-handler.php';
+cfg_load_env_file(dirname(__DIR__) . '/.env');
+$tmp=sys_get_temp_dir().'/orientation-test-'.bin2hex(random_bytes(6));
+mkdir($tmp,0770,true);
+foreach (['STORAGE_DIR'=>$tmp,'LEAD_ENABLED'=>'1','PRACTITIONER_NAME'=>'Synthetic test recipient','VENDERCRM_URL'=>'https://crm.example.invalid','VENDERCRM_API_KEY'=>'synthetic-key','NOTIFY_EMAIL'=>'','SITE_URL'=>'https://ciberseguridad.com.py'] as $k=>$v) cfg_env_store($k,$v);
+$passed=0; $failed=0;
+function check(bool $ok,string $label):void { global $passed,$failed; $ok?$passed++:$failed++; echo ($ok?'PASS ':'FAIL ').$label.PHP_EOL; }
+$post=['form_type'=>'orientacion','page'=>'servicios/backup-recuperacion','ts'=>(string)(time()-30),'csrf'=>str_repeat('a',64),'nombre'=>'Persona Sintética','telefono'=>'0981 123 456','rubro'=>'comercio','empleados'=>'1-9','disparador'=>'backup','consent'=>'1','email'=>'synthetic@example.invalid','website'=>''];
+$server=['REQUEST_METHOD'=>'POST','REMOTE_ADDR'=>'127.0.0.1'];$cookie=['csrf'=>str_repeat('a',64)];
+[$clean,$errors]=validate_submission($post);
+check($errors===[],'minimal structured request validates');
+check(isset(validate_submission(array_replace($post,['consent'=>'0']))[1]['consent']),'consent required server-side');
+check(isset(validate_submission(array_replace($post,['disparador'=>'forged']))[1]['disparador']),'forged need rejected');
+check(isset(validate_submission(array_replace($post,['disparador'=>'incidente']))[1]['disparador']),'legacy incident category is not a public orientation choice');
+check(isset(validate_submission(array_replace($post,['rubro'=>['array']]))[1]['rubro']),'array enum rejected');
+check(validate_submission(array_replace($post,['page'=>'unpublished']))[0]['page']==='encontra-un-proveedor','unpublished context normalized');
+check(!isset(validate_submission($post+['mensaje'=>'secret=never-forward','empresa'=>'unrequested'])[0]['mensaje']),'unexpected narrative ignored');
+check(validate_submission($post+['empresa'=>"ignored\r\nfield"])[1]===[],'unrequested company field never creates a hidden validation error');
+check((form_attribution([], ['HTTP_REFERER'=>'https://example.invalid/private/person?token=never-store#secret'])['referrer']??'')==='https://example.invalid/','referrer path, query and fragment never retained');
+$pushes=0;$notifications=0;
+$transport=function($url,$json,$headers,$timeout)use(&$pushes):array { $pushes++; $p=json_decode($json,true); check(($p['fields']['consent']??'')==='1','consent forwarded to mock CRM'); check(!isset($p['message']),'no narrative in payload'); return ['status'=>201,'body'=>'{"contactId":"synthetic-contact","dealId":"synthetic-deal"}','error'=>'']; };
+$notify=function()use(&$notifications):void { $notifications++; };
+$result=handle_submission($post,$server,$cookie,$transport,$notify);
+check($result['action']==='redirect' && $pushes===1 && $notifications===1,'success stored and mock-delivered without external calls');
+$rows=array_map(static fn($line)=>str_getcsv($line,',','"','\\'),file(leads_file(),FILE_IGNORE_NEW_LINES));$idx=array_flip(LEAD_COLUMNS);
+check(($rows[1][$idx['consent']]??'')==='1','consent stored with receipt timestamp');
+check(($rows[1][$idx['crm_status']]??'')==='201','delivery marked after success');
+$failedTransport=static fn()=>['status'=>503,'body'=>'DO-NOT-LOG secret-payload','error'=>'DO-NOT-LOG secret-error'];
+$result=handle_submission($post,array_replace($server,['REMOTE_ADDR'=>'127.0.0.2']),$cookie,$failedTransport,$notify);
+check($result['action']==='redirect' && count(file(leads_file()))===3,'CRM outage retains private request');
+check(!str_contains(file_get_contents($tmp.'/form.log'),'DO-NOT-LOG'),'no raw upstream errors in logs');
+check(!str_contains(file_get_contents($tmp.'/form.log'),'127.0.0.2'),'raw IP absent from logs');
+$result=handle_submission(array_replace($post,['ts'=>(string)time()]),$server,$cookie,$transport,$notify);
+check($result['action']==='render' && isset($result['errors']['form']),'fast human submission explains retry');
+$result=handle_submission(array_replace($post,['ts'=>(string)(time()-8000)]),$server,$cookie,$transport,$notify);
+check($result['action']==='render','expired request explains retry');
+$result=handle_submission($post,$server,['csrf'=>'incorrect'],$transport,$notify);
+check(($result['code']??0)===403,'CSRF mismatch blocked');
+$before=$pushes;
+$result=handle_submission($post+['archivo'=>'ignored'],array_replace($server,['REMOTE_ADDR'=>'127.0.0.3']),$cookie,$transport,$notify);
+check($result['action']==='redirect','unknown field never treated as attachment');
+// Retention: replace one timestamp with an old synthetic date.
+$rows=array_map(static fn($line)=>str_getcsv($line,',','"','\\'),file(leads_file(),FILE_IGNORE_NEW_LINES));$rows[1][1]=gmdate('c',time()-31*86400);
+$fh=fopen(leads_file(),'w');foreach($rows as $row)fputcsv($fh,$row,',','"','\\');fclose($fh);
+check(leads_prune()===1 && count(file(leads_file()))===3,'30-day retention keeps recent rows and removes old one');
+// Storage failure must not produce a false thank-you or send externally.
+unlink(leads_file());mkdir(leads_file());$before=$pushes;
+$result=handle_submission($post,array_replace($server,['REMOTE_ADDR'=>'127.0.0.4']),$cookie,$transport,$notify);
+check(($result['code']??0)===503 && $before===$pushes,'unwritable storage blocks delivery and false success');
+rmdir(leads_file());
+foreach(glob($tmp.'/ratelimit/*')?:[] as $p)unlink($p);
+@rmdir($tmp.'/ratelimit');foreach(glob($tmp.'/*')?:[] as $p)unlink($p);rmdir($tmp);
+echo "$passed passed, $failed failed".PHP_EOL;exit($failed?1:0);

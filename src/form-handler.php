@@ -20,11 +20,15 @@ require_once __DIR__ . '/vendercrm.php';
  *               errors?:array<string,string>, old?:array<string,string>,
  *               form_type?:string, page?:string}
  */
-function handle_submission(array $post, array $server, array $cookie): array
+function handle_submission(array $post, array $server, array $cookie, ?callable $crmTransport = null, ?callable $notify = null): array
 {
     // 1. Method.
     if (($server['REQUEST_METHOD'] ?? '') !== 'POST') {
         return ['action' => 'deny', 'code' => 405];
+    }
+
+    if (!cfg('lead_enabled')) {
+        return ['action' => 'deny', 'code' => 503];
     }
 
     // 2. CSRF. Silent 403 — the response says nothing about why.
@@ -42,22 +46,27 @@ function handle_submission(array $post, array $server, array $cookie): array
 
     // 3. Honeypot. Silent success: the bot sees a normal thank-you page and
     //    nothing is sent anywhere.
-    if (trim((string) ($post['website'] ?? '')) !== '') {
+    if (trim(v_post($post, 'website')) !== '') {
         form_log('honeypot', ['ip' => form_client_ip($server)]);
         return ['action' => 'redirect', 'to' => '/gracias?t=' . rawurlencode($formType)];
     }
 
     // 4. Timing. Faster than 3s is a bot; older than 2h is a stale tab.
-    $ts  = (int) ($post['ts'] ?? 0);
+    $ts  = (int) v_post($post, 'ts');
     $age = time() - $ts;
     if ($ts <= 0 || $age < (int) cfg('min_fill_secs') || $age > (int) cfg('max_form_age')) {
         form_log('timing_reject', ['ip' => form_client_ip($server), 'age' => $age]);
+        if ($formType === 'orientacion') {
+            return ['action'=>'render','form_type'=>$formType,'page'=>v_post($post,'page'),
+                'old'=>form_old_input($post),'errors'=>['form'=>'El formulario venció o se envió demasiado rápido. Revisá los datos e intentá de nuevo.']];
+        }
         return ['action' => 'redirect', 'to' => '/gracias?t=' . rawurlencode($formType)];
     }
 
     // 5. Rate limit.
     if (!form_rate_ok(form_client_ip($server))) {
         form_log('rate_limited', ['ip' => form_client_ip($server)]);
+        if ($formType === 'orientacion') return ['action'=>'deny','code'=>429];
         return ['action' => 'redirect', 'to' => '/gracias?t=' . rawurlencode($formType)];
     }
 
@@ -79,14 +88,20 @@ function handle_submission(array $post, array $server, array $cookie): array
     $band = lead_band($clean);
 
     // 10. Local write FIRST. This is the durability guarantee.
-    $rowId = leads_append($clean, $attr, $band, $key);
+    try {
+        leads_prune();
+        $rowId = leads_append($clean, $attr, $band, $key);
+    } catch (Throwable $e) {
+        form_log('storage_failed', ['error'=>get_class($e)]);
+        return ['action'=>'deny','code'=>503];
+    }
 
     // 11. CRM push. Never allowed to break the visitor's journey.
     $crm = ['ok' => false, 'status' => 0, 'body' => '', 'error' => 'not attempted',
             'contact_id' => '', 'deal_id' => '', 'duplicate' => false];
     try {
         $payload = vendercrm_build_payload($clean, $attr, $key);
-        $crm     = vendercrm_push($payload);
+        $crm     = vendercrm_push($payload, $crmTransport);
     } catch (Throwable $e) {
         // Class name only. The message could contain payload fragments.
         $crm['error'] = 'exception: ' . get_class($e);
@@ -99,14 +114,13 @@ function handle_submission(array $post, array $server, array $cookie): array
         'status'    => $crm['status'],
         'ok'        => $crm['ok'] ? '1' : '0',
         'duplicate' => $crm['duplicate'] ? '1' : '0',
-        'error'     => $crm['error'],
-        // Response body is logged because it names the failing field on a 422.
-        'body'      => $crm['ok'] ? '' : mb_substr($crm['body'], 0, 500),
+        'error'     => $crm['ok'] ? '' : 'delivery_failed',
     ]);
 
     // 12. Notify.
     try {
-        form_notify($clean, $band, $attr, $crm);
+        if ($notify !== null) $notify($clean, $band, $attr, $crm);
+        else form_notify($clean, $band, $attr, $crm);
     } catch (Throwable $e) {
         form_log('notify_failed', ['error' => get_class($e)]);
     }
@@ -180,7 +194,12 @@ function form_attribution(array $cookie, array $server): array
         && preg_match('#^https?://#i', $ref) === 1
         && preg_match('/[\x00-\x1F\x7F]/', $ref) !== 1
     ) {
-        $out['referrer'] = $ref;
+        // Referrer queries can contain identifiers or credentials. Keep only
+        // the origin for campaign context, never the path/query/fragment.
+        $parts = parse_url($ref);
+        if (is_array($parts) && !empty($parts['host'])) {
+            $out['referrer'] = strtolower($parts['scheme']) . '://' . $parts['host'] . '/';
+        }
     }
 
     return $out;
@@ -196,7 +215,7 @@ function form_client_ip(array $server): string
 function form_old_input(array $post): array
 {
     $out = [];
-    foreach (['nombre', 'telefono', 'email', 'empresa', 'empleados', 'rubro', 'disparador', 'mensaje'] as $k) {
+    foreach (['nombre', 'telefono', 'email', 'empresa', 'empleados', 'rubro', 'disparador', 'mensaje', 'consent'] as $k) {
         $v = $post[$k] ?? '';
         if (is_string($v)) {
             $out[$k] = mb_substr($v, 0, 2000);
@@ -268,16 +287,16 @@ function form_rate_ok(string $ip): bool
 
 const LEAD_COLUMNS = [
     'row_id', 'received_at', 'form_type', 'page', 'lead_band',
-    'nombre', 'telefono', 'email', 'empresa', 'empleados', 'rubro', 'disparador', 'mensaje',
+        'nombre', 'telefono', 'email', 'empresa', 'empleados', 'rubro', 'disparador', 'mensaje',
     'score', 'banda', 'dominios',
     'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content',
     'gclid', 'fbclid', 'referrer',
-    'idempotency_key', 'crm_status', 'crm_contact_id', 'crm_deal_id', 'crm_pushed_at',
+    'idempotency_key', 'crm_status', 'crm_contact_id', 'crm_deal_id', 'crm_pushed_at', 'consent',
 ];
 
 function leads_file(): string
 {
-    return cfg('storage_dir') . '/leads.csv';
+    return cfg('storage_dir') . '/orientation-leads.csv';
 }
 
 /** Append the lead and return its row id. Runs before the CRM call. */
@@ -323,24 +342,58 @@ function leads_append(array $clean, array $attr, string $band, string $key): str
         'crm_contact_id'  => '',
         'crm_deal_id'     => '',
         'crm_pushed_at'   => '',
+        'consent'         => (string) ($clean['consent'] ?? ''),
     ];
 
     $fh = @fopen($file, 'a+');
     if ($fh === false) {
         form_log('leads_write_failed', ['row_id' => $rowId]);
-        return $rowId;
+        throw new RuntimeException('Private storage unavailable');
     }
-    if (flock($fh, LOCK_EX)) {
-        if (ftell($fh) === 0 || filesize($file) === 0) {
+    if (!flock($fh, LOCK_EX)) {
+        fclose($fh);
+        throw new RuntimeException('Private storage lock unavailable');
+    }
+    try {
+        if ((fstat($fh)['size'] ?? 0) === 0) {
             fputcsv($fh, LEAD_COLUMNS, ',', '"', '\\');
         }
-        fputcsv($fh, array_values($row), ',', '"', '\\');
-        fflush($fh);
+        if (fputcsv($fh, array_values($row), ',', '"', '\\') === false || !fflush($fh)) {
+            throw new RuntimeException('Private storage write failed');
+        }
+    } finally {
         flock($fh, LOCK_UN);
+        fclose($fh);
     }
-    fclose($fh);
 
     return $rowId;
+}
+
+/** Delete local lead rows older than 30 days under the same exclusive lock. */
+function leads_prune(?int $now = null): int
+{
+    $file = leads_file();
+    if (!is_file($file)) return 0;
+    $fh = @fopen($file, 'r+');
+    if ($fh === false) throw new RuntimeException('Private storage unavailable');
+    if (!flock($fh, LOCK_EX)) { fclose($fh); throw new RuntimeException('Private storage lock unavailable'); }
+    try {
+        $header = fgetcsv($fh, 0, ',', '"', '\\');
+        if ($header !== LEAD_COLUMNS) throw new RuntimeException('Unrecognized storage schema');
+        $kept = []; $removed = 0; $cutoff = ($now ?? time()) - 30 * 86400;
+        while (($row = fgetcsv($fh, 0, ',', '"', '\\')) !== false) {
+            $received = strtotime((string) ($row[1] ?? ''));
+            if ($received !== false && $received < $cutoff) $removed++;
+            else $kept[] = $row;
+        }
+        if ($removed) {
+            rewind($fh);
+            if (!ftruncate($fh, 0) || fputcsv($fh, $header, ',', '"', '\\') === false) throw new RuntimeException('Cleanup failed');
+            foreach ($kept as $row) if (fputcsv($fh, $row, ',', '"', '\\') === false) throw new RuntimeException('Cleanup failed');
+            if (!fflush($fh)) throw new RuntimeException('Cleanup failed');
+        }
+        return $removed;
+    } finally { flock($fh, LOCK_UN); fclose($fh); }
 }
 
 /**
@@ -483,7 +536,9 @@ function form_notify(array $clean, string $band, array $attr, array $crm): void
         ? 'ok (contacto ' . $crm['contact_id'] . ($crm['duplicate'] ? ', duplicado' : '') . ')'
         : 'FALLÓ — status ' . $crm['status'] . ' — revisá storage/form.log');
 
-    form_send_mail($to, $subject, implode("\n", $lines));
+    if (!form_send_mail($to, $subject, implode("\n", $lines))) {
+        form_log('notify_failed', ['error'=>'mail_delivery_rejected']);
+    }
 }
 
 /**
@@ -527,7 +582,7 @@ function form_send_mail(string $to, string $subject, string $body): bool
  * Append a structured line to storage/form.log.
  *
  * Never logs the submission itself — see PHP_FORM_SPEC.md §4. Status codes,
- * timestamps and the CRM response body only.
+ * timestamps and delivery result codes only. Never response bodies or secrets.
  */
 function form_log(string $event, array $context): void
 {
@@ -538,6 +593,7 @@ function form_log(string $event, array $context): void
 
     $parts = [gmdate('c'), $event];
     foreach ($context as $k => $v) {
+        if ($k === 'ip') $v = hash('sha256', (string) $v);
         $v = str_replace(["\r", "\n", "\t"], ' ', (string) $v);
         $parts[] = $k . '=' . $v;
     }

@@ -8,6 +8,13 @@ DirectoryIndex index.php
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
+# Deny private paths before canonicalization or page routing.
+RewriteCond %{REQUEST_URI} !/\.well-known/
+RewriteRule (^|/)\. - [F,L]
+RewriteRule ^(src|storage|tests|docs|bin|tools|vendor)(/|$) - [F,L]
+RewriteCond %{THE_REQUEST} "\s/+public_html(?:[/\s?]|$)" [NC]
+RewriteRule ^ - [F,L]
+
 # HTTPS, non-www (canonical host = ciberseguridad.com.py).
 RewriteCond %{HTTPS} !=on
 RewriteCond %{HTTP:X-Forwarded-Proto} !=https
@@ -20,21 +27,26 @@ RewriteRule ^index(\.php)?$ / [L,R=301]
 
 # /pagina.php -> /pagina (one URL per page).
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
-RewriteRule ^ /%1 [L,R=301,NE]
+RewriteCond %{ENV:REDIRECT_STATUS} !^[45]
+RewriteRule ^(.+)\.php$ /$1/ [L,R=301,NE]
 
-# Strip trailing slash.
-RewriteRule ^(.+)/$ /$1 [L,R=301]
+# Preserve published trailing-slash page URLs.
+RewriteCond %{REQUEST_URI} !/enviar$
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+[^/])$ /$1/ [L,R=301]
 
 # Extensionless URLs.
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.+)$ $1.php [L]
+RewriteRule ^enviar/?$ enviar.php [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !\.php$ [NC]
+RewriteRule ^(.+?)/?$ $1.php [L]
 </IfModule>
 
 # Never serve secrets, dotfiles (except .well-known), markdown, logs, dumps.
 <IfModule mod_rewrite.c>
-RewriteCond %{REQUEST_URI} !^/\.well-known/
+RewriteCond %{REQUEST_URI} !/\.well-known/
 RewriteRule (^|/)\. - [F,L]
-RewriteRule ^(src|storage|tests|docs|vendor)(/|$) - [F,L]
+RewriteRule ^(src|storage|tests|docs|bin|tools|vendor)(/|$) - [F,L]
 </IfModule>
 <FilesMatch "(?i)\.(md|env|log|csv|ini|sh|bak|sql|lock|dist|example)$">
   Require all denied
@@ -44,7 +56,7 @@ ErrorDocument 403 /404.php
 ErrorDocument 404 /404.php
 
 <IfModule mod_headers.c>
-  Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+  Header always set Strict-Transport-Security "max-age=31536000"
   Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; font-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
   Header always set X-Content-Type-Options "nosniff"
   Header always set X-Frame-Options "DENY"
@@ -55,7 +67,7 @@ ErrorDocument 404 /404.php
   Header unset X-Powered-By
   # Long cache for versioned assets (?v=mtime is appended by asset()).
   <FilesMatch "\.(css|js|svg|woff2|png|jpg|webp|avif|pdf)$">
-    Header set Cache-Control "public, max-age=31536000, immutable"
+    Header set Cache-Control "public, max-age=86400"
   </FilesMatch>
 </IfModule>
 

@@ -1,0 +1,74 @@
+[
+  {
+    "url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+    "status": 200,
+    "final_url": "https://csrc.nist.gov/pubs/sp/800/61/r3/final",
+    "title": "SP 800-61 Rev. 3, Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile | CSRC"
+  },
+  {
+    "url": "https://mitic.gov.py/eoj0cad9uplo/2025/05/ENC-Paraguay-2025-2028-Mayo-20251558.pdf",
+    "status": 200,
+    "final_url": "https://mitic.gov.py/eoj0cad9uplo/2025/05/ENC-Paraguay-2025-2028-Mayo-20251558.pdf",
+    "title": ""
+  },
+  {
+    "url": "https://sedeco.gov.py/webinar-sedeco-recomendaciones-para-prevenir-fraudes-y-riesgos-en-el-consumo/",
+    "status": 200,
+    "final_url": "https://sedeco.gov.py/webinar-sedeco-recomendaciones-para-prevenir-fraudes-y-riesgos-en-el-consumo/",
+    "title": "Webinar SEDECO | Recomendaciones para prevenir fraudes y riesgos en el consumo – SEDECO"
+  },
+  {
+    "url": "https://www.bacn.gov.py/leyes-paraguayas/12924/ley-n-7593-2025-de-protecci-n-de-datos-personales-en-la-rep-blica-del-paraguay",
+    "status": 500,
+    "final_url": "https://www.bacn.gov.py/leyes-paraguayas/12924/ley-n-7593-2025-de-protecci-n-de-datos-personales-en-la-rep-blica-del-paraguay",
+    "title": ""
+  },
+  {
+    "url": "https://www.cert.gov.py/",
+    "status": 200,
+    "final_url": "https://www.cert.gov.py/",
+    "title": "CERT-PY – CERT-PY"
+  },
+  {
+    "url": "https://www.cert.gov.py/contacto/",
+    "status": 200,
+    "final_url": "https://www.cert.gov.py/contacto/",
+    "title": "Contacto – CERT-PY"
+  },
+  {
+    "url": "https://www.cert.gov.py/siguen-los-casos-de-ransomware-mediante-la-explotacion-de-rdp/",
+    "status": 200,
+    "final_url": "https://www.cert.gov.py/siguen-los-casos-de-ransomware-mediante-la-explotacion-de-rdp/",
+    "title": "Siguen los casos de ransomware mediante la explotación de RDP – CERT-PY"
+  },
+  {
+    "url": "https://www.cisa.gov/stopransomware/ransomware-guide",
+    "status": 200,
+    "final_url": "https://www.cisa.gov/stopransomware/ransomware-guide",
+    "title": "#StopRansomware Guide | CISA"
+  },
+  {
+    "url": "https://www.iso.org/standard/27001",
+    "status": 403,
+    "final_url": "https://www.iso.org/standard/27001",
+    "title": "Just a moment..."
+  },
+  {
+    "url": "https://www.nist.gov/cyberframework",
+    "status": 200,
+    "final_url": "https://www.nist.gov/cyberframework",
+    "title": "Cybersecurity Framework | NIST"
+  },
+  {
+    "url": "https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20",
+    "status": 200,
+    "final_url": "https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20",
+    "title": "The NIST Cybersecurity Framework (CSF) 2.0 | NIST"
+  },
+  {
+    "url": "https://www.pcisecuritystandards.org/standards/pci-dss/",
+    "status": 200,
+    "final_url": "https://www.pcisecuritystandards.org/standards/pci-dss/",
+    "title": "PCI Security Standards Council – Protect Payment Data with Industry-driven Security Standards, Training, and Programs"
+  }
+]

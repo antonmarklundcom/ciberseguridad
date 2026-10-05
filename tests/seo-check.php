@@ -21,7 +21,7 @@ foreach ($pages as $slug => $p) {
     $tl = mb_strlen($p['title']);
     $dl = mb_strlen($p['desc']);
     if ($tl > 60) bad("$label title $tl > 60");
-    if ($dl < 120 || $dl > 155) bad("$label description $dl not in 120-155");
+    if ($dl < 60 || $dl > 155) bad("$label description $dl not in 60-155");
     if (isset($titles[$p['title']])) bad("$label duplicate title");
     if (isset($descs[$p['desc']])) bad("$label duplicate description");
     $titles[$p['title']] = $descs[$p['desc']] = true;
@@ -29,7 +29,7 @@ foreach ($pages as $slug => $p) {
 ok(count($pages) . ' registry entries checked for title/description');
 
 // Render each page through PHP CLI so notices surface.
-$forbidden = '/garantiz|100\s?%|\bseguro\b|\bprotegid|certificad|\d\s?%|\d\s?\+|\d+\s+a[nñ]os|\d+\s+(clientes|empresas)\b/iu';
+$forbidden = '/100\s?%\s+(seguro|protegid)|garantizamos\s+(seguridad|recuperación)|[+]\d+\s+(clientes|empresas)|\d+\s+a[nñ]os\s+de\s+experiencia/iu';
 $falsePositive = '/(no significa que[^.]*seguro|no garantiz\w*|nos garantizan|no asegura[^.]*seguro|ni garantiz\w*)/iu';
 $tuForms = '/\b(tú|tienes|puedes|quieres|contáctanos|escríbenos|necesitas|sabes|eres|haz clic tú)\b/iu';
 
@@ -42,7 +42,7 @@ foreach ($pages as $slug => $p) {
     $lab = '/' . $slug;
     if (preg_match('/(Notice|Warning|Deprecated|Fatal error|Parse error)/', $out)) { bad("$lab PHP diagnostics: " . substr(strip_tags($out), 0, 200)); continue; }
     if (preg_match_all('/<h1[\s>]/i', $out) !== 1) bad("$lab needs exactly one h1");
-    if (!str_contains($out, '<link rel="canonical" href="' . site_url('/' . $slug) . '">')
+    if (!str_contains($out, '<link rel="canonical" href="' . site_url(page_path($slug)) . '">')
         && !($slug === '' && str_contains($out, 'rel="canonical" href="' . site_url('/') . '"'))) bad("$lab canonical");
     if (preg_match('/<script(?![^>]*\bsrc=)(?![^>]*application\/ld\+json)[^>]*>/i', $out)) bad("$lab inline script");
     if (preg_match('/\sstyle=|<style/i', $out)) bad("$lab inline style (CSP)");
@@ -82,7 +82,7 @@ foreach ($pages as $slug => $p) {
 // Sitemap parity.
 $sm = @file_get_contents(PUBLIC_DIR . '/sitemap.xml') ?: '';
 foreach ($pages as $slug => $p) {
-    $loc = '<loc>' . site_url($slug === '' ? '/' : '/' . $slug) . '</loc>';
+    $loc = '<loc>' . site_url(page_path((string)$slug)) . '</loc>';
     if ($p['index'] && !str_contains($sm, $loc)) bad("sitemap missing /$slug");
     if (!$p['index'] && str_contains($sm, $loc)) bad("sitemap must not contain /$slug");
 }

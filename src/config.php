@@ -38,9 +38,9 @@ function cfg_build(): array
         // empty and the page degrades: the row / section is simply not shown.
         // Never fill these with invented values.
         'brand'          => 'Ciberseguridad.com.py',
-        'wa_number'      => preg_replace('/\D+/', '', cfg_env('WA_NUMBER', '595995628862')),
-        'phone_display'  => cfg_env('PHONE_DISPLAY', '+595 995 628862'),
-        'phone_e164'     => cfg_env('PHONE_E164', '+595995628862'),
+        'wa_number'      => preg_replace('/\D+/', '', cfg_env('WA_NUMBER', '')),
+        'phone_display'  => cfg_env('PHONE_DISPLAY', ''),
+        'phone_e164'     => cfg_env('PHONE_E164', ''),
         'contact_email'  => cfg_env('CONTACT_EMAIL', ''),
         'practitioner'   => cfg_env('PRACTITIONER_NAME', ''),
         'hours'          => cfg_env('BUSINESS_HOURS', ''),
@@ -56,6 +56,12 @@ function cfg_build(): array
         'price_incidentes'    => cfg_env('PRICE_INCIDENTES', ''),
 
         // Tunables. See PHP_FORM_SPEC.md §3–§4.
+        'lead_enabled'   => cfg_env('LEAD_ENABLED', '0') === '1'
+            && cfg_env('PRACTITIONER_NAME', '') !== ''
+            && (filter_var(cfg_env('NOTIFY_EMAIL', ''), FILTER_VALIDATE_EMAIL)
+                || (filter_var(cfg_env('VENDERCRM_URL', ''), FILTER_VALIDATE_URL)
+                    && parse_url(cfg_env('VENDERCRM_URL', ''), PHP_URL_SCHEME) === 'https'
+                    && cfg_env('VENDERCRM_API_KEY', '') !== '')),
         'crm_timeout'    => 10,
         'rate_limit'     => 5,
         'rate_window'    => 3600,

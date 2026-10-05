@@ -1,0 +1,385 @@
+{
+  "": {
+    "title": "Ciberseguridad para empresas en Paraguay | Orientación",
+    "desc": "Orientación independiente para empresas en Paraguay. Entendé qué servicio necesitás y qué pedir por escrito, con datos mínimos y expectativas claras.",
+    "label": "Entender antes de contratar.",
+    "group": "root",
+    "index": true,
+    "prio": "1.0",
+    "wa": ""
+  },
+  "servicios": {
+    "title": "Servicios de ciberseguridad para empresas",
+    "desc": "Compará 17 tipos de servicio de ciberseguridad para empresas en Paraguay. Conocé el alcance, los límites y las preguntas antes de contratar.",
+    "label": "Servicios de ciberseguridad",
+    "group": "root",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "proveedores": {
+    "title": "Proveedores de ciberseguridad en Paraguay",
+    "desc": "Cómo elegir un proveedor de ciberseguridad en Paraguay: qué comparar, qué pedir por escrito y cómo iniciar un contacto sin compartir información sensible.",
+    "label": "Proveedores de ciberseguridad en Paraguay",
+    "group": "root",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "encontra-un-proveedor": {
+    "title": "Pedí orientación para contratar ciberseguridad",
+    "desc": "Definí tu necesidad de ciberseguridad con contexto comercial y contacto. Orientación para empresas en Paraguay, sin datos técnicos ni promesas.",
+    "label": "Pedí orientación",
+    "group": "root",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "incidente": {
+    "title": "Incidente de seguridad en curso",
+    "desc": "Consultá el canal oficial del CERT-PY y a tu responsable de IT ante un incidente. Esta plataforma no ofrece respuesta técnica de emergencia.",
+    "label": "Incidente en curso",
+    "group": "root",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "registro-proveedor": {
+    "title": "Registro para proveedores",
+    "desc": "Solicitá una revisión editorial para publicar tu empresa de ciberseguridad. Enviar datos no crea un perfil verificado ni garantiza publicación.",
+    "label": "Registro para proveedores",
+    "group": "root",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "reclamar-perfil": {
+    "title": "Reclamá o corregí un perfil",
+    "desc": "Conocé cómo solicitar la revisión editorial de un perfil de proveedor. Identidad, representación y cambios sujetos a verificación y autorización.",
+    "label": "Reclamá o corregí un perfil",
+    "group": "root",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "recursos": {
+    "title": "Guías de ciberseguridad para empresas",
+    "desc": "Guías para empresas en Paraguay: prepará preguntas sobre backups, pentesting, accesos y continuidad, con fuentes y límites editoriales explícitos.",
+    "label": "Guías de ciberseguridad para empresas",
+    "group": "root",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "nosotros": {
+    "title": "Sobre la plataforma",
+    "desc": "Qué hace ciberseguridad.com.py, qué no hace, cómo se financia y cómo mantiene independencia frente a autoridades y proveedores.",
+    "label": "Sobre la plataforma",
+    "group": "root",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "contacto": {
+    "title": "Contacto con la plataforma",
+    "desc": "Consultas comerciales, editoriales, correcciones y privacidad. Este canal no reemplaza el reporte oficial de incidentes a CERT-PY.",
+    "label": "Contacto con la plataforma",
+    "group": "root",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "privacidad": {
+    "title": "Privacidad",
+    "desc": "Qué contacto y contexto comercial recibimos, cómo usamos tus datos y cómo pedir su eliminación. Identidad del responsable antes de habilitar el canal.",
+    "label": "Privacidad",
+    "group": "root",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "terminos": {
+    "title": "Términos de uso",
+    "desc": "Condiciones de uso de la plataforma de orientación de ciberseguridad para empresas. Alcance editorial, límites y verificación de proveedores.",
+    "label": "Términos de uso",
+    "group": "root",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "correcciones": {
+    "title": "Correcciones y reportes",
+    "desc": "Solicitá la revisión de un dato o enlace de la plataforma. No envíes documentación sensible: el intercambio de evidencia se acuerda por otra vía.",
+    "label": "Correcciones y reportes",
+    "group": "root",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "divulgacion-responsable": {
+    "title": "Divulgación responsable",
+    "desc": "Cómo reportar de buena fe un problema de este sitio. Reglas de alcance, privacidad y contacto inicial, sin enviar secretos ni archivos por formularios.",
+    "label": "Divulgación responsable",
+    "group": "root",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "metodologia-verificacion": {
+    "title": "Cómo verificamos a los proveedores",
+    "desc": "Cómo se valida cada dato, certificación y relación de servicio antes de publicarlo, y por qué todavía no mostramos perfiles.",
+    "label": "Cómo verificamos a los proveedores",
+    "group": "root",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "servicios/evaluacion-ciberseguridad": {
+    "title": "Evaluación de ciberseguridad",
+    "desc": "Entendé qué incluye una evaluación de ciberseguridad y qué debería entregar un proveedor: alcance, prioridades, límites y preguntas para cotizar.",
+    "label": "Evaluación de ciberseguridad",
+    "group": "servicios",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "servicios/evaluacion-vulnerabilidades": {
+    "title": "Evaluación de vulnerabilidades",
+    "desc": "Evaluación de vulnerabilidades para empresas en Paraguay: alcance, autorización, validación de resultados, entregables y qué influye en el precio.",
+    "label": "Evaluación de vulnerabilidades",
+    "group": "servicios",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "servicios/pentesting-autorizado": {
+    "title": "Pentesting autorizado",
+    "desc": "Pentesting autorizado en Paraguay: qué pedir antes de contratar, autorización, reglas de trabajo, evidencia, límites, reporte y precio orientativo.",
+    "label": "Pentesting autorizado",
+    "group": "servicios",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "servicios/preparacion-respuesta-incidentes": {
+    "title": "Preparación para respuesta a incidentes",
+    "desc": "Plan de respuesta a incidentes para empresas en Paraguay: roles, contactos, comunicación, ejercicios de mesa y revisión periódica.",
+    "label": "Preparación para respuesta a incidentes",
+    "group": "servicios",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "servicios/respuesta-incidentes": {
+    "title": "Apoyo de respuesta a incidentes",
+    "desc": "Apoyo de respuesta a incidentes en Paraguay: cómo pedir ayuda profesional sin exponer evidencia en un formulario público y qué esperar del proveedor.",
+    "label": "Apoyo de respuesta a incidentes",
+    "group": "servicios",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "servicios/preparacion-recuperacion-ransomware": {
+    "title": "Preparación y recuperación ante ransomware",
+    "desc": "Preparación y recuperación ante ransomware para empresas en Paraguay: backups probados, prioridades, roles y límites. Sin prometer descifrado.",
+    "label": "Preparación y recuperación ante ransomware",
+    "group": "servicios",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "servicios/seguridad-microsoft-365-google-workspace": {
+    "title": "Seguridad de Microsoft 365 y Google Workspace",
+    "desc": "Seguridad de Microsoft 365 y Google Workspace para empresas en Paraguay: MFA, cuentas privilegiadas, correo, registros y fraude por correo.",
+    "label": "Seguridad de Microsoft 365 y Google Workspace",
+    "group": "servicios",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "servicios/revision-seguridad-nube": {
+    "title": "Revisión de seguridad en la nube",
+    "desc": "Revisión de seguridad cloud para empresas en Paraguay: identidades, exposición, configuración, registros y responsabilidad compartida con el proveedor.",
+    "label": "Revisión de seguridad en la nube",
+    "group": "servicios",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "servicios/backup-recuperacion": {
+    "title": "Revisión de backup y recuperación",
+    "desc": "Revisión de backup y recuperación para empresas en Paraguay: pruebas de restauración, prioridades, dependencias y evidencia de resultados.",
+    "label": "Revisión de backup y recuperación",
+    "group": "servicios",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "servicios/seguridad-red-endpoints": {
+    "title": "Seguridad de red y endpoints",
+    "desc": "Seguridad de red y endpoints para empresas en Paraguay: segmentación, accesos remotos, parches, antivirus gestionado y administración operativa.",
+    "label": "Seguridad de red y endpoints",
+    "group": "servicios",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "servicios/capacitacion-phishing": {
+    "title": "Capacitación sobre phishing",
+    "desc": "Capacitación sobre phishing para empresas en Paraguay: talleres, simulaciones autorizadas, canal de reporte y métricas responsables.",
+    "label": "Capacitación sobre phishing",
+    "group": "servicios",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "servicios/iso-27001": {
+    "title": "Preparación para ISO 27001",
+    "desc": "Consultoría y preparación para ISO/IEC 27001 en Paraguay: alcance, SGSI, riesgos, evidencias, plazos y límites frente a la certificación.",
+    "label": "Preparación para ISO 27001",
+    "group": "servicios",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "servicios/asesoria-pci-dss": {
+    "title": "Asesoría PCI DSS",
+    "desc": "Asesoría PCI DSS en Paraguay: alcance, responsabilidades, reducción de entorno y preparación, sin prometer cumplimiento o validación automática.",
+    "label": "Asesoría PCI DSS",
+    "group": "servicios",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "servicios/politicas-gobernanza-seguridad": {
+    "title": "Políticas y gobernanza de seguridad",
+    "desc": "Políticas y gobernanza de seguridad para empresas en Paraguay: responsables, decisiones, riesgos, políticas aplicables y revisión continua.",
+    "label": "Políticas y gobernanza de seguridad",
+    "group": "servicios",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "servicios/monitoreo-gestionado-soc": {
+    "title": "Monitoreo gestionado y SOC",
+    "desc": "Monitoreo gestionado y SOC para empresas en Paraguay: cobertura real, fuentes, horarios, escalamiento, retención de datos y precio mensual.",
+    "label": "Monitoreo gestionado y SOC",
+    "group": "servicios",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "servicios/proteccion-datos-personales": {
+    "title": "Adecuación a la ley de protección de datos personales",
+    "desc": "Orientación para definir el alcance de una revisión de datos personales en Paraguay. Diferenciá asesoría legal y trabajo técnico antes de contratar.",
+    "label": "Adecuación a la ley de protección de datos personales",
+    "group": "servicios",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "servicios/ciso-externo": {
+    "title": "CISO externo o responsable de seguridad por horas",
+    "desc": "CISO externo o responsable de seguridad por horas para empresas en Paraguay: qué hace, qué no, dedicación, entregables y precio mensual orientativo.",
+    "label": "CISO externo o responsable de seguridad por horas",
+    "group": "servicios",
+    "index": true,
+    "prio": "0.7",
+    "wa": ""
+  },
+  "recursos/preparar-hoja-contactos-incidentes": {
+    "title": "Cómo preparar una hoja de contactos para incidentes",
+    "desc": "Prepará responsables, contactos de IT y canales alternativos antes de una interrupción. Guía editorial para empresas, con fuentes y límites claros.",
+    "label": "Cómo preparar una hoja de contactos para incidentes",
+    "group": "recursos",
+    "index": true,
+    "prio": "0.7",
+    "wa": "",
+    "published_at": "2026-08-28",
+    "modified_at": "2026-10-05"
+  },
+  "recursos/preguntas-antes-contratar-pentest": {
+    "title": "Preguntas antes de contratar un pentest",
+    "desc": "Preguntas antes de un pentest: autorización, objetivos, alcance, evidencia y criterios de parada. Prepará la conversación con un proveedor autorizado.",
+    "label": "Preguntas antes de contratar un pentest",
+    "group": "recursos",
+    "index": true,
+    "prio": "0.7",
+    "wa": "",
+    "published_at": "2026-08-28",
+    "modified_at": "2026-10-05"
+  },
+  "recursos/autorizacion-alcance-pruebas-seguridad": {
+    "title": "Por qué la autorización y el alcance importan",
+    "desc": "Por qué acordar autorización, activos, acciones y límites antes de una prueba de seguridad. Guía para preparar un trabajo profesional autorizado.",
+    "label": "Por qué la autorización y el alcance importan",
+    "group": "recursos",
+    "index": true,
+    "prio": "0.7",
+    "wa": "",
+    "published_at": "2026-08-28",
+    "modified_at": "2026-10-05"
+  },
+  "recursos/checklist-pruebas-recuperacion-backup": {
+    "title": "Checklist para probar recuperación de backups",
+    "desc": "Preguntas y puntos de control para acordar una restauración de backups. Comprobá datos y servicios, con criterios definidos junto al responsable de IT.",
+    "label": "Checklist para probar recuperación de backups",
+    "group": "recursos",
+    "index": true,
+    "prio": "0.7",
+    "wa": "",
+    "published_at": "2026-08-28",
+    "modified_at": "2026-10-05"
+  },
+  "recursos/que-significa-certificacion-iso-27001": {
+    "title": "Qué significa —y qué no— una certificación ISO 27001",
+    "desc": "Entendé el alcance de una certificación ISO 27001 y sus límites. Guía editorial para comparar propuestas y preparar preguntas antes de contratar.",
+    "label": "Qué significa —y qué no— una certificación ISO 27001",
+    "group": "recursos",
+    "index": true,
+    "prio": "0.7",
+    "wa": "",
+    "published_at": "2026-08-28",
+    "modified_at": "2026-10-05"
+  },
+  "recursos/reportar-correo-sospechoso-seguro": {
+    "title": "Cómo reportar un correo sospechoso de forma segura",
+    "desc": "Cómo acordar un canal interno para reportar mensajes sospechosos sin compartir secretos. Guía editorial para empresas, con fuentes y límites claros.",
+    "label": "Cómo reportar un correo sospechoso de forma segura",
+    "group": "recursos",
+    "index": true,
+    "prio": "0.7",
+    "wa": "",
+    "published_at": "2026-08-28",
+    "modified_at": "2026-10-05"
+  },
+  "recursos/practicas-minimas-ciberseguridad-pymes-paraguay": {
+    "title": "Prácticas mínimas de ciberseguridad para pymes paraguayas",
+    "desc": "Priorizá responsabilidades, accesos, actualizaciones, backups y contactos de IT en tu pyme. Una guía general para preparar una revisión profesional.",
+    "label": "Prácticas mínimas de ciberseguridad para pymes paraguayas",
+    "group": "recursos",
+    "index": true,
+    "prio": "0.7",
+    "wa": "",
+    "published_at": "2026-08-28",
+    "modified_at": "2026-10-05"
+  },
+  "gracias": {
+    "title": "Solicitud recibida",
+    "desc": "Tu solicitud quedó registrada. El envío no garantiza respuesta inmediata ni disponibilidad de un proveedor. Consultá las guías mientras tanto.",
+    "label": "Solicitud recibida",
+    "group": "hidden",
+    "index": false,
+    "prio": "0",
+    "wa": ""
+  },
+  "404": {
+    "title": "Página no encontrada",
+    "desc": "La página que buscás no está disponible. Volvé al inicio, explorá los servicios o consultá las guías de ciberseguridad para empresas.",
+    "label": "Página no encontrada",
+    "group": "hidden",
+    "index": false,
+    "prio": "0",
+    "wa": ""
+  }
+}

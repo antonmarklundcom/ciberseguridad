@@ -1,0 +1,11 @@
+{
+  "server": "Apache 2.4.69 + mod_fcgid / PHP 8.5.11",
+  "modes": [
+    "repo root",
+    "public_html"
+  ],
+  "checks": 612,
+  "failed": 0,
+  "failures": [],
+  "TLS": "Local HTTP with X-Forwarded-Proto=https; no live TLS scan"
+}

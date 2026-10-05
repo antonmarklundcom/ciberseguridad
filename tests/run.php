@@ -18,10 +18,17 @@ putenv('STORAGE_DIR=' . $tmp);
 putenv('SITE_URL=https://ciberseguridad.com.py');
 putenv('VENDERCRM_URL=https://crm.example.test');
 putenv('VENDERCRM_API_KEY=test-key');
+putenv('LEAD_ENABLED=1');
+putenv('PRACTITIONER_NAME=Test only');
 putenv('NOTIFY_EMAIL=');   // suppresses mail() during tests
 
 $root = dirname(__DIR__);
 require_once $root . '/src/form-handler.php';
+// A developer's local .env must never override the synthetic test recipients.
+cfg_load_env_file($root . '/.env');
+foreach (['STORAGE_DIR'=>$tmp, 'LEAD_ENABLED'=>'1', 'PRACTITIONER_NAME'=>'Test only',
+          'VENDERCRM_URL'=>'https://crm.example.test', 'VENDERCRM_API_KEY'=>'test-key',
+          'NOTIFY_EMAIL'=>'', 'SITE_URL'=>'https://ciberseguridad.com.py'] as $k=>$v) cfg_env_store($k,$v);
 
 $GLOBALS['__pass'] = 0;
 $GLOBALS['__fail'] = 0;
@@ -333,20 +340,20 @@ ok('6th and 7th attempt from one IP blocked', $accepted === 5, "accepted=$accept
 // ---------------------------------------------------------------------------
 section('Local lead store');
 
-$leadsFile = cfg('storage_dir') . '/leads.csv';
+$leadsFile = leads_file();
 @unlink($leadsFile);
 
 [$c] = validate_submission(post());
 $rowId = leads_append($c, ['utm_source' => 'google'], 'A', 'idem-key-123456');
 ok('CSV created', is_file($leadsFile));
 
-$rows = array_map('str_getcsv', file($leadsFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES));
+$rows = array_map(static fn($line) => str_getcsv($line, ',', '"', '\\'), file($leadsFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES));
 ok('header row written', ($rows[0][0] ?? '') === 'row_id');
 ok('lead row written', count($rows) === 2);
 ok('crm_status starts pending', in_array('pending', $rows[1], true));
 
 leads_mark_pushed($rowId, 'contact-9', 'deal-9', 201);
-$rows = array_map('str_getcsv', file($leadsFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES));
+$rows = array_map(static fn($line) => str_getcsv($line, ',', '"', '\\'), file($leadsFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES));
 $idx  = array_flip(LEAD_COLUMNS);
 ok('crm_contact_id recorded', ($rows[1][$idx['crm_contact_id']] ?? '') === 'contact-9');
 ok('crm_status updated', ($rows[1][$idx['crm_status']] ?? '') === '201');

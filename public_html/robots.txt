@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /gracias
 Disallow: /enviar
-
+Disallow: /gracias/
 Sitemap: https://ciberseguridad.com.py/sitemap.xml

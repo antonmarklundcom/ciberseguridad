@@ -4,3 +4,6 @@ storage/*
 .DS_Store
 Thumbs.db
 *.log
+
+.tools/
+docs/review/live/

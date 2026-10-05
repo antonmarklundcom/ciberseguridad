@@ -12,15 +12,15 @@
   var mq = window.matchMedia ? window.matchMedia('(max-width: 899px)') : null;
 
   function focusables() {
-    return panel ? Array.prototype.slice.call(
+    return panel ? (toggle ? [toggle] : []).concat(Array.prototype.slice.call(
       panel.querySelectorAll('a[href], button:not([disabled])')
-    ).concat(toggle ? [toggle] : []) : [];
+    ).filter(function (el) { return el.getClientRects().length > 0; })) : [];
   }
   function setOpen(open) {
     if (!toggle || !header) return;
     header.classList.toggle('nav-open', open);
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    d.body.style.overflow = open ? 'hidden' : '';
+    d.body.classList.toggle('menu-open', open);
     if (open && panel) {
       var f = panel.querySelector('a[href]');
       if (f) f.focus();
@@ -44,7 +44,7 @@
     });
     if (mq && mq.addEventListener) {
       mq.addEventListener('change', function () {
-        if (!mq.matches) { header.classList.remove('nav-open'); toggle.setAttribute('aria-expanded', 'false'); d.body.style.overflow = ''; }
+        if (!mq.matches) { header.classList.remove('nav-open'); toggle.setAttribute('aria-expanded', 'false'); d.body.classList.remove('menu-open'); }
       });
     }
   }
@@ -83,8 +83,8 @@
       if (!input.willValidate || input.name === 'website') return true;
       var id = 'err-' + input.name;
       var old = d.getElementById(id);
-      if (old && !old.hasAttribute('data-server')) old.parentNode.removeChild(old);
-      if (input.validity.valid) { input.removeAttribute('aria-invalid'); return true; }
+      if (old) old.parentNode.removeChild(old);
+      if (input.validity.valid) { input.removeAttribute('aria-invalid'); input.removeAttribute('aria-describedby'); return true; }
       input.setAttribute('aria-invalid', 'true');
       if (!d.getElementById(id)) {
         var p = d.createElement('p');
@@ -109,5 +109,20 @@
     });
     var summary = form.querySelector('.form-errors');
     if (summary) summary.focus();
+  });
+  /* Service catalog filtering: every card remains available without JS. */
+  var chips = d.querySelectorAll('[data-filter]');
+  Array.prototype.forEach.call(chips, function (chip) {
+    chip.setAttribute('aria-pressed', chip.classList.contains('active') ? 'true' : 'false');
+    chip.addEventListener('click', function () {
+      var category = chip.getAttribute('data-filter');
+      Array.prototype.forEach.call(chips, function (c) {
+        c.classList.toggle('active', c === chip);
+        c.setAttribute('aria-pressed', c === chip ? 'true' : 'false');
+      });
+      Array.prototype.forEach.call(d.querySelectorAll('.service-card[data-category]'), function (card) {
+        card.hidden = category !== 'all' && card.getAttribute('data-category') !== category;
+      });
+    });
   });
 })();
