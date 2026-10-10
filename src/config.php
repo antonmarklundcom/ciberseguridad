@@ -25,10 +25,31 @@ function cfg_build(): array
     $root = dirname(__DIR__);
     cfg_load_env_file($root . '/.env');
 
+    require_once $root . '/lib/vendercrm-config.php';
+    // Keep this site's effective store/.env > process environment precedence.
+    // Bad CRM settings must not break rendering or the monitored email fallback.
+    $crmUrl = '';
+    $crmKey = '';
+    $crmConfigError = '';
+    try {
+        $canonicalCrm = \VenderCRM\Config::optional($root . '/public_html', [
+            'VENDERCRM_URL' => cfg_env('VENDERCRM_URL', ''),
+            'VENDERCRM_API_KEY' => cfg_env('VENDERCRM_API_KEY', ''),
+            'VENDERCRM_CONFIG_FILE' => cfg_env('VENDERCRM_CONFIG_FILE', ''),
+        ]);
+        if ($canonicalCrm) {
+            $crmUrl = $canonicalCrm->doctor()['url'];
+            $crmKey = $canonicalCrm->apiKey();
+        }
+    } catch (\Throwable $error) {
+        $crmConfigError = 'VenderCRM configuration incomplete or invalid; CRM disabled';
+        error_log($crmConfigError); // Never log loader exceptions or supplied values.
+    }
     return [
         'site_url'       => rtrim(cfg_env('SITE_URL', 'https://ciberseguridad.com.py'), '/'),
-        'vendercrm_url'  => rtrim(cfg_env('VENDERCRM_URL', ''), '/'),
-        'vendercrm_key'  => cfg_env('VENDERCRM_API_KEY', ''),
+        'vendercrm_url'  => $crmUrl,
+        'vendercrm_key'  => $crmKey,
+        'vendercrm_config_error' => $crmConfigError,
         'notify_email'   => cfg_env('NOTIFY_EMAIL', ''),
         'mail_from'      => cfg_env('MAIL_FROM', ''),
         // STORAGE_DIR is overridable so the test suite never touches real leads.
@@ -59,9 +80,9 @@ function cfg_build(): array
         'lead_enabled'   => cfg_env('LEAD_ENABLED', '0') === '1'
             && cfg_env('PRACTITIONER_NAME', '') !== ''
             && (filter_var(cfg_env('NOTIFY_EMAIL', ''), FILTER_VALIDATE_EMAIL)
-                || (filter_var(cfg_env('VENDERCRM_URL', ''), FILTER_VALIDATE_URL)
-                    && parse_url(cfg_env('VENDERCRM_URL', ''), PHP_URL_SCHEME) === 'https'
-                    && cfg_env('VENDERCRM_API_KEY', '') !== '')),
+                || (filter_var($crmUrl, FILTER_VALIDATE_URL)
+                    && parse_url($crmUrl, PHP_URL_SCHEME) === 'https'
+                    && $crmKey !== '')),
         'crm_timeout'    => 10,
         'rate_limit'     => 5,
         'rate_window'    => 3600,
