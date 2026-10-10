@@ -4,7 +4,7 @@ require dirname(__DIR__) . '/src/form-handler.php';
 cfg_load_env_file(dirname(__DIR__) . '/.env');
 $tmp=sys_get_temp_dir().'/orientation-test-'.bin2hex(random_bytes(6));
 mkdir($tmp,0770,true);
-foreach (['STORAGE_DIR'=>$tmp,'LEAD_ENABLED'=>'1','PRACTITIONER_NAME'=>'Synthetic test recipient','VENDERCRM_URL'=>'https://crm.example.invalid','VENDERCRM_API_KEY'=>'synthetic-key','NOTIFY_EMAIL'=>'','SITE_URL'=>'https://ciberseguridad.com.py'] as $k=>$v) cfg_env_store($k,$v);
+foreach (['STORAGE_DIR'=>$tmp,'LEAD_ENABLED'=>'1','PRACTITIONER_NAME'=>'Synthetic test recipient','VENDERCRM_URL'=>'https://crm.example.com','VENDERCRM_API_KEY'=>'synthetic-key','NOTIFY_EMAIL'=>'','SITE_URL'=>'https://ciberseguridad.com.py'] as $k=>$v) cfg_env_store($k,$v);
 $passed=0; $failed=0;
 function check(bool $ok,string $label):void { global $passed,$failed; $ok?$passed++:$failed++; echo ($ok?'PASS ':'FAIL ').$label.PHP_EOL; }
 $post=['form_type'=>'orientacion','page'=>'servicios/backup-recuperacion','ts'=>(string)(time()-30),'csrf'=>str_repeat('a',64),'nombre'=>'Persona Sintética','telefono'=>'0981 123 456','rubro'=>'comercio','empleados'=>'1-9','disparador'=>'backup','consent'=>'1','email'=>'synthetic@example.invalid','website'=>''];

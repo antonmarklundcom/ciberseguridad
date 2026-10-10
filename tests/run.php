@@ -16,7 +16,7 @@ mkdir($tmp, 0770, true);
 
 putenv('STORAGE_DIR=' . $tmp);
 putenv('SITE_URL=https://ciberseguridad.com.py');
-putenv('VENDERCRM_URL=https://crm.example.test');
+putenv('VENDERCRM_URL=https://crm.example.com');
 putenv('VENDERCRM_API_KEY=test-key');
 putenv('LEAD_ENABLED=1');
 putenv('PRACTITIONER_NAME=Test only');
@@ -27,7 +27,7 @@ require_once $root . '/src/form-handler.php';
 // A developer's local .env must never override the synthetic test recipients.
 cfg_load_env_file($root . '/.env');
 foreach (['STORAGE_DIR'=>$tmp, 'LEAD_ENABLED'=>'1', 'PRACTITIONER_NAME'=>'Test only',
-          'VENDERCRM_URL'=>'https://crm.example.test', 'VENDERCRM_API_KEY'=>'test-key',
+          'VENDERCRM_URL'=>'https://crm.example.com', 'VENDERCRM_API_KEY'=>'test-key',
           'NOTIFY_EMAIL'=>'', 'SITE_URL'=>'https://ciberseguridad.com.py'] as $k=>$v) cfg_env_store($k,$v);
 
 $GLOBALS['__pass'] = 0;

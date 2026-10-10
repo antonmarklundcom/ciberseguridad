@@ -4,7 +4,7 @@ Publication-ready code ships with request intake disabled by default. It does no
 
 ## Contents and prerequisites
 
-Deploy `public_html/`, `src/`, `bin/`, `storage/.gitkeep`, root `.htaccess` and `.env.example` together, preserving relative locations. Never deploy `.tools/`, tests, screenshots, audit captures, `.git/`, local `.env` or test leads. PHP must read private source and write private storage. Do not use world-writable permissions.
+Deploy `public_html/`, `src/`, `lib/`, `bin/`, `storage/.gitkeep`, root `.htaccess` and `.env.example` together, preserving relative locations. Never deploy `.tools/`, tests, screenshots, audit captures, `.git/`, local `.env` or test leads. PHP must read private source and write private storage. Do not use world-writable permissions.
 
 Tests used PHP 8.3.33/8.5.11 with mbstring/curl/openssl, plus Apache 2.4.69 and mod_fcgid. Actual Hostinger LiteSpeed/PHP needs staging verification. `.user.ini` keeps display_errors off; disable `expose_php` in the host settings as well.
 
@@ -35,3 +35,6 @@ Schedule daily CLI cleanup with the host's verified PHP executable and absolute 
 Keep the pre-deployment snapshot and configuration. On routing, assets or storage failures, restore public/private code together and the previous document-root/server settings. Preserve newly received private records separately before rollback; never replace lead storage with an empty release directory. Disable intake while reconciling a failure.
 
 No production forms, external messages, Hostinger changes or merges were performed.
+
+
+VenderCRM config validation lives in `lib/vendercrm-config.php`; include `lib/` in the release whitelist. The effective local .env/store precedence is retained, with validated persistent environment/private config support. Malformed or incomplete CRM configuration disables only CRM with a generic diagnostic; site rendering and an already enabled monitored-email/private-storage fallback remain available. This does not enable intake or change ownership/consent gates. Never ship secret-bearing private config or .env inside the release/public tree.
