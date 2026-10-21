@@ -1,5 +1,14 @@
 <?php
 declare(strict_types=1);
+
+function delivery_test_cleanup(string $base): void {
+ $resolved=realpath($base); $temp=realpath(sys_get_temp_dir());
+ if(!$resolved||!$temp||!str_starts_with($resolved,$temp.DIRECTORY_SEPARATOR)||!preg_match('/^(cyber-tests-|orientation-test-|crm-fallback-)/',basename($resolved))) throw new RuntimeException('Unsafe test cleanup');
+ $it=new RecursiveIteratorIterator(new RecursiveDirectoryIterator($resolved,FilesystemIterator::SKIP_DOTS),RecursiveIteratorIterator::CHILD_FIRST);
+ foreach($it as $entry) $entry->isDir()&&!$entry->isLink()?rmdir($entry->getPathname()):unlink($entry->getPathname());
+ rmdir($resolved);
+}
+
 require dirname(__DIR__) . '/src/form-handler.php';
 cfg_load_env_file(dirname(__DIR__) . '/.env');
 $tmp=sys_get_temp_dir().'/orientation-test-'.bin2hex(random_bytes(6));
@@ -20,7 +29,7 @@ check(!isset(validate_submission($post+['mensaje'=>'secret=never-forward','empre
 check(validate_submission($post+['empresa'=>"ignored\r\nfield"])[1]===[],'unrequested company field never creates a hidden validation error');
 check((form_attribution([], ['HTTP_REFERER'=>'https://example.invalid/private/person?token=never-store#secret'])['referrer']??'')==='https://example.invalid/','referrer path, query and fragment never retained');
 $pushes=0;$notifications=0;
-$transport=function($url,$json,$headers,$timeout)use(&$pushes):array { $pushes++; $p=json_decode($json,true); check(($p['fields']['consent']??'')==='1','consent forwarded to mock CRM'); check(!isset($p['message']),'no narrative in payload'); return ['status'=>201,'body'=>'{"contactId":"synthetic-contact","dealId":"synthetic-deal"}','error'=>'']; };
+$transport=function($url,$json,$headers,$timeout)use(&$pushes):array { $pushes++; $p=json_decode($json,true); check(($p['fields']['consent']??'')==='1','consent forwarded to mock CRM'); check(!isset($p['message']),'no narrative in payload'); return ['status'=>201,'body'=>'{"contactId":"AAAAAAAAAAAAAAAAAAAAAAAAAA","submissionId":"BBBBBBBBBBBBBBBBBBBBBBBBBB","dealId":"DDDDDDDDDDDDDDDDDDDDDDDDDD"}','error'=>'']; };
 $notify=function()use(&$notifications):void { $notifications++; };
 $result=handle_submission($post,$server,$cookie,$transport,$notify);
 check($result['action']==='redirect' && $pushes===1 && $notifications===1,'success stored and mock-delivered without external calls');
@@ -50,6 +59,5 @@ unlink(leads_file());mkdir(leads_file());$before=$pushes;
 $result=handle_submission($post,array_replace($server,['REMOTE_ADDR'=>'127.0.0.4']),$cookie,$transport,$notify);
 check(($result['code']??0)===503 && $before===$pushes,'unwritable storage blocks delivery and false success');
 rmdir(leads_file());
-foreach(glob($tmp.'/ratelimit/*')?:[] as $p)unlink($p);
-@rmdir($tmp.'/ratelimit');foreach(glob($tmp.'/*')?:[] as $p)unlink($p);rmdir($tmp);
+delivery_test_cleanup($tmp);
 echo "$passed passed, $failed failed".PHP_EOL;exit($failed?1:0);

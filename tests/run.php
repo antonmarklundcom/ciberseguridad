@@ -1,6 +1,15 @@
 <?php
 declare(strict_types=1);
 
+function delivery_test_cleanup(string $base): void {
+ $resolved=realpath($base); $temp=realpath(sys_get_temp_dir());
+ if(!$resolved||!$temp||!str_starts_with($resolved,$temp.DIRECTORY_SEPARATOR)||!preg_match('/^(cyber-tests-|orientation-test-|crm-fallback-)/',basename($resolved))) throw new RuntimeException('Unsafe test cleanup');
+ $it=new RecursiveIteratorIterator(new RecursiveDirectoryIterator($resolved,FilesystemIterator::SKIP_DOTS),RecursiveIteratorIterator::CHILD_FIRST);
+ foreach($it as $entry) $entry->isDir()&&!$entry->isLink()?rmdir($entry->getPathname()):unlink($entry->getPathname());
+ rmdir($resolved);
+}
+
+
 /**
  * Block B test suite. Zero dependencies: `php tests/run.php`.
  *
@@ -219,9 +228,10 @@ ok('all seven domains in fields', count(array_filter(array_keys($p3['fields']),
 // ---------------------------------------------------------------------------
 section('Idempotency');
 
-$k1 = vendercrm_idempotency_key('0981 123 456', 'contacto');
-$k2 = vendercrm_idempotency_key('0981 123 456', 'contacto');
-ok('same phone+form+hour → same key', $k1 === $k2);
+$k1 = vendercrm_idempotency_key('0981 123 456', 'contacto', str_repeat('a',32));
+$k2 = vendercrm_idempotency_key('0981 123 456', 'contacto', str_repeat('a',32));
+ok('same submitted identity → same key', $k1 === $k2);
+ok('different enquiry from same phone/form → new key', $k1 !== vendercrm_idempotency_key('0981 123 456','contacto',str_repeat('b',32)));
 ok('different form → different key', $k1 !== vendercrm_idempotency_key('0981 123 456', 'autoevaluacion'));
 ok('different phone → different key', $k1 !== vendercrm_idempotency_key('0982 000 000', 'contacto'));
 
@@ -236,13 +246,13 @@ $stub = static function (int $status, string $body): callable {
     };
 };
 
-$r = vendercrm_push($payload, $stub(201, '{"contactId":"c1","dealId":"d1","duplicate":false}'));
+$r = vendercrm_push($payload, $stub(201, '{"contactId":"AAAAAAAAAAAAAAAAAAAAAAAAAA","submissionId":"BBBBBBBBBBBBBBBBBBBBBBBBBB","dealId":"DDDDDDDDDDDDDDDDDDDDDDDDDD","duplicate":false}'));
 ok('201 → ok', $r['ok'] === true);
-ok('contactId parsed', $r['contact_id'] === 'c1');
-ok('dealId parsed', $r['deal_id'] === 'd1');
+ok('contactId parsed', $r['contact_id'] === str_repeat('A',26));
+ok('dealId parsed', $r['deal_id'] === str_repeat('D',26));
 ok('X-Api-Key header sent', in_array('X-Api-Key: test-key', $GLOBALS['__last_headers'], true));
 
-$r = vendercrm_push($payload, $stub(200, '{"contactId":"c1","duplicate":true}'));
+$r = vendercrm_push($payload, $stub(200, '{"contactId":"AAAAAAAAAAAAAAAAAAAAAAAAAA","submissionId":"BBBBBBBBBBBBBBBBBBBBBBBBBB","duplicate":true}'));
 ok('200 replay → ok (retry working)', $r['ok'] === true);
 ok('duplicate flag parsed', $r['duplicate'] === true);
 
@@ -380,16 +390,7 @@ echo "\n" . str_repeat('=', 46) . "\n";
 printf("  %d passed, %d failed\n", $GLOBALS['__pass'], $GLOBALS['__fail']);
 echo str_repeat('=', 46) . "\n";
 
-// Clean up temp storage.
-foreach (glob($tmp . '/{,.}*', GLOB_BRACE) ?: [] as $f) {
-    if (is_file($f)) {
-        @unlink($f);
-    }
-}
-foreach (glob($tmp . '/ratelimit/*') ?: [] as $f) {
-    @unlink($f);
-}
-@rmdir($tmp . '/ratelimit');
-@rmdir($tmp);
+// Clean up only this unique test root.
+delivery_test_cleanup($tmp);
 
 exit($GLOBALS['__fail'] > 0 ? 1 : 0);
