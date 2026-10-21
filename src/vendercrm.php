@@ -29,7 +29,7 @@ function vendercrm_push(array $payload, ?callable $transport = null): array
 
     $fail = static fn (string $err): array => [
         'ok' => false, 'status' => 0, 'body' => '', 'error' => $err,
-        'contact_id' => '', 'deal_id' => '', 'duplicate' => false,
+        'contact_id' => '', 'deal_id' => '', 'submission_id' => '', 'duplicate' => false,
     ];
 
     if ($base === '' || $key === '') {
@@ -65,7 +65,8 @@ function vendercrm_push(array $payload, ?callable $transport = null): array
 
     // 201 = created. 200 = idempotency key replayed, which is the retry
     // working as designed and is a success, not a duplicate to clean up.
-    $ok = ($status === 201 || $status === 200);
+    require_once dirname(__DIR__) . '/lib/lead-delivery.php';
+    $ok = VenderCrmDelivery::receipt(['ok'=>$error === '', 'status'=>$status, 'body'=>$decoded]);
 
     return [
         'ok'         => $ok,
@@ -74,6 +75,7 @@ function vendercrm_push(array $payload, ?callable $transport = null): array
         'error'      => $error,
         'contact_id' => isset($decoded['contactId']) ? (string) $decoded['contactId'] : '',
         'deal_id'    => isset($decoded['dealId']) ? (string) $decoded['dealId'] : '',
+        'submission_id' => isset($decoded['submissionId']) ? (string)$decoded['submissionId'] : '',
         'duplicate'  => (bool) ($decoded['duplicate'] ?? false),
     ];
 }
@@ -189,7 +191,8 @@ function vendercrm_build_payload(array $clean, array $attr, string $idempotencyK
  * a timeout after the write succeeded) while still letting the same person
  * enquire again tomorrow.
  */
-function vendercrm_idempotency_key(string $phone, string $formType): string
+function vendercrm_idempotency_key(string $phone, string $formType, string $submissionId = ''): string
 {
-    return hash('sha256', $phone . '|' . $formType . '|' . gmdate('Y-m-d-H'));
+    if (!preg_match('/^[a-f0-9]{32}$/D', $submissionId)) $submissionId = bin2hex(random_bytes(16));
+    return hash('sha256', $phone . '|' . $formType . '|' . $submissionId);
 }

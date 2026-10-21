@@ -68,7 +68,8 @@ $disparadorLabels = [
 ];
 ?>
 <form method="POST" action="/enviar" novalidate class="lead-form">
-  <input type="hidden" name="form_type" value="<?= $e($form_type) ?>">
+  <input type="hidden" name="submission_id" value="<?= htmlspecialchars((string)($old['submission_id'] ?? bin2hex(random_bytes(16))), ENT_QUOTES, 'UTF-8') ?>">
+<input type="hidden" name="form_type" value="<?= $e($form_type) ?>">
   <input type="hidden" name="page" value="<?= $e($page) ?>">
   <input type="hidden" name="ts" value="<?= time() ?>">
   <input type="hidden" name="csrf" value="<?= $e(csrf_token()) ?>">

@@ -31,6 +31,7 @@ $labels=['rubro'=>'Tipo de empresa','empleados'=>'Tamaño del equipo','disparado
 <div class="empty-state" id="formulario"><h2>El canal de solicitudes está en preparación</h2><p>Mientras se confirma quién recibe las solicitudes, podés consultar el alcance de cada servicio y preparar tus preguntas.</p><a class="button" href="/servicios/">Comparar servicios ↗</a><?php if (cfg('contact_email')): ?><p><a href="mailto:<?= e(cfg('contact_email')) ?>">Contactar a la plataforma</a></p><?php endif; ?></div>
 <?php else: ?>
 <form class="lead-form" id="formulario" method="post" action="/enviar/">
+<input type="hidden" name="submission_id" value="<?= htmlspecialchars((string)($old['submission_id'] ?? bin2hex(random_bytes(16))), ENT_QUOTES, 'UTF-8') ?>">
 <input type="hidden" name="form_type" value="orientacion"><input type="hidden" name="page" value="<?= e($page??'encontra-un-proveedor') ?>"><input type="hidden" name="csrf" value="<?= e(csrf_token()) ?>"><input type="hidden" name="ts" value="<?= time() ?>">
 <div class="hp" aria-hidden="true"><input name="website" tabindex="-1" autocomplete="off" aria-label="Dejá vacío"></div>
 <?php if ($errors): ?><div class="form-errors" role="alert" tabindex="-1"><p>Revisá los campos marcados. Tu solicitud todavía no se envió.</p><?php if(isset($errors['form'])): ?><p><?= e($errors['form']) ?></p><?php endif; ?></div><?php endif; ?>

@@ -84,8 +84,11 @@ function handle_submission(array $post, array $server, array $cookie, ?callable 
 
     // 7–8. Attribution and idempotency.
     $attr = form_attribution($cookie, $server);
-    $key  = vendercrm_idempotency_key((string) $clean['telefono'], (string) $clean['form_type']);
+    $key  = vendercrm_idempotency_key((string) $clean['telefono'], (string) $clean['form_type'], is_string($post['submission_id']??null)?$post['submission_id']:'');
     $band = lead_band($clean);
+
+    $payload = vendercrm_build_payload($clean, $attr, $key);
+    $delivery = require dirname(__DIR__) . '/lib/lead-delivery-config.php';
 
     // 10. Local write FIRST. This is the durability guarantee.
     try {
@@ -96,12 +99,21 @@ function handle_submission(array $post, array $server, array $cookie, ?callable 
         return ['action'=>'deny','code'=>503];
     }
 
+    try { $queueId = $delivery->enqueue($payload); }
+    catch(Throwable $error) { form_log('queue_failed', ['error'=>get_class($error)]); return ['action'=>'deny','code'=>503]; }
+
     // 11. CRM push. Never allowed to break the visitor's journey.
     $crm = ['ok' => false, 'status' => 0, 'body' => '', 'error' => 'not attempted',
             'contact_id' => '', 'deal_id' => '', 'duplicate' => false];
     try {
-        $payload = vendercrm_build_payload($clean, $attr, $key);
-        $crm     = vendercrm_push($payload, $crmTransport);
+        $result = $delivery->deliver($queueId, static function(array $pending) use ($crmTransport): array {
+            $pushed = vendercrm_push($pending, $crmTransport);
+            return ['received'=>$pushed['ok'], 'status'=>$pushed['status'], 'code'=>$pushed['ok']?'received':(in_array($pushed['status'],[200,201],true)?'invalid-receipt':'http'),
+                'receipt'=>['contactId'=>$pushed['contact_id'],'submissionId'=>$pushed['submission_id'],'dealId'=>$pushed['deal_id']]];
+        });
+        $receipt = $result['receipt']??[];
+        $crm = ['ok'=>!empty($result['received']),'status'=>$result['status']??0,'error'=>'', 'body'=>'',
+            'contact_id'=>$receipt['contactId']??'', 'deal_id'=>$receipt['dealId']??'', 'duplicate'=>($result['code']??'')==='already-received'];
     } catch (Throwable $e) {
         // Class name only. The message could contain payload fragments.
         $crm['error'] = 'exception: ' . get_class($e);
@@ -119,7 +131,8 @@ function handle_submission(array $post, array $server, array $cookie, ?callable 
 
     // 12. Notify.
     try {
-        if ($notify !== null) $notify($clean, $band, $attr, $crm);
+        if ($crm['duplicate']) {}
+        elseif ($notify !== null) $notify($clean, $band, $attr, $crm);
         else form_notify($clean, $band, $attr, $crm);
     } catch (Throwable $e) {
         form_log('notify_failed', ['error' => get_class($e)]);
@@ -215,7 +228,7 @@ function form_client_ip(array $server): string
 function form_old_input(array $post): array
 {
     $out = [];
-    foreach (['nombre', 'telefono', 'email', 'empresa', 'empleados', 'rubro', 'disparador', 'mensaje', 'consent'] as $k) {
+    foreach (['nombre', 'telefono', 'email', 'empresa', 'empleados', 'rubro', 'disparador', 'mensaje', 'consent', 'submission_id'] as $k) {
         $v = $post[$k] ?? '';
         if (is_string($v)) {
             $out[$k] = mb_substr($v, 0, 2000);
@@ -355,6 +368,15 @@ function leads_append(array $clean, array $attr, string $band, string $key): str
         throw new RuntimeException('Private storage lock unavailable');
     }
     try {
+        rewind($fh);
+        $existingHeader = fgetcsv($fh, 0, ',', '"', '\\');
+        if ($existingHeader === LEAD_COLUMNS) {
+            $keyIndex = array_search('idempotency_key', LEAD_COLUMNS, true);
+            while (($existing = fgetcsv($fh, 0, ',', '"', '\\')) !== false) {
+                if (($existing[$keyIndex]??'') === $key) return (string)$existing[0];
+            }
+        }
+        fseek($fh, 0, SEEK_END);
         if ((fstat($fh)['size'] ?? 0) === 0) {
             fputcsv($fh, LEAD_COLUMNS, ',', '"', '\\');
         }

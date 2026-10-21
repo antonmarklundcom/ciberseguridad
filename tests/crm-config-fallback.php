@@ -1,5 +1,14 @@
 <?php
 declare(strict_types=1);
+
+function delivery_test_cleanup(string $base): void {
+ $resolved=realpath($base); $temp=realpath(sys_get_temp_dir());
+ if(!$resolved||!$temp||!str_starts_with($resolved,$temp.DIRECTORY_SEPARATOR)||!preg_match('/^(cyber-tests-|orientation-test-|crm-fallback-)/',basename($resolved))) throw new RuntimeException('Unsafe test cleanup');
+ $it=new RecursiveIteratorIterator(new RecursiveDirectoryIterator($resolved,FilesystemIterator::SKIP_DOTS),RecursiveIteratorIterator::CHILD_FIRST);
+ foreach($it as $entry) $entry->isDir()&&!$entry->isLink()?rmdir($entry->getPathname()):unlink($entry->getPathname());
+ rmdir($resolved);
+}
+
 require dirname(__DIR__) . '/src/form-handler.php';
 cfg_load_env_file(dirname(__DIR__) . '/.env');
 $tmp=sys_get_temp_dir().'/crm-fallback-'.bin2hex(random_bytes(6));
@@ -15,8 +24,5 @@ $ok=$result['action']==='redirect' && $pushes===0 && $notifications===1 && is_fi
     && cfg('vendercrm_url')==='' && cfg('vendercrm_key')==='' && cfg('lead_enabled')===true
     && !str_contains($log,'never-output-synthetic-key');
 echo ($ok?'PASS ':'FAIL ').'invalid CRM preserves recorded consented request and notification fallback without transport'.PHP_EOL;
-foreach (glob($tmp.'/ratelimit/*')?:[] as $file) unlink($file);
-if(is_dir($tmp.'/ratelimit'))rmdir($tmp.'/ratelimit');
-foreach(glob($tmp.'/*')?:[] as $file)if(is_file($file))unlink($file);
-rmdir($tmp);
+delivery_test_cleanup($tmp);
 exit($ok?0:1);
