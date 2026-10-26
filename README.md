@@ -8,6 +8,10 @@ The October 2026 implementation preserves the 39 published live URLs, 17 service
 
 The recovered dark homepage and shared shell are reconstructed on the current PHP implementation, preserving all 39 public URLs and the merged form/CRM repair. See [restoration evidence, SEO comparison and deployment notes](docs/DARK-RESTORATION-2026-10-25.md). The complete original stylesheet/backend was not recovered.
 
+## Buyer journey improvements
+
+All 17 services and seven guides are connected, with buying worksheets, a printable quotation brief and service-aware orientation. Optional analytics measures intent without false thank-you conversions. The dark design, 39 URLs and form/CRM safeguards remain. See [scope, tests and recovery](docs/IMPROVEMENTS-2026-10-26.md).
+
 ## Current implementation
 
 - `public_html/`: public PHP controllers, assets, sitemap, robots and Apache configuration.
@@ -23,10 +27,8 @@ No framework, database, production Node dependency or asset build step. PHP 8.3.
 
 ```sh
 php -S 127.0.0.1:8899 -t public_html tests/router.php
-php tests/run.php
-php tests/orientation.php
-php tests/config-gate.php
-php tests/seo-check.php
+php tests/release.php
+node --test tests/analytics.test.cjs
 ```
 
 The development server emulates page routing only. Apache checks verify rewrite rules, headers, forbidden paths and both supported document roots. Python HTTP checks require requests and BeautifulSoup and target localhost only.

@@ -1,0 +1,145 @@
+{
+  "evaluacion-ciberseguridad": {
+    "guides": [
+      "practicas-minimas-ciberseguridad-pymes-paraguay"
+    ],
+    "goal": "Prioridades para empezar",
+    "deliverable": "Mapa de necesidades, prioridades y responsables.",
+    "acceptance": "Cada prioridad explica qué problema aborda, quién decide y cómo se comprobará el avance."
+  },
+  "evaluacion-vulnerabilidades": {
+    "guides": [
+      "autorizacion-alcance-pruebas-seguridad",
+      "preguntas-antes-contratar-pentest"
+    ],
+    "goal": "Hallazgos dentro de un alcance",
+    "deliverable": "Informe de activos revisados, hallazgos y límites de la revisión.",
+    "acceptance": "El informe distingue lo comprobado de lo no revisado y define si incluye una nueva comprobación tras corregir."
+  },
+  "pentesting-autorizado": {
+    "guides": [
+      "preguntas-antes-contratar-pentest",
+      "autorizacion-alcance-pruebas-seguridad"
+    ],
+    "goal": "Prueba con reglas acordadas",
+    "deliverable": "Reglas de trabajo, informe y devolución de resultados.",
+    "acceptance": "Las reglas identifican activos autorizados, exclusiones y criterios de parada; el informe responde a los objetivos acordados."
+  },
+  "preparacion-respuesta-incidentes": {
+    "guides": [
+      "preparar-hoja-contactos-incidentes"
+    ],
+    "goal": "Preparar decisiones y contactos",
+    "deliverable": "Plan de respuesta, hoja de contactos y ejercicio de mesa.",
+    "acceptance": "Cada decisión tiene titular y suplencia; el ejercicio deja acciones y una fecha de revisión."
+  },
+  "respuesta-incidentes": {
+    "guides": [
+      "preparar-hoja-contactos-incidentes"
+    ],
+    "goal": "Acordar ayuda durante un incidente",
+    "deliverable": "Alcance de la intervención y registro de decisiones.",
+    "acceptance": "Antes de contratar, confirmá disponibilidad real, autoridad para actuar, canal seguro y condiciones de cierre."
+  },
+  "preparacion-recuperacion-ransomware": {
+    "guides": [
+      "checklist-pruebas-recuperacion-backup",
+      "preparar-hoja-contactos-incidentes"
+    ],
+    "goal": "Preparación de continuidad",
+    "deliverable": "Escenario de recuperación, roles y resultados de un ejercicio.",
+    "acceptance": "Queda claro qué servicio se recuperaría primero, quién decide y qué dependencias faltan por comprobar."
+  },
+  "seguridad-microsoft-365-google-workspace": {
+    "guides": [
+      "reportar-correo-sospechoso-seguro",
+      "practicas-minimas-ciberseguridad-pymes-paraguay"
+    ],
+    "goal": "Revisión de cuentas y correo",
+    "deliverable": "Informe de configuración y propuesta de cambios priorizados.",
+    "acceptance": "Se distinguen revisión y cambios ejecutados; cada cambio tiene aprobación, responsable y comprobación acordada."
+  },
+  "revision-seguridad-nube": {
+    "guides": [
+      "practicas-minimas-ciberseguridad-pymes-paraguay",
+      "autorizacion-alcance-pruebas-seguridad"
+    ],
+    "goal": "Revisión de la infraestructura acordada",
+    "deliverable": "Inventario del alcance, hallazgos y plan de corrección.",
+    "acceptance": "La propuesta identifica cuentas y entornos incluidos, exclusiones y quién implementa y valida las correcciones."
+  },
+  "backup-recuperacion": {
+    "guides": [
+      "checklist-pruebas-recuperacion-backup"
+    ],
+    "goal": "Prueba controlada de recuperación",
+    "deliverable": "Registro de una restauración y acciones pendientes.",
+    "acceptance": "El registro indica copia y servicio probados, resultado observado, tiempo y quién confirmó que funciona."
+  },
+  "seguridad-red-endpoints": {
+    "guides": [
+      "practicas-minimas-ciberseguridad-pymes-paraguay"
+    ],
+    "goal": "Revisión de equipos y red",
+    "deliverable": "Inventario revisado y medidas de protección priorizadas.",
+    "acceptance": "La propuesta separa equipos cubiertos, licencias, instalación, mantenimiento y seguimiento posterior."
+  },
+  "capacitacion-phishing": {
+    "guides": [
+      "reportar-correo-sospechoso-seguro"
+    ],
+    "goal": "Capacitación con un objetivo",
+    "deliverable": "Material para el equipo, práctica acordada y resultados agregados.",
+    "acceptance": "Se acuerdan público, conducta esperada y canal de reporte; cualquier simulación tiene autorización y tratamiento de datos definido."
+  },
+  "iso-27001": {
+    "guides": [
+      "que-significa-certificacion-iso-27001"
+    ],
+    "goal": "Preparación del sistema de gestión",
+    "deliverable": "Alcance propuesto, brechas y plan de preparación.",
+    "acceptance": "La propuesta distingue consultoría, auditoría y certificación, con responsabilidades y costos separados."
+  },
+  "asesoria-pci-dss": {
+    "guides": [
+      "practicas-minimas-ciberseguridad-pymes-paraguay"
+    ],
+    "goal": "Entender el alcance del trabajo",
+    "deliverable": "Mapa del proceso de cobro y plan de trabajo a validar con las partes correspondientes.",
+    "acceptance": "Se identifican sistemas y terceros involucrados, responsables y evidencia requerida sin prometer aprobación del banco."
+  },
+  "politicas-gobernanza-seguridad": {
+    "guides": [
+      "practicas-minimas-ciberseguridad-pymes-paraguay",
+      "que-significa-certificacion-iso-27001"
+    ],
+    "goal": "Reglas que se puedan aplicar",
+    "deliverable": "Políticas adaptadas, responsables y calendario de revisión.",
+    "acceptance": "Cada política tiene una persona que la aprueba, otra que la aplica y una forma de revisar su cumplimiento."
+  },
+  "monitoreo-gestionado-soc": {
+    "guides": [
+      "preparar-hoja-contactos-incidentes"
+    ],
+    "goal": "Monitoreo con responsabilidades claras",
+    "deliverable": "Cobertura acordada, reglas de aviso e informe periódico.",
+    "acceptance": "El contrato identifica fuentes cubiertas, horarios, escalación y qué acciones requieren tu autorización."
+  },
+  "proteccion-datos-personales": {
+    "guides": [
+      "practicas-minimas-ciberseguridad-pymes-paraguay"
+    ],
+    "goal": "Ordenar datos y responsabilidades",
+    "deliverable": "Inventario de tratamientos y plan de acciones sujeto a revisión competente.",
+    "acceptance": "La propuesta identifica entregables, responsables y límites de la asesoría; no equivale a una garantía de cumplimiento."
+  },
+  "ciso-externo": {
+    "guides": [
+      "practicas-minimas-ciberseguridad-pymes-paraguay",
+      "preparar-hoja-contactos-incidentes"
+    ],
+    "goal": "Dirección y seguimiento",
+    "deliverable": "Plan de prioridades, registro de decisiones e informe a dirección.",
+    "acceptance": "Se acuerdan dedicación, autoridad, reuniones, responsables de ejecutar y criterios para revisar el avance."
+  }
+}

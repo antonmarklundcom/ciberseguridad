@@ -11,7 +11,7 @@ Tests used PHP 8.3.33/8.5.11 with mbstring/curl/openssl, plus Apache 2.4.69 and 
 ## Before replacement
 
 1. Back up actual hosting files, `.env`, private storage and server settings. No inspected Git branch matched all 39 live pages; this implementation includes recovered public content rather than live PHP source.
-2. Review the draft PR and business role. Do not auto-deploy the default planning branch. This change targets `main` from the reviewed current branch.
+2. Select the reviewed merged main revision and confirm the business role. Do not deploy an unreviewed planning branch.
 3. Stage separately and copy `.env.example` to private `.env`, retaining `LEAD_ENABLED=0`. Never overwrite production `.env` or a pre-existing CSV with release contents. New intake uses separate `orientation-leads.csv`; existing `leads.csv` remains untouched.
 
 ## Supported document roots
@@ -34,7 +34,12 @@ Schedule daily CLI cleanup with the host's verified PHP executable and absolute 
 
 Keep the pre-deployment snapshot and configuration. On routing, assets or storage failures, restore public/private code together and the previous document-root/server settings. Preserve newly received private records separately before rollback; never replace lead storage with an empty release directory. Disable intake while reconciling a failure.
 
-No production forms, external messages, Hostinger changes or merges were performed.
+No production forms, external messages or Hostinger changes are part of these local release checks.
 
 
 VenderCRM config validation lives in `lib/vendercrm-config.php`; include `lib/` in the release whitelist. The effective local .env/store precedence is retained, with validated persistent environment/private config support. Malformed or incomplete CRM configuration disables only CRM with a generic diagnostic; site rendering and an already enabled monitored-email/private-storage fallback remain available. This does not enable intake or change ownership/consent gates. Never ship secret-bearing private config or .env inside the release/public tree.
+
+
+## Buyer journey release — 26 October 2026
+
+See [implementation and verification](IMPROVEMENTS-2026-10-26.md). Include private src/buyer-journey.php and src/buyer-journey.json with the complete release. No new runtime dependency or environment setting is required. The printable brief works with intake off; optional analytics events measure intent, not accepted or delivered enquiries.

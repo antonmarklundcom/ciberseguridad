@@ -296,7 +296,7 @@
     "prio": "0.7",
     "wa": "",
     "published_at": "2026-08-28",
-    "modified_at": "2026-10-05"
+    "modified_at": "2026-10-26"
   },
   "recursos/preguntas-antes-contratar-pentest": {
     "title": "Preguntas antes de contratar un pentest",
@@ -307,7 +307,7 @@
     "prio": "0.7",
     "wa": "",
     "published_at": "2026-08-28",
-    "modified_at": "2026-10-05"
+    "modified_at": "2026-10-26"
   },
   "recursos/autorizacion-alcance-pruebas-seguridad": {
     "title": "Por qué la autorización y el alcance importan",
@@ -318,7 +318,7 @@
     "prio": "0.7",
     "wa": "",
     "published_at": "2026-08-28",
-    "modified_at": "2026-10-05"
+    "modified_at": "2026-10-26"
   },
   "recursos/checklist-pruebas-recuperacion-backup": {
     "title": "Checklist para probar recuperación de backups",
@@ -329,7 +329,7 @@
     "prio": "0.7",
     "wa": "",
     "published_at": "2026-08-28",
-    "modified_at": "2026-10-05"
+    "modified_at": "2026-10-26"
   },
   "recursos/que-significa-certificacion-iso-27001": {
     "title": "Qué significa —y qué no— una certificación ISO 27001",
@@ -340,7 +340,7 @@
     "prio": "0.7",
     "wa": "",
     "published_at": "2026-08-28",
-    "modified_at": "2026-10-05"
+    "modified_at": "2026-10-26"
   },
   "recursos/reportar-correo-sospechoso-seguro": {
     "title": "Cómo reportar un correo sospechoso de forma segura",
@@ -351,7 +351,7 @@
     "prio": "0.7",
     "wa": "",
     "published_at": "2026-08-28",
-    "modified_at": "2026-10-05"
+    "modified_at": "2026-10-26"
   },
   "recursos/practicas-minimas-ciberseguridad-pymes-paraguay": {
     "title": "Prácticas mínimas de ciberseguridad para pymes paraguayas",
@@ -362,7 +362,7 @@
     "prio": "0.7",
     "wa": "",
     "published_at": "2026-08-28",
-    "modified_at": "2026-10-05"
+    "modified_at": "2026-10-26"
   },
   "gracias": {
     "title": "Solicitud recibida",
