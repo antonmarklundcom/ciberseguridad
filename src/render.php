@@ -286,13 +286,14 @@ function nav_groups(): array
 
 function render_header(array $page, bool $minimal): string
 {
-    $h='<header class="site-header"><div class="shell bar"><a class="brand" href="/" aria-label="Ciberseguridad.com.py — inicio"><span class="brand-mark" aria-hidden="true">c.</span><span>ciberseguridad<span class="brand-domain">.com.py</span></span></a>';
+    $symbol='<svg class="brand-symbol" viewBox="0 0 256 256" aria-hidden="true"><path d="M0 128C70.692 128 128 185.308 128 256H64C64 220.654 35.346 192 0 192ZM256 192C220.654 192 192 220.654 192 256H128C128 185.308 185.308 128 256 128ZM128 0C128 70.692 70.692 128 0 128V64C35.346 64 64 35.346 64 0ZM192 0C192 35.346 220.654 64 256 64V128C185.308 128 128 70.692 128 0Z"/></svg>';
+    $h='<header class="site-header"><div class="shell bar"><a class="brand" href="/" aria-label="Ciberseguridad.com.py — inicio">'.$symbol.'<span>ciberseguridad<span class="brand-domain">.com.py</span></span></a>';
     if ($minimal) return $h . '</div></header>';
-    $h.='<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel">Menú <span aria-hidden="true">☰</span></button><div class="nav-panel" id="nav-panel"><nav aria-label="Principal"><ul class="nav">';
-    foreach (['servicios'=>'Servicios','recursos'=>'Guías','proveedores'=>'Proveedores','nosotros'=>'La plataforma','contacto'=>'Contacto'] as $slug=>$label) {
+    $h.='<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel">Menú <span aria-hidden="true">☰</span></button><div class="nav-panel" id="nav-panel"><nav aria-label="Principal"><ul class="nav nav-pill">';
+    foreach (['servicios'=>'Servicios','proveedores'=>'Proveedores','recursos'=>'Guías','metodologia-verificacion'=>'Cómo verificamos','contacto'=>'Contacto'] as $slug=>$label) {
         $h.='<li><a href="'.e(page_path($slug)).'"'.($page['slug']===$slug?' aria-current="page"':'').'>'.e($label).'</a></li>';
     }
-    return $h.'</ul></nav><a class="button nav-cta" href="/encontra-un-proveedor/">Pedir orientación <span aria-hidden="true">↗</span></a></div></div></header>';
+    return $h.'</ul></nav><div class="header-actions"><a class="header-incident" href="/incidente/"><i class="signal-dot" aria-hidden="true"></i>Incidente en curso</a><a class="button nav-cta" href="/encontra-un-proveedor/"><span aria-hidden="true">→</span>Pedir orientación</a></div></div></div></header>';
 }
 
 function render_footer(): string
@@ -354,9 +355,14 @@ function layout(array $page, string $body, array $opts = []): string
 
     $out  = "<!doctype html>\n<html lang=\"es-PY\">\n<head>\n<meta charset=\"utf-8\">\n";
     $out .= '<meta name="viewport" content="width=device-width,initial-scale=1">' . "\n";
-    $out .= '<meta name="theme-color" content="#163b3c">' . "\n";
+    $out .= '<meta name="theme-color" content="#060606">' . "\n";
     $out .= meta($page, $opts['og_image'] ?? og_image_for($page['slug']));
     $out .= '<link rel="stylesheet" href="' . e(asset('/assets/css/orientation.css')) . '">' . "\n";
+    // Restored visual layer: the page registry, service/guide content and intake gates stay independent.
+    $out .= '<link rel="preconnect" href="https://fonts.googleapis.com">' . "\n";
+    $out .= '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
+    $out .= '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handjet:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap">' . "\n";
+    $out .= '<link rel="stylesheet" href="' . e(asset('/assets/css/dark.css')) . '">' . "\n";
     $out .= '<link rel="icon" href="/favicon.svg" type="image/svg+xml">' . "\n";
     $out .= $ld;
     $out .= "</head>\n<body{$bodyAttrs}>\n";
@@ -365,7 +371,7 @@ function layout(array $page, string $body, array $opts = []): string
     $out .= '<main id="main" tabindex="-1">' . "\n" . $body . "\n</main>\n";
     $out .= render_footer() . "\n";
 
-    if (!$minimal && !in_array($page['slug'], ['encontra-un-proveedor','contacto','incidente','gracias','404','privacidad','terminos'], true)) {
+    if (!$minimal && !in_array($page['slug'], ['', 'encontra-un-proveedor','contacto','incidente','gracias','404','privacidad','terminos'], true)) {
         $out .= '<div class="sticky-cta"><a class="button" href="/encontra-un-proveedor/">Pedir orientación <span aria-hidden="true">↗</span></a></div>';
     }
     if (!$minimal) {
@@ -373,6 +379,9 @@ function layout(array $page, string $body, array $opts = []): string
     }
     foreach ($scripts as $s) {
         $out .= '<script src="' . e(asset($s)) . '" defer></script>' . "\n";
+    }
+    if ($page['slug'] === '') {
+        $out .= '<script src="' . e(asset('/assets/js/dark-media.js')) . '" defer></script>' . "\n";
     }
     $out .= '<script src="' . e(asset('/assets/js/vc-attribution.js')) . '" defer></script>' . "\n";
     if ((string) cfg('ga4_id') !== '') {

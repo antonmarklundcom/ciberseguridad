@@ -1,6 +1,6 @@
 # Manual deployment and rollback — October 2026
 
-Publication-ready code ships with request intake disabled by default. It does not establish verified business facts or live delivery. No merge or deployment is authorized by this implementation task.
+Publication-ready code ships with request intake disabled by default. It does not establish verified business facts or live delivery. This guide does not authorize hosting changes. The owner requested the dark restoration to be merged into main; production redeployment remains separate. See [the restoration and SEO handoff](DARK-RESTORATION-2026-10-25.md).
 
 ## Contents and prerequisites
 
@@ -11,7 +11,7 @@ Tests used PHP 8.3.33/8.5.11 with mbstring/curl/openssl, plus Apache 2.4.69 and 
 ## Before replacement
 
 1. Back up actual hosting files, `.env`, private storage and server settings. No inspected Git branch matched all 39 live pages; this implementation includes recovered public content rather than live PHP source.
-2. Review the draft PR and business role. Do not auto-deploy the default planning branch. This change targets `main` from `codex/business-orientation-redesign`.
+2. Review the draft PR and business role. Do not auto-deploy the default planning branch. This change targets `main` from the reviewed current branch.
 3. Stage separately and copy `.env.example` to private `.env`, retaining `LEAD_ENABLED=0`. Never overwrite production `.env` or a pre-existing CSV with release contents. New intake uses separate `orientation-leads.csv`; existing `leads.csv` remains untouched.
 
 ## Supported document roots

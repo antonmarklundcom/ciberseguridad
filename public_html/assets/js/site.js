@@ -9,7 +9,7 @@
   var toggle = d.querySelector('.nav-toggle');
   var panel = d.getElementById('nav-panel');
   var header = d.querySelector('.site-header');
-  var mq = window.matchMedia ? window.matchMedia('(max-width: 899px)') : null;
+  var mq = window.matchMedia ? window.matchMedia('(max-width: 1150px)') : null;
 
   function focusables() {
     return panel ? (toggle ? [toggle] : []).concat(Array.prototype.slice.call(
