@@ -19,6 +19,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/pages.php';
+require_once __DIR__ . '/buyer-journey.php';
 
 const PUBLIC_DIR = __DIR__ . '/../public_html';
 
@@ -313,6 +314,8 @@ function layout(array $page, string $body, array $opts = []): string
         trigger_error('Page "' . $page['slug'] . '" must have exactly one <h1>.', E_USER_WARNING);
     }
 
+    $context = buyer_context($page['slug']);
+    if ($context !== '') $body = str_replace('</article>', $context . '</article>', $body);
     $minimal = (bool) ($opts['minimal'] ?? false);
     $sticky  = (string) ($opts['sticky'] ?? 'wa');
     $schema  = $opts['schema'] ?? [];
@@ -342,9 +345,10 @@ function layout(array $page, string $body, array $opts = []): string
     }
 
     $bodyAttrs = ' data-page="' . e($page['slug'] === '' ? 'home' : $page['slug']) . '"';
-    if (isset($opts['service'])) {
-        $bodyAttrs .= ' data-service="' . e($opts['service']) . '"';
-    }
+    $service = $opts['service'] ?? orientation_service($page['slug']);
+    if ($page['slug'] === 'encontra-un-proveedor' && is_string($_GET['servicio'] ?? null)
+        && isset(site_pages()['servicios/' . $_GET['servicio']])) $service = $_GET['servicio'];
+    if ($service !== '') $bodyAttrs .= ' data-service="' . e($service) . '"';
     if (isset($opts['event'])) {
         $bodyAttrs .= ' data-event="' . e($opts['event']) . '"';
     }
@@ -372,7 +376,7 @@ function layout(array $page, string $body, array $opts = []): string
     $out .= render_footer() . "\n";
 
     if (!$minimal && !in_array($page['slug'], ['', 'encontra-un-proveedor','contacto','incidente','gracias','404','privacidad','terminos'], true)) {
-        $out .= '<div class="sticky-cta"><a class="button" href="/encontra-un-proveedor/">Pedir orientación <span aria-hidden="true">↗</span></a></div>';
+        $out .= '<div class="sticky-cta"><a class="button" href="' . e(orientation_path($page['slug'])) . '">Pedir orientación <span aria-hidden="true">↗</span></a></div>';
     }
     if (!$minimal) {
         $out .= '<script src="' . e(asset('/assets/js/site.js')) . '"></script>' . "\n";

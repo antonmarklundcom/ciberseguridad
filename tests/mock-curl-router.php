@@ -23,6 +23,7 @@ function curl_error(object $ch): string { return !empty($ch->mode['network'])?'s
 function curl_errno(object $ch): int { return !empty($ch->mode['network'])?7:0; }
 function curl_close(object $ch): void {}
 }
+header('X-Synthetic-Delivery: 1');
 $source=(string)getenv('CRM_TEST_SOURCE'); $site=(string)getenv('CRM_TEST_SITE');
 $mode=json_decode((string)file_get_contents((string)getenv('CRM_TEST_MODE_FILE')),true);
 if(isset($mode['outbox'])) putenv('VENDERCRM_OUTBOX_DIR='.$mode['outbox']);
@@ -37,6 +38,6 @@ if($uri==='/lib/lead-delivery-cli.php') { require $source.'/lib/lead-delivery-cl
 if($site==='sitiosweb.html') { require $source.'/index.php'; return true; }
 if($site==='ciberseguridad' && $uri==='/enviar/') { require $source.'/public_html/enviar.php'; return true; }
 if($uri==='/enviar.php' || $uri==='/contacto.php') { require $source.($site==='pozo'?'/contacto.php':'/enviar.php'); return true; }
-if($site==='ciberseguridad') { require $source.'/tests/router.php'; return true; }
+if($site==='ciberseguridad') { return require $source.'/tests/router.php'; }
 if($site==='pozo') { require $source.'/tools/router.php'; return true; }
 require $source.'/router.php'; return true;

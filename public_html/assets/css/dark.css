@@ -213,3 +213,26 @@ h1,h2,h3,.source-list a{overflow-wrap:anywhere}
  .hero-actions .button{max-width:100%;white-space:normal}
  .lead-form{padding:25px}
 }
+
+/* Buying resources remain readable and keyboard-accessible in the dark theme. */
+.buyer-context{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line)}
+.buyer-example{margin:1.5rem 0}
+.buyer-example>div{padding:1rem 0;border-bottom:1px solid var(--line)}
+.buyer-example dt{font-weight:600;color:var(--ink);margin-bottom:.5rem}
+.buyer-example dd{margin:0;color:#c4c4bc;line-height:1.8}
+.comparison-scroll{overflow-x:auto;max-width:100%;margin:1.5rem 0}
+.buyer-table{border-collapse:collapse;width:100%;font-size:.9rem;line-height:1.7}
+.buyer-table caption{text-align:left;color:#c4c4bc;margin-bottom:.8rem}
+.buyer-table th,.buyer-table td{text-align:left;vertical-align:top;padding:1rem;border:1px solid #484842;min-width:140px}
+.buyer-table th{color:var(--ink);font-weight:600}
+.buyer-table td{color:#c4c4bc}
+.print-brief{display:none}
+.js .print-brief{display:inline-flex}
+@media print{
+ .site-header,.site-footer,.sticky-cta,.print-brief,.js .print-brief{display:none}
+ .buying-brief,.buyer-context,.buyer-example dd,.buyer-table td,.buyer-table th,.buyer-table caption{color:#000}
+ .comparison-scroll{overflow:visible}
+ .buyer-table th,.buyer-table td{min-width:0;padding:.5rem}
+ body:has(.buying-brief) main>section:not(:has(.buying-brief)){display:none}
+ .buying-brief h2{font-family:Arial,sans-serif;font-size:24pt}
+}

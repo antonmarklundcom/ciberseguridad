@@ -78,7 +78,7 @@
 
   /* ---- Forms: validate on blur, disable on submit, focus errors ---- */
   Array.prototype.forEach.call(d.querySelectorAll('form.lead-form'), function (form) {
-    var msgs = { valueMissing: 'Completá este campo.', typeMismatch: 'Revisá el formato.' };
+    var msgs = { valueMissing: 'Completá este campo.', typeMismatch: 'Revisá el formato.', patternMismatch: 'Revisá el formato. Para teléfono usá números, espacios, +, paréntesis o guiones.', tooShort: 'Completá al menos la cantidad mínima de caracteres.' };
     function check(input) {
       if (!input.willValidate || input.name === 'website') return true;
       var id = 'err-' + input.name;
@@ -89,7 +89,7 @@
       if (!d.getElementById(id)) {
         var p = d.createElement('p');
         p.className = 'field-error'; p.id = id;
-        p.textContent = input.validity.valueMissing ? msgs.valueMissing : msgs.typeMismatch;
+        p.textContent = input.validity.valueMissing ? msgs.valueMissing : input.validity.patternMismatch ? msgs.patternMismatch : input.validity.tooShort ? msgs.tooShort : msgs.typeMismatch;
         input.parentNode.appendChild(p);
         input.setAttribute('aria-describedby', id);
       }
@@ -97,6 +97,11 @@
     }
     Array.prototype.forEach.call(form.querySelectorAll('input, select, textarea'), function (i) {
       i.addEventListener('blur', function () { if (i.value !== '' || i.required) check(i); });
+    });
+    var submitButton = form.querySelector('button[type=submit]');
+    var submitLabel = submitButton ? submitButton.textContent : '';
+    window.addEventListener('pageshow', function () {
+      if (submitButton) { submitButton.disabled = false; submitButton.textContent = submitLabel; }
     });
     form.addEventListener('submit', function (ev) {
       var bad = null;
@@ -109,6 +114,9 @@
     });
     var summary = form.querySelector('.form-errors');
     if (summary) summary.focus();
+  });
+  Array.prototype.forEach.call(d.querySelectorAll('.print-brief'), function (button) {
+    button.addEventListener('click', function () { window.print(); });
   });
   /* Service catalog filtering: every card remains available without JS. */
   var chips = d.querySelectorAll('[data-filter]');
