@@ -4,6 +4,10 @@ Independent Spanish-language guidance for businesses in Paraguay. This PHP site 
 
 The October 2026 implementation preserves the 39 published live URLs, 17 service pages and seven guides. The live site's original PHP source was not present in any inspected Git branch: reviewed public content was recovered and integrated into the existing PHP shell. See [the Swedish audit and delivery report](docs/review/REPORT-SV.md) for evidence and limitations.
 
+## Dark design restoration
+
+The recovered dark homepage and shared shell are reconstructed on the current PHP implementation, preserving all 39 public URLs and the merged form/CRM repair. See [restoration evidence, SEO comparison and deployment notes](docs/DARK-RESTORATION-2026-10-25.md). The complete original stylesheet/backend was not recovered.
+
 ## Current implementation
 
 - `public_html/`: public PHP controllers, assets, sitemap, robots and Apache configuration.
@@ -29,6 +33,6 @@ The development server emulates page routing only. Apache checks verify rewrite 
 
 ## Publish manually after review
 
-Follow [DEPLOYMENT.md](docs/DEPLOYMENT.md). `.env.example` ships with `LEAD_ENABLED=0`. Requests stay unavailable until the owner verifies the recipient identity, delivery configuration, legal/privacy text, retention and operational monitoring. Do not copy a test recipient into production. No production form submissions, merge or Hostinger deployment were performed.
+Follow [DEPLOYMENT.md](docs/DEPLOYMENT.md). `.env.example` ships with `LEAD_ENABLED=0`. Requests stay unavailable until the owner verifies the recipient identity, delivery configuration, legal/privacy text, retention and operational monitoring. Do not copy a test recipient into production. Production deployment and fresh live form-receipt verification remain owner steps.
 
 Older strategy/specification documents and legacy helpers are historical context. They do not establish business capabilities, credentials, prices, staffing, contact numbers or current launch requirements. This README, deployment guide and October report supersede conflicting earlier assumptions.
