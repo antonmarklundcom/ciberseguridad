@@ -12,6 +12,10 @@ The recovered dark homepage and shared shell are reconstructed on the current PH
 
 All 17 services and seven guides are connected, with buying worksheets, a printable quotation brief and service-aware orientation. Optional analytics measures intent without false thank-you conversions. The dark design, 39 URLs and form/CRM safeguards remain. See [scope, tests and recovery](docs/IMPROVEMENTS-2026-10-26.md).
 
+## Services navigation and SEO plan
+
+Servicios opens a dark mega menu with all 17 existing services in five groups, including keyboard/mobile and native no-JavaScript support. [Service SEO and provider architecture](docs/SEO-SERVICES-AND-PROVIDERS-2026-10-26.md) explains the next editorial priorities and provider-directory options. No new public URLs or business claims are introduced.
+
 ## Current implementation
 
 - `public_html/`: public PHP controllers, assets, sitemap, robots and Apache configuration.

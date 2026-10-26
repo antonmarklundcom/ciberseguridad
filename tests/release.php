@@ -14,7 +14,7 @@ foreach ($files as $file) {
     $out=[];
 }
 echo 'PASS: '.count($files)." PHP syntax checks\n";
-foreach (['run','orientation','config-gate','crm-config-fallback','lead-delivery','buyer-journey','seo-check'] as $suite) {
+foreach (['run','orientation','config-gate','crm-config-fallback','lead-delivery','buyer-journey','navigation','seo-check'] as $suite) {
     passthru(escapeshellarg(PHP_BINARY).' '.escapeshellarg(__DIR__.'/'.$suite.'.php'),$code);
     if ($code!==0) exit($code);
 }
