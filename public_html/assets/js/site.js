@@ -9,11 +9,13 @@
   var toggle = d.querySelector('.nav-toggle');
   var panel = d.getElementById('nav-panel');
   var header = d.querySelector('.site-header');
+  var servicesMenu = d.getElementById('services-menu');
+  var servicesSummary = servicesMenu ? servicesMenu.querySelector('summary') : null;
   var mq = window.matchMedia ? window.matchMedia('(max-width: 1150px)') : null;
 
   function focusables() {
     return panel ? (toggle ? [toggle] : []).concat(Array.prototype.slice.call(
-      panel.querySelectorAll('a[href], button:not([disabled])')
+      panel.querySelectorAll('a[href], button:not([disabled]), summary')
     ).filter(function (el) { return el.getClientRects().length > 0; })) : [];
   }
   function setOpen(open) {
@@ -22,9 +24,10 @@
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     d.body.classList.toggle('menu-open', open);
     if (open && panel) {
-      var f = panel.querySelector('a[href]');
+      var f = focusables()[1];
       if (f) f.focus();
     } else {
+      if (servicesMenu) servicesMenu.open = false;
       toggle.focus();
     }
   }
@@ -33,6 +36,11 @@
       setOpen(toggle.getAttribute('aria-expanded') !== 'true');
     });
     d.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Escape' && servicesMenu && servicesMenu.open) {
+        ev.preventDefault(); servicesMenu.open = false;
+        if (servicesSummary) servicesSummary.focus();
+        return;
+      }
       if (toggle.getAttribute('aria-expanded') !== 'true' || !mq || !mq.matches) return;
       if (ev.key === 'Escape') { setOpen(false); return; }
       if (ev.key !== 'Tab') return;
@@ -48,17 +56,13 @@
       });
     }
   }
-  // Desktop dropdowns: click toggles too (hover/focus already handled in CSS).
-  Array.prototype.forEach.call(d.querySelectorAll('.sub-toggle'), function (b) {
-    b.addEventListener('click', function () {
-      var open = b.getAttribute('aria-expanded') === 'true';
-      Array.prototype.forEach.call(d.querySelectorAll('.sub-toggle'), function (o) { o.setAttribute('aria-expanded', 'false'); });
-      b.setAttribute('aria-expanded', open ? 'false' : 'true');
-    });
-  });
+  // Native details keeps all service links usable without JavaScript.
+  // Enhancement adds predictable outside-click/focus and Escape dismissal.
   d.addEventListener('click', function (ev) {
-    if (!ev.target.closest || ev.target.closest('.has-sub')) return;
-    Array.prototype.forEach.call(d.querySelectorAll('.sub-toggle'), function (o) { o.setAttribute('aria-expanded', 'false'); });
+    if (servicesMenu && servicesMenu.open && !servicesMenu.contains(ev.target)) servicesMenu.open = false;
+  });
+  d.addEventListener('focusin', function (ev) {
+    if (servicesMenu && servicesMenu.open && !servicesMenu.contains(ev.target)) servicesMenu.open = false;
   });
 
   /* ---- Reveal (fires once) ---- */

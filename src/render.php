@@ -285,13 +285,64 @@ function nav_groups(): array
     return $g;
 }
 
+/** Existing service URLs, grouped for discovery rather than new category pages. */
+function services_menu_groups(): array
+{
+    return [
+        'Evaluar' => [
+            'evaluacion-ciberseguridad'=>'Evaluación de ciberseguridad',
+            'evaluacion-vulnerabilidades'=>'Vulnerabilidades',
+            'pentesting-autorizado'=>'Pentest autorizado',
+        ],
+        'Proteger' => [
+            'seguridad-microsoft-365-google-workspace'=>'Microsoft 365 y Google Workspace',
+            'revision-seguridad-nube'=>'Seguridad en la nube',
+            'seguridad-red-endpoints'=>'Redes y equipos',
+        ],
+        'Preparar y recuperar' => [
+            'backup-recuperacion'=>'Backup y recuperación',
+            'preparacion-respuesta-incidentes'=>'Preparación para incidentes',
+            'preparacion-recuperacion-ransomware'=>'Preparación ante ransomware',
+            'capacitacion-phishing'=>'Capacitación sobre phishing',
+        ],
+        'Responder y monitorear' => [
+            'respuesta-incidentes'=>'Respuesta a incidentes',
+            'monitoreo-gestionado-soc'=>'Monitoreo y SOC',
+        ],
+        'Cumplir y gestionar' => [
+            'iso-27001'=>'ISO 27001',
+            'asesoria-pci-dss'=>'PCI DSS',
+            'politicas-gobernanza-seguridad'=>'Políticas y gobernanza',
+            'proteccion-datos-personales'=>'Protección de datos personales',
+            'ciso-externo'=>'CISO externo',
+        ],
+    ];
+}
+
+function services_mega_menu(string $current): string
+{
+    $active=$current==='servicios' || str_starts_with($current,'servicios/');
+    $h='<li class="services-menu-item"><details class="services-menu" id="services-menu"><summary'.($active?' class="is-current"':'').'>Servicios <span aria-hidden="true" class="menu-chevron">⌄</span></summary>'
+        .'<div class="services-mega" id="services-mega"><div class="mega-intro"><p>Encontrá el servicio según tu necesidad.</p><a href="/servicios/"'.($current==='servicios'?' aria-current="page"':'').'>Comparar los 17 servicios →</a></div><div class="mega-grid">';
+    foreach (services_menu_groups() as $label=>$services) {
+        $h.='<section class="mega-group"><h2>'.e($label).'</h2><ul>';
+        foreach($services as $slug=>$name) {
+            $path='servicios/'.$slug;
+            $h.='<li><a href="'.e(page_path($path)).'"'.($current===$path?' aria-current="page"':'').'>'.e($name).'</a></li>';
+        }
+        $h.='</ul></section>';
+    }
+    return $h.'</div><div class="mega-help"><span>¿No sabés por dónde empezar?</span><a href="/encontra-un-proveedor/#preparar-cotizacion">Prepará tu solicitud por tu cuenta →</a></div></div></details></li>';
+}
+
 function render_header(array $page, bool $minimal): string
 {
     $symbol='<svg class="brand-symbol" viewBox="0 0 256 256" aria-hidden="true"><path d="M0 128C70.692 128 128 185.308 128 256H64C64 220.654 35.346 192 0 192ZM256 192C220.654 192 192 220.654 192 256H128C128 185.308 185.308 128 256 128ZM128 0C128 70.692 70.692 128 0 128V64C35.346 64 64 35.346 64 0ZM192 0C192 35.346 220.654 64 256 64V128C185.308 128 128 70.692 128 0Z"/></svg>';
     $h='<header class="site-header"><div class="shell bar"><a class="brand" href="/" aria-label="Ciberseguridad.com.py — inicio">'.$symbol.'<span>ciberseguridad<span class="brand-domain">.com.py</span></span></a>';
     if ($minimal) return $h . '</div></header>';
     $h.='<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel">Menú <span aria-hidden="true">☰</span></button><div class="nav-panel" id="nav-panel"><nav aria-label="Principal"><ul class="nav nav-pill">';
-    foreach (['servicios'=>'Servicios','proveedores'=>'Proveedores','recursos'=>'Guías','metodologia-verificacion'=>'Cómo verificamos','contacto'=>'Contacto'] as $slug=>$label) {
+    $h.=services_mega_menu($page['slug']);
+    foreach (['proveedores'=>'Proveedores','recursos'=>'Guías','metodologia-verificacion'=>'Cómo verificamos','contacto'=>'Contacto'] as $slug=>$label) {
         $h.='<li><a href="'.e(page_path($slug)).'"'.($page['slug']===$slug?' aria-current="page"':'').'>'.e($label).'</a></li>';
     }
     return $h.'</ul></nav><div class="header-actions"><a class="header-incident" href="/incidente/"><i class="signal-dot" aria-hidden="true"></i>Incidente en curso</a><a class="button nav-cta" href="/encontra-un-proveedor/"><span aria-hidden="true">→</span>Pedir orientación</a></div></div></div></header>';
