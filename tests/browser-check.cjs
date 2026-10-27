@@ -79,7 +79,7 @@ const check=(ok,label)=>{checks.push({label,ok:!!ok});if(!ok)throw Error(label);
   for(const path of ['/','/servicios/','/recursos/checklist-pruebas-recuperacion-backup/','/encontra-un-proveedor/']){
    await plain.goto(origin.origin+path,{waitUntil:'networkidle'});
    check(await plain.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),path+' noJS no overflow');
-   check(await plain.locator('.nav a').first().isVisible(),path+' noJS nav available');
+   check(await plain.locator('#services-menu summary').isVisible(),path+' noJS nav available');
    check(await plain.locator('main').innerText().then(x=>x.length>100),path+' noJS content available');
   }
   await nojs.close();

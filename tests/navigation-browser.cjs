@@ -55,6 +55,14 @@ let n=0;const check=(ok,label)=>{if(!ok)throw Error(label);n++;};
     if(js && width<=1150)await p.locator('.nav-toggle').click();
     await p.locator('#services-menu summary').click();
     check(await p.locator('.mega-group a[aria-current=page]').getAttribute('href')==='/servicios/backup-recuperacion/','Current service marked '+width);
+    check(await p.locator('#services-menu a[href="/proveedores/"]').innerText()==='Cómo elegir proveedor →','Provider guide is named inside services '+width);
+    await p.locator('#services-menu a[href="/proveedores/"]').click();
+    check(p.url()===origin.origin+'/proveedores/','Provider URL retained '+width);
+    check(await p.locator('main h1').innerText()==='Cómo elegir proveedor','Provider guide heading '+width);
+    if(js && width<=1150)await p.locator('.nav-toggle').click();
+    await p.locator('#services-menu summary').click();
+    check(await p.locator('#services-menu a[aria-current=page]').getAttribute('href')==='/proveedores/','Provider current state inside services '+width);
+
    }
    check(errors.length===0,'No JS errors');
    await c.close();

@@ -321,7 +321,7 @@ function services_menu_groups(): array
 
 function services_mega_menu(string $current): string
 {
-    $active=$current==='servicios' || str_starts_with($current,'servicios/');
+    $active=$current==='servicios' || $current==='proveedores' || str_starts_with($current,'servicios/');
     $h='<li class="services-menu-item"><details class="services-menu" id="services-menu"><summary'.($active?' class="is-current"':'').'>Servicios <span aria-hidden="true" class="menu-chevron">⌄</span></summary>'
         .'<div class="services-mega" id="services-mega"><div class="mega-intro"><p>Encontrá el servicio según tu necesidad.</p><a href="/servicios/"'.($current==='servicios'?' aria-current="page"':'').'>Comparar los 17 servicios →</a></div><div class="mega-grid">';
     foreach (services_menu_groups() as $label=>$services) {
@@ -332,7 +332,7 @@ function services_mega_menu(string $current): string
         }
         $h.='</ul></section>';
     }
-    return $h.'</div><div class="mega-help"><span>¿No sabés por dónde empezar?</span><a href="/encontra-un-proveedor/#preparar-cotizacion">Prepará tu solicitud por tu cuenta →</a></div></div></details></li>';
+    return $h.'</div><div class="mega-help"><span>¿No sabés por dónde empezar?</span><a href="/proveedores/"'.($current==='proveedores'?' aria-current="page"':'').'>Cómo elegir proveedor →</a><a href="/encontra-un-proveedor/#preparar-cotizacion">Prepará tu solicitud por tu cuenta →</a></div></div></details></li>';
 }
 
 function render_header(array $page, bool $minimal): string
@@ -342,7 +342,7 @@ function render_header(array $page, bool $minimal): string
     if ($minimal) return $h . '</div></header>';
     $h.='<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel">Menú <span aria-hidden="true">☰</span></button><div class="nav-panel" id="nav-panel"><nav aria-label="Principal"><ul class="nav nav-pill">';
     $h.=services_mega_menu($page['slug']);
-    foreach (['proveedores'=>'Proveedores','recursos'=>'Guías','metodologia-verificacion'=>'Cómo verificamos','contacto'=>'Contacto'] as $slug=>$label) {
+    foreach (['recursos'=>'Guías','metodologia-verificacion'=>'Cómo verificamos','contacto'=>'Contacto'] as $slug=>$label) {
         $h.='<li><a href="'.e(page_path($slug)).'"'.($page['slug']===$slug?' aria-current="page"':'').'>'.e($label).'</a></li>';
     }
     return $h.'</ul></nav><div class="header-actions"><a class="header-incident" href="/incidente/"><i class="signal-dot" aria-hidden="true"></i>Incidente en curso</a><a class="button nav-cta" href="/encontra-un-proveedor/"><span aria-hidden="true">→</span>Pedir orientación</a></div></div></div></header>';
@@ -350,7 +350,7 @@ function render_header(array $page, bool $minimal): string
 
 function render_footer(): string
 {
-    return '<footer class="site-footer"><div class="shell"><div class="footer-grid"><div><a class="brand" href="/">ciberseguridad.com.py</a><p>Orientación independiente para empresas en Paraguay. Te ayudamos a entender y comparar servicios de seguridad.</p><p class="foot-note">No prestamos servicios técnicos de seguridad ni somos CERT-PY o MITIC.</p></div><nav aria-label="Plataforma"><h2>Explorá</h2><a href="/servicios/">Servicios</a><a href="/recursos/">Guías para empresas</a><a href="/proveedores/">Proveedores</a><a href="/encontra-un-proveedor/">Pedir orientación</a><a href="/incidente/">Incidente en curso</a></nav><nav aria-label="Confianza"><h2>La plataforma</h2><a href="/nosotros/">Sobre nosotros</a><a href="/metodologia-verificacion/">Cómo verificamos</a><a href="/registro-proveedor/">Soy proveedor</a><a href="/correcciones/">Correcciones</a><a href="/divulgacion-responsable/">Divulgación responsable</a></nav><nav aria-label="Contacto y privacidad"><h2>Contacto</h2><a href="/contacto/">Contacto general</a><a href="/privacidad/">Privacidad</a><a href="/terminos/">Términos</a><a href="https://www.cert.gov.py/contacto/" rel="noopener">Canal oficial CERT-PY ↗</a></nav></div><div class="footer-bottom"><span>Paraguay · Español</span><span>Datos mínimos. Alcance por escrito. Decisiones informadas.</span></div></div></footer>';
+    return '<footer class="site-footer"><div class="shell"><div class="footer-grid"><div><a class="brand" href="/">ciberseguridad.com.py</a><p>Orientación independiente para empresas en Paraguay. Te ayudamos a entender y comparar servicios de seguridad.</p><p class="foot-note">No prestamos servicios técnicos de seguridad ni somos CERT-PY o MITIC.</p></div><nav aria-label="Plataforma"><h2>Explorá</h2><a href="/servicios/">Servicios</a><a href="/recursos/">Guías para empresas</a><a href="/proveedores/">Cómo elegir proveedor</a><a href="/encontra-un-proveedor/">Pedir orientación</a><a href="/incidente/">Incidente en curso</a></nav><nav aria-label="Confianza"><h2>La plataforma</h2><a href="/nosotros/">Sobre nosotros</a><a href="/metodologia-verificacion/">Cómo verificamos</a><a href="/registro-proveedor/">Soy proveedor</a><a href="/correcciones/">Correcciones</a><a href="/divulgacion-responsable/">Divulgación responsable</a></nav><nav aria-label="Contacto y privacidad"><h2>Contacto</h2><a href="/contacto/">Contacto general</a><a href="/privacidad/">Privacidad</a><a href="/terminos/">Términos</a><a href="https://www.cert.gov.py/contacto/" rel="noopener">Canal oficial CERT-PY ↗</a></nav></div><div class="footer-bottom"><span>Paraguay · Español</span><span>Datos mínimos. Alcance por escrito. Decisiones informadas.</span></div></div></footer>';
 }
 
 /**
