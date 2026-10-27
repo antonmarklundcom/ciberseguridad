@@ -16,6 +16,10 @@ All 17 services and seven guides are connected, with buying worksheets, a printa
 
 Servicios opens a dark mega menu with all 17 existing services in five groups, including keyboard/mobile and native no-JavaScript support. [Service SEO and provider architecture](docs/SEO-SERVICES-AND-PROVIDERS-2026-10-26.md) explains the next editorial priorities and provider-directory options. No new public URLs or business claims are introduced.
 
+## Service SEO update — 27 October 2026
+
+All17 service pages retain their original content and gain scope distinctions, buying steps and51 distinct FAQs, with clearer local titles/snippets. Cómo elegir proveedor is inside Servicios; its /proveedores/ URL remains. [Release evidence and recovery](docs/SERVICE-SEO-2026-10-27.md) records all39URL preservation, tests and unverified live ranking/hosting status.
+
 ## Current implementation
 
 - `public_html/`: public PHP controllers, assets, sitemap, robots and Apache configuration.

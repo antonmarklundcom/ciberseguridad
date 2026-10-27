@@ -43,3 +43,8 @@ VenderCRM config validation lives in `lib/vendercrm-config.php`; include `lib/` 
 ## Buyer journey release — 26 October 2026
 
 See [implementation and verification](IMPROVEMENTS-2026-10-26.md). Include private src/buyer-journey.php and src/buyer-journey.json with the complete release. No new runtime dependency or environment setting is required. The printable brief works with intake off; optional analytics events measure intent, not accepted or delivered enquiries.
+
+
+## Service SEO and provider navigation — 27 October 2026
+
+[Release scope, checks and recovery](SERVICE-SEO-2026-10-27.md). Deploy compatible src content/registry/render updates with the existing complete release; private configuration, intake gates, records and queue remain unchanged. No new runtime dependency or environment setting is required. Verify the18 changed metadata entries and Cómo elegir proveedor inside Servicios after owner deployment.
